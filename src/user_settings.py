@@ -25,6 +25,7 @@ SOURCE_URLS = [
     # "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/protocols/hysteria", 
     "https://raw.githubusercontent.com/4n0nymou3/ss-config-updater/refs/heads/main/configs.txt",
     "https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt",
+    "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.txt",
     "https://raw.githubusercontent.com/itsyebekhe/PSG/main/lite/subscriptions/xray/normal/mix",
     "https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2",
     # Add more URLs here if you want to include additional sources.
