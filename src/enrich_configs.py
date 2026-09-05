@@ -6,9 +6,9 @@ import base64
 import socket
 import requests
 import time
-from typing import Dict, Optional, Tuple, List
+from typing import Dict, Optional, Tuple, List, Set
 from urllib.parse import urlparse, parse_qs
-from collections import OrderedDict
+from collections import Counter
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'settings'))
 from user_settings import LOCATION_APIS
 import config_parser as parser
@@ -17,38 +17,24 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 
-class LRUCache:
-    def __init__(self, capacity: int = 1000):
-        self.cache = OrderedDict()
-        self.capacity = capacity
-    
-    def get(self, key: str) -> Optional[Tuple[str, str]]:
-        if key not in self.cache:
-            return None
-        self.cache.move_to_end(key)
-        return self.cache[key]
-    
-    def put(self, key: str, value: Tuple[str, str]):
-        if key in self.cache:
-            self.cache.move_to_end(key)
-        self.cache[key] = value
-        if len(self.cache) > self.capacity:
-            self.cache.popitem(last=False)
-
-
 class ConfigEnricher:
+    DISABLE_AFTER_CONSECUTIVE_FAILURES = 5
+
     def __init__(self):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Accept': 'application/json, text/plain, */*',
             'Accept-Language': 'en-US,en;q=0.9'
         }
-        self.location_cache = LRUCache(capacity=2000)
+        self.resolved_locations: Dict[str, Tuple[str, str]] = {}
+        self.previous_locations: Dict[str, Tuple[str, str]] = {}
         self.location_apis = self._initialize_apis()
-        self.successful_patterns = {}
+        self.successful_patterns: Dict[str, str] = {}
         self.session = requests.Session()
         self.session.headers.update(self.headers)
-        self.failed_apis = set()
+        self.consecutive_failures: Dict[str, int] = {}
+        self.disabled_domains: Set[str] = set()
+
 
     def _clean_domain(self, api_input: str) -> str:
         api_input = api_input.strip()
@@ -202,71 +188,97 @@ class ConfigEnricher:
 
     def get_location_from_api(self, ip: str, api_config: dict) -> Tuple[str, str]:
         domain = api_config['domain']
-        
-        if domain in self.failed_apis:
+
+        if domain in self.disabled_domains:
             return '', ''
-        
-        if domain in self.successful_patterns:
-            cached_pattern = self.successful_patterns[domain]
+
+        cached_pattern = self.successful_patterns.get(domain)
+        if cached_pattern:
             url = cached_pattern.format(ip=ip)
             data = self._test_url(url)
             if data:
                 country_code, country_name = self._extract_country_data(data)
                 if country_code and country_name:
+                    self.consecutive_failures[domain] = 0
                     return country_code, country_name
-        
+
         url_patterns = self._generate_url_patterns(domain, ip)
-        
+
         for url in url_patterns:
             data = self._test_url(url)
             if data:
                 country_code, country_name = self._extract_country_data(data)
-                
+
                 if country_code and country_name and len(country_code) == 2:
                     template = url.replace(ip, '{ip}')
                     self.successful_patterns[domain] = template
+                    self.consecutive_failures[domain] = 0
                     logger.debug(f"Success: {domain} -> {template}")
                     return country_code, country_name
-        
-        logger.debug(f"Failed: {domain} - no working pattern")
-        self.failed_apis.add(domain)
+
+        self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
+        if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES:
+            logger.warning(
+                f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
+            )
+            self.disabled_domains.add(domain)
+        logger.debug(f"Failed: {domain} - no working pattern for this address")
         return '', ''
 
     def get_location(self, address: str) -> tuple:
-        cached = self.location_cache.get(address)
-        if cached:
-            return cached
+        if address in self.resolved_locations:
+            return self.resolved_locations[address]
 
         try:
             ip = socket.gethostbyname(address)
         except socket.gaierror as e:
             logger.warning(f"Cannot resolve: {address} - {e}")
-            result = ("🏳️", "Unknown")
-            self.location_cache.put(address, result)
+            previous = self.previous_locations.get(address)
+            result = tuple(previous) if previous else ("🏳️", "Unknown")
+            self.resolved_locations[address] = result
             return result
 
-        for api_config in self.location_apis:
-            if api_config['domain'] in self.failed_apis:
+        answers: List[Tuple[int, str, str]] = []
+        for idx, api_config in enumerate(self.location_apis):
+            if api_config['domain'] in self.disabled_domains:
                 continue
-                
+
             country_code, country = self.get_location_from_api(ip, api_config)
-            
+
             if country_code and country and len(country_code) == 2:
-                try:
-                    flag = ''.join(chr(0x1F1E6 + ord(c.upper()) - ord('A')) for c in country_code)
-                except:
-                    flag = "🏳️"
-                
-                result = (flag, country)
-                self.location_cache.put(address, result)
-                logger.debug(f"{address} -> {flag} {country} (via {api_config['domain']})")
-                return result
-            
+                answers.append((idx, country_code, country))
+
             time.sleep(0.2)
-        
+
+        if answers:
+            counts = Counter(code for _, code, _ in answers)
+            top_count = max(counts.values())
+            top_codes = {code for code, count in counts.items() if count == top_count}
+            best = min((a for a in answers if a[1] in top_codes), key=lambda a: a[0])
+            chosen_code, country_name = best[1], best[2]
+
+            try:
+                flag = ''.join(chr(0x1F1E6 + ord(c.upper()) - ord('A')) for c in chosen_code)
+            except Exception:
+                flag = "🏳️"
+
+            result = (flag, country_name)
+            self.resolved_locations[address] = result
+            logger.debug(
+                f"{address} -> {flag} {country_name} (agreement {counts[chosen_code]}/{len(answers)})"
+            )
+            return result
+
+        previous = self.previous_locations.get(address)
+        if previous:
+            logger.info(f"No geolocation API answered for {address} this run; keeping previous result")
+            result = tuple(previous)
+            self.resolved_locations[address] = result
+            return result
+
         logger.warning(f"Location unknown for {address}")
         result = ("🏳️", "Unknown")
-        self.location_cache.put(address, result)
+        self.resolved_locations[address] = result
         return result
 
     def extract_address(self, config: str) -> Optional[str]:
@@ -300,6 +312,17 @@ class ConfigEnricher:
             return None
 
     def process_configs(self, input_file: str, output_file: str):
+        if os.path.exists(output_file):
+            try:
+                with open(output_file, 'r', encoding='utf-8') as f:
+                    raw_previous = json.load(f)
+                for key, value in raw_previous.items():
+                    if isinstance(value, (list, tuple)) and len(value) >= 2 and value[1] and value[1] != 'Unknown':
+                        self.previous_locations[key] = (value[0], value[1])
+                logger.info(f"Loaded {len(self.previous_locations)} previous location entries as a fallback")
+            except Exception as e:
+                logger.warning(f"Could not load previous {output_file} for fallback: {e}")
+
         try:
             with open(input_file, 'r', encoding='utf-8') as f:
                 lines = f.readlines()
@@ -331,8 +354,7 @@ class ConfigEnricher:
                 logger.info(f"Progress: {idx}/{total} addresses processed")
 
         cache_dict = {}
-        current_cache = self.location_cache.cache
-        for key, value in current_cache.items():
+        for key, value in self.resolved_locations.items():
             cache_dict[key] = list(value)
 
         try:
