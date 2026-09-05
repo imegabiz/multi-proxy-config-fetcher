@@ -22,7 +22,8 @@ logger = logging.getLogger(__name__)
 class ConfigEnricher:
     DISABLE_AFTER_CONSECUTIVE_FAILURES = 5
     MAX_WORKERS = 20
-    MAX_CONCURRENT_PER_DOMAIN = 4
+    MAX_CONCURRENT_PER_DOMAIN = 2
+    DEFAULT_RATE_LIMIT_COOLDOWN = 5.0
 
     def __init__(self):
         self.headers = {
@@ -38,6 +39,7 @@ class ConfigEnricher:
         self.session.headers.update(self.headers)
         self.consecutive_failures: Dict[str, int] = {}
         self.disabled_domains: Set[str] = set()
+        self.domain_cooldown_until: Dict[str, float] = {}
         self.cache_lock = threading.Lock()
         self.domain_semaphores: Dict[str, threading.Semaphore] = {
             api['domain']: threading.Semaphore(self.MAX_CONCURRENT_PER_DOMAIN)
@@ -160,7 +162,7 @@ class ConfigEnricher:
         
         return apis
 
-    def _test_url(self, url: str, retries: int = 2) -> Optional[dict]:
+    def _test_url(self, url: str, retries: int = 2) -> Tuple[Optional[dict], Optional[float]]:
         for attempt in range(retries):
             try:
                 response = self.session.get(
@@ -168,18 +170,26 @@ class ConfigEnricher:
                     timeout=5, 
                     allow_redirects=True
                 )
-                
+
+                if response.status_code == 429:
+                    retry_header = response.headers.get('Retry-After') or response.headers.get('X-Ttl')
+                    try:
+                        wait_seconds = float(retry_header) if retry_header else self.DEFAULT_RATE_LIMIT_COOLDOWN
+                    except ValueError:
+                        wait_seconds = self.DEFAULT_RATE_LIMIT_COOLDOWN
+                    return None, wait_seconds
+
                 if response.status_code == 200:
                     content_type = response.headers.get('content-type', '').lower()
                     
                     if 'json' in content_type or 'application/json' in content_type:
                         try:
-                            return response.json()
+                            return response.json(), None
                         except json.JSONDecodeError:
                             pass
                     else:
                         try:
-                            return response.json()
+                            return response.json(), None
                         except:
                             pass
             except requests.exceptions.Timeout:
@@ -193,7 +203,7 @@ class ConfigEnricher:
                 logger.debug(f"Unexpected error for {url}: {e}")
                 break
         
-        return None
+        return None, None
 
     def get_location_from_api(self, ip: str, api_config: dict) -> Tuple[str, str]:
         domain = api_config['domain']
@@ -202,15 +212,23 @@ class ConfigEnricher:
         with self.cache_lock:
             if domain in self.disabled_domains:
                 return '', ''
+            if time.time() < self.domain_cooldown_until.get(domain, 0):
+                return '', ''
             cached_pattern = self.successful_patterns.get(domain)
 
         if cached_pattern:
             url = cached_pattern.format(ip=ip)
             if semaphore:
                 with semaphore:
-                    data = self._test_url(url)
+                    data, retry_after = self._test_url(url)
             else:
-                data = self._test_url(url)
+                data, retry_after = self._test_url(url)
+
+            if retry_after is not None:
+                with self.cache_lock:
+                    self.domain_cooldown_until[domain] = time.time() + retry_after
+                logger.debug(f"{domain} rate-limited, cooling down for {retry_after}s")
+                return '', ''
 
             if data:
                 country_code, country_name = self._extract_country_data(data)
@@ -221,7 +239,8 @@ class ConfigEnricher:
 
             with self.cache_lock:
                 self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
-                if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES:
+                if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES \
+                        and domain not in self.disabled_domains:
                     logger.warning(
                         f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
                     )
@@ -234,9 +253,15 @@ class ConfigEnricher:
         for url in url_patterns:
             if semaphore:
                 with semaphore:
-                    data = self._test_url(url)
+                    data, retry_after = self._test_url(url)
             else:
-                data = self._test_url(url)
+                data, retry_after = self._test_url(url)
+
+            if retry_after is not None:
+                with self.cache_lock:
+                    self.domain_cooldown_until[domain] = time.time() + retry_after
+                logger.debug(f"{domain} rate-limited during discovery, cooling down for {retry_after}s")
+                return '', ''
 
             if data:
                 country_code, country_name = self._extract_country_data(data)
@@ -251,7 +276,8 @@ class ConfigEnricher:
 
         with self.cache_lock:
             self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
-            if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES:
+            if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES \
+                    and domain not in self.disabled_domains:
                 logger.warning(
                     f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
                 )
