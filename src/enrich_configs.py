@@ -6,6 +6,8 @@ import base64
 import socket
 import requests
 import time
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, Optional, Tuple, List, Set
 from urllib.parse import urlparse, parse_qs
 from collections import Counter
@@ -19,6 +21,8 @@ logger = logging.getLogger(__name__)
 
 class ConfigEnricher:
     DISABLE_AFTER_CONSECUTIVE_FAILURES = 5
+    MAX_WORKERS = 20
+    MAX_CONCURRENT_PER_DOMAIN = 4
 
     def __init__(self):
         self.headers = {
@@ -34,6 +38,11 @@ class ConfigEnricher:
         self.session.headers.update(self.headers)
         self.consecutive_failures: Dict[str, int] = {}
         self.disabled_domains: Set[str] = set()
+        self.cache_lock = threading.Lock()
+        self.domain_semaphores: Dict[str, threading.Semaphore] = {
+            api['domain']: threading.Semaphore(self.MAX_CONCURRENT_PER_DOMAIN)
+            for api in self.location_apis
+        }
 
 
     def _clean_domain(self, api_input: str) -> str:
@@ -188,46 +197,72 @@ class ConfigEnricher:
 
     def get_location_from_api(self, ip: str, api_config: dict) -> Tuple[str, str]:
         domain = api_config['domain']
+        semaphore = self.domain_semaphores.get(domain)
 
-        if domain in self.disabled_domains:
-            return '', ''
+        with self.cache_lock:
+            if domain in self.disabled_domains:
+                return '', ''
+            cached_pattern = self.successful_patterns.get(domain)
 
-        cached_pattern = self.successful_patterns.get(domain)
         if cached_pattern:
             url = cached_pattern.format(ip=ip)
-            data = self._test_url(url)
+            if semaphore:
+                with semaphore:
+                    data = self._test_url(url)
+            else:
+                data = self._test_url(url)
+
             if data:
                 country_code, country_name = self._extract_country_data(data)
                 if country_code and country_name:
-                    self.consecutive_failures[domain] = 0
+                    with self.cache_lock:
+                        self.consecutive_failures[domain] = 0
                     return country_code, country_name
+
+            with self.cache_lock:
+                self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
+                if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES:
+                    logger.warning(
+                        f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
+                    )
+                    self.disabled_domains.add(domain)
+            logger.debug(f"Failed: {domain} - known-good pattern failed for this address")
+            return '', ''
 
         url_patterns = self._generate_url_patterns(domain, ip)
 
         for url in url_patterns:
-            data = self._test_url(url)
+            if semaphore:
+                with semaphore:
+                    data = self._test_url(url)
+            else:
+                data = self._test_url(url)
+
             if data:
                 country_code, country_name = self._extract_country_data(data)
 
                 if country_code and country_name and len(country_code) == 2:
                     template = url.replace(ip, '{ip}')
-                    self.successful_patterns[domain] = template
-                    self.consecutive_failures[domain] = 0
+                    with self.cache_lock:
+                        self.successful_patterns[domain] = template
+                        self.consecutive_failures[domain] = 0
                     logger.debug(f"Success: {domain} -> {template}")
                     return country_code, country_name
 
-        self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
-        if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES:
-            logger.warning(
-                f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
-            )
-            self.disabled_domains.add(domain)
+        with self.cache_lock:
+            self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
+            if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES:
+                logger.warning(
+                    f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
+                )
+                self.disabled_domains.add(domain)
         logger.debug(f"Failed: {domain} - no working pattern for this address")
         return '', ''
 
     def get_location(self, address: str) -> tuple:
-        if address in self.resolved_locations:
-            return self.resolved_locations[address]
+        with self.cache_lock:
+            if address in self.resolved_locations:
+                return self.resolved_locations[address]
 
         try:
             ip = socket.gethostbyname(address)
@@ -235,7 +270,8 @@ class ConfigEnricher:
             logger.warning(f"Cannot resolve: {address} - {e}")
             previous = self.previous_locations.get(address)
             result = tuple(previous) if previous else ("🏳️", "Unknown")
-            self.resolved_locations[address] = result
+            with self.cache_lock:
+                self.resolved_locations[address] = result
             return result
 
         answers: List[Tuple[int, str, str]] = []
@@ -247,8 +283,6 @@ class ConfigEnricher:
 
             if country_code and country and len(country_code) == 2:
                 answers.append((idx, country_code, country))
-
-            time.sleep(0.2)
 
         if answers:
             counts = Counter(code for _, code, _ in answers)
@@ -263,7 +297,8 @@ class ConfigEnricher:
                 flag = "🏳️"
 
             result = (flag, country_name)
-            self.resolved_locations[address] = result
+            with self.cache_lock:
+                self.resolved_locations[address] = result
             logger.debug(
                 f"{address} -> {flag} {country_name} (agreement {counts[chosen_code]}/{len(answers)})"
             )
@@ -273,12 +308,14 @@ class ConfigEnricher:
         if previous:
             logger.info(f"No geolocation API answered for {address} this run; keeping previous result")
             result = tuple(previous)
-            self.resolved_locations[address] = result
+            with self.cache_lock:
+                self.resolved_locations[address] = result
             return result
 
         logger.warning(f"Location unknown for {address}")
         result = ("🏳️", "Unknown")
-        self.resolved_locations[address] = result
+        with self.cache_lock:
+            self.resolved_locations[address] = result
         return result
 
     def extract_address(self, config: str) -> Optional[str]:
@@ -348,10 +385,24 @@ class ConfigEnricher:
         logger.info(f"Found {len(unique_addresses)} unique server addresses")
 
         total = len(unique_addresses)
-        for idx, address in enumerate(unique_addresses, 1):
-            self.get_location(address)
-            if idx % 10 == 0 or idx == total:
-                logger.info(f"Progress: {idx}/{total} addresses processed")
+        completed = 0
+        progress_lock = threading.Lock()
+
+        def _process(address: str):
+            nonlocal completed
+            try:
+                self.get_location(address)
+            except Exception as e:
+                logger.warning(f"Error processing {address}: {e}")
+            with progress_lock:
+                completed += 1
+                if completed % 50 == 0 or completed == total:
+                    logger.info(f"Progress: {completed}/{total} addresses processed")
+
+        with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
+            futures = [executor.submit(_process, address) for address in unique_addresses]
+            for future in as_completed(futures):
+                future.result()
 
         cache_dict = {}
         for key, value in self.resolved_locations.items():
