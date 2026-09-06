@@ -6,77 +6,75 @@
 
 trojan://humanity@185.220.100.168:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇩🇪 3267 - DE - Trojan/WS/TLS - 443
 
-vless://03c48eca-e0aa-4e18-998c-1f53f1de293c@94.156.232.254:443?encryption=none&security=tls&sni=cf6.rumedia-cdn.com&alpn=http/1.1&fp=chrome&type=ws&host=cf6.rumedia-cdn.com&path=/cdn/v3/live&packetEncoding=xudp#🇩🇪 19 - DE - VLESS/WS/TLS/UTLS - 443
+trojan://humanity@185.255.179.166:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇩🇪 3269 - DE - Trojan/WS/TLS - 443
 
-vless://05bfcbaa-cba0-4bce-9103-09fe3f5f0667@167.233.219.201:443?security=tls&type=xhttp&path=/api/v3/stream/&alpn=h2&sni=fsn1.nordlinkcloud.com&fp=firefox&extra={"xPaddingBytes":"100-1000"}&encryption=none#🇩🇪 28 - DE - VLESS/XHTTP/TLS/UTLS - 443
+vless://03c48eca-e0aa-4e18-998c-1f53f1de293c@94.156.232.254:443?encryption=none&security=tls&sni=cf6.rumedia-cdn.com&alpn=http/1.1&fp=chrome&type=ws&host=cf6.rumedia-cdn.com&path=/cdn/v3/live&packetEncoding=xudp#🇩🇪 21 - DE - VLESS/WS/TLS/UTLS - 443
 
-vless://05bfcbaa-cba0-4bce-9103-09fe3f5f0667@fsn1.nordlinkcloud.com:443?security=tls&type=xhttp&path=/api/v3/stream/&alpn=h2&sni=fsn1.nordlinkcloud.com&fp=chrome&encryption=none#🇩🇪 31 - DE - VLESS/XHTTP/TLS/UTLS - 443
+vless://05bfcbaa-cba0-4bce-9103-09fe3f5f0667@167.233.219.201:443?security=tls&type=xhttp&path=/api/v3/stream/&alpn=h2&sni=fsn1.nordlinkcloud.com&fp=chrome&mode=auto&encryption=none#🇩🇪 30 - DE - VLESS/XHTTP/TLS/UTLS - 443
 
-vless://11af1c47-865a-47c6-92ff-118013655d78@91.107.190.63:8080?path=/?ed=2048&security=none&encryption=none&type=ws#🇩🇪 103 - DE - VLESS/WS - 8080
+vless://05bfcbaa-cba0-4bce-9103-09fe3f5f0667@fsn1.nordlinkcloud.com:443?security=tls&type=xhttp&path=/api/v3/stream/&alpn=h2&sni=fsn1.nordlinkcloud.com&fp=chrome&encryption=none#🇩🇪 33 - DE - VLESS/XHTTP/TLS/UTLS - 443
 
-vless://218fd696-e3a2-4c33-b397-a5f13a82969e@94.156.155.27:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.telekom.de&fp=firefox&sid=8f892fa1&pbk=bY0-zlTOPCaEWDMw_BTzuzJW513tl6Hc61n4Z-q1cHE#🇩🇪 186 - DE - VLESS/REALITY/PBK/SID/UTLS - 443
+vless://11af1c47-865a-47c6-92ff-118013655d78@91.107.190.63:8080?path=/?ed=2048&security=none&encryption=none&type=ws#🇩🇪 104 - DE - VLESS/WS - 8080
 
-vless://3165b4d0-40f7-4df0-9f59-4c89ccdac92d@82.24.203.2:2087?type=ws&encryption=none&path=/3bfc3e3ed603&packetEncoding=xudp#🇩🇪 280 - DE - VLESS/WS - 2087
+vless://218fd696-e3a2-4c33-b397-a5f13a82969e@94.156.155.27:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.telekom.de&fp=firefox&sid=8f892fa1&pbk=bY0-zlTOPCaEWDMw_BTzuzJW513tl6Hc61n4Z-q1cHE#🇩🇪 190 - DE - VLESS/REALITY/PBK/SID/UTLS - 443
 
-vless://3165b4d0-40f7-4df0-9f59-4c89ccdac92d@82.24.203.9:2087?path=/3bfc3e3ed603&security=none&encryption=none&type=ws#🇩🇪 281 - DE - VLESS/WS - 2087
+vless://3165b4d0-40f7-4df0-9f59-4c89ccdac92d@82.24.203.10:2087?encryption=none&path=/3bfc3e3ed603&security=none&type=ws#🇩🇪 284 - DE - VLESS/WS - 2087
 
-vless://423b1d79-08c4-403f-9d5e-c541f791b55f@144.31.168.95:443?security=reality&type=tcp&packetEncoding=xudp&sni=eu-central.cendora.ru&fp=firefox&flow=xtls-rprx-vision&sid=00bca5982f82d083&pbk=b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI#🇩🇪 376 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://3165b4d0-40f7-4df0-9f59-4c89ccdac92d@82.24.203.2:2087?type=ws&encryption=none&path=/3bfc3e3ed603&packetEncoding=xudp#🇩🇪 285 - DE - VLESS/WS - 2087
 
-vless://44573770-963a-41f5-a080-3cc11e4957a2@82.24.203.37:2087?encryption=none&path=/5c62e3c616d8&security=none&type=ws#🇩🇪 383 - DE - VLESS/WS - 2087
+vless://3165b4d0-40f7-4df0-9f59-4c89ccdac92d@82.24.203.9:2087?path=/3bfc3e3ed603&security=none&encryption=none&type=ws#🇩🇪 286 - DE - VLESS/WS - 2087
 
-vless://55ed97fc-77d1-4802-baf3-acef70776331@31.76.119.117:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q&sid=9e4eced6e98ed4d4&sni=de.orpheous.ru#🇩🇪 651 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://423b1d79-08c4-403f-9d5e-c541f791b55f@144.31.168.95:443?security=reality&type=tcp&packetEncoding=xudp&sni=eu-central.cendora.ru&fp=firefox&flow=xtls-rprx-vision&sid=00bca5982f82d083&pbk=b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI#🇩🇪 378 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://56ba5d34-ef22-4ba6-8090-4188b807df54@163.8.195.241:2087?type=ws&encryption=none&path=/29c8fed7ca22&packetEncoding=xudp#🇩🇪 658 - DE - VLESS/WS - 2087
+vless://44573770-963a-41f5-a080-3cc11e4957a2@82.24.203.37:2087?encryption=none&path=/5c62e3c616d8&security=none&type=ws#🇩🇪 385 - DE - VLESS/WS - 2087
 
-vless://56ba5d34-ef22-4ba6-8090-4188b807df54@163.8.195.241:2087?encryption=none&host=/?--v2rayNplus--v2rayNplus--v2rayNplus--&path=/29c8fed7ca22&security=none&type=ws#🇩🇪 659 - DE - VLESS/WS - 2087
+vless://56ba5d34-ef22-4ba6-8090-4188b807df54@163.8.195.241:2087?encryption=none&host=/?--v2rayNplus--v2rayNplus--v2rayNplus--&path=/29c8fed7ca22&security=none&type=ws#🇩🇪 648 - DE - VLESS/WS - 2087
 
-vless://5fcdc9b7-e70f-4a5c-85c3-e018ad818326@82.24.203.20:2087?path=/fd5ba98a3970&security=none&encryption=none&type=ws#🇩🇪 726 - DE - VLESS/WS - 2087
+vless://5fcdc9b7-e70f-4a5c-85c3-e018ad818326@82.24.203.20:2087?path=/fd5ba98a3970&security=none&encryption=none&type=ws#🇩🇪 714 - DE - VLESS/WS - 2087
 
-vless://78791f9e-fe09-4d4f-88ec-895764bae0d6@94.183.209.58:443?encryption=none&host=pl2.lckdwn.ru&path=/&security=none&type=ws#🇩🇪 979 - DE - VLESS/WS - 443
+vless://78791f9e-fe09-4d4f-88ec-895764bae0d6@94.183.209.58:443?encryption=none&host=pl2.lckdwn.ru&path=/&security=none&type=ws#🇩🇪 965 - DE - VLESS/WS - 443
 
-vless://7c9b4360-6be9-47f2-ace9-b87297ea3d8f@157.90.165.181:11762?encryption=none&flow=xtls-rprx-vision&pbk=R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU&security=reality&sni=swdist.apple.com&type=tcp#🇩🇪 1007 - DE - VLESS/REALITY/PBK/VISION - 11762
+vless://7c9b4360-6be9-47f2-ace9-b87297ea3d8f@157.90.165.181:11762?encryption=none&flow=xtls-rprx-vision&pbk=R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU&security=reality&sni=swdist.apple.com&type=tcp#🇩🇪 996 - DE - VLESS/REALITY/PBK/VISION - 11762
 
-vless://84c898c4-6990-4121-ae51-27d989f5ce39@94.183.209.42:443?encryption=none&path=/&security=none&type=ws#🇩🇪 1064 - DE - VLESS/WS - 443
+vless://84c898c4-6990-4121-ae51-27d989f5ce39@94.183.209.42:443?encryption=none&path=/&security=none&type=ws#🇩🇪 1061 - DE - VLESS/WS - 443
 
-vless://84c898c4-6990-4121-ae51-27d989f5ce39@pl3.lckdwn.ru:443?type=ws#🇩🇪 1065 - DE - VLESS/WS - 443
+vless://84c898c4-6990-4121-ae51-27d989f5ce39@pl3.lckdwn.ru:443?type=ws#🇩🇪 1062 - DE - VLESS/WS - 443
 
-vless://90715c6b-6c65-4466-a50c-234660f1f531@82.24.203.70:2087?security=none&type=ws&path=/d51f7fbe4da2&packetEncoding=xudp#🇩🇪 1161 - DE - VLESS/WS - 2087
+vless://90715c6b-6c65-4466-a50c-234660f1f531@82.24.203.70:2087?security=none&type=ws&path=/d51f7fbe4da2&packetEncoding=xudp#🇩🇪 1155 - DE - VLESS/WS - 2087
 
-vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@87.120.84.32:33843?encryption=none&fp=firefox&security=tls&sni=deproxy2.lckdwn.ru&type=tcp#🇩🇪 1195 - DE - VLESS/TLS/UTLS - 33843
+vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@87.120.84.32:33843?encryption=none&fp=firefox&security=tls&sni=deproxy2.lckdwn.ru&type=tcp#🇩🇪 1192 - DE - VLESS/TLS/UTLS - 33843
 
-vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@87.120.84.32:8443?security=none&encryption=none&type=ws#🇩🇪 1196 - DE - VLESS/WS - 8443
+vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@87.120.84.32:8443?security=none&encryption=none&type=ws#🇩🇪 1193 - DE - VLESS/WS - 8443
 
-vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@deproxy2.lckdwn.ru:33843?alpn=h2,http/1.1&fp=edge&security=tls&sni=deproxy2.lckdwn.ru&type=tcp#🇩🇪 1197 - DE - VLESS/TLS/UTLS - 33843
+vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@deproxy2.lckdwn.ru:33843?alpn=h2,http/1.1&fp=edge&security=tls&sni=deproxy2.lckdwn.ru&type=tcp#🇩🇪 1194 - DE - VLESS/TLS/UTLS - 33843
 
-vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@deproxy2.lckdwn.ru:8443?encryption=none&host=deproxy2.lckdwn.ru&path=/&security=none&type=ws#🇩🇪 1198 - DE - VLESS/WS - 8443
+vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@deproxy2.lckdwn.ru:8443?encryption=none&host=deproxy2.lckdwn.ru&path=/&security=none&type=ws#🇩🇪 1195 - DE - VLESS/WS - 8443
 
-vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@deproxy2.lckdwn.ru:8443?encryption=none&type=ws#🇩🇪 1199 - DE - VLESS/WS - 8443
+vless://93dac4b8-3879-4179-abdb-9666a9e2ca8d@deproxy2.lckdwn.ru:8443?encryption=none&type=ws#🇩🇪 1196 - DE - VLESS/WS - 8443
 
-vless://a04814d9-d006-4e7b-ae20-8ab304b3b429@151.242.17.99:8443?type=grpc&headerType=none&security=reality&encryption=none&sni=de.emvservice.com&fp=chrome&pbk=6Yskxg5U0WxPGtuCAAGH9uD57T4U8LeGrErTBNvIrwM&sid=bc&spx=/#🇩🇪 1281 - DE - VLESS/GRPC/REALITY/PBK/SID/UTLS - 8443
+vless://a04814d9-d006-4e7b-ae20-8ab304b3b429@151.242.17.99:8443?type=grpc&headerType=none&security=reality&encryption=none&sni=de.emvservice.com&fp=chrome&pbk=6Yskxg5U0WxPGtuCAAGH9uD57T4U8LeGrErTBNvIrwM&sid=bc&spx=/#🇩🇪 1292 - DE - VLESS/GRPC/REALITY/PBK/SID/UTLS - 8443
 
-vless://ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2@152.53.114.186:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=UO3EObgU3xUrhIGEE0gfCn5ZOz8YxNcwwW6ZaYzD3SA&security=reality&sid=4e9b0c2d1a3f5768&sni=as.tunnelx.space&type=tcp#🇩🇪 1366 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2@152.53.114.186:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=UO3EObgU3xUrhIGEE0gfCn5ZOz8YxNcwwW6ZaYzD3SA&security=reality&sid=4e9b0c2d1a3f5768&sni=as.tunnelx.space&type=tcp#🇩🇪 1379 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2@as.tunnelx.space:443?security=reality&flow=xtls-rprx-vision&pbk=UO3EObgU3xUrhIGEE0gfCn5ZOz8YxNcwwW6ZaYzD3SA&sid=4e9b0c2d1a3f5768&fp=firefox&sni=as.tunnelx.space&type=tcp&headerType=none&host=as.tunnelx.space&path=/#🇩🇪 1367 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2@as.tunnelx.space:443?security=reality&flow=xtls-rprx-vision&pbk=UO3EObgU3xUrhIGEE0gfCn5ZOz8YxNcwwW6ZaYzD3SA&sid=4e9b0c2d1a3f5768&fp=firefox&sni=as.tunnelx.space&type=tcp&headerType=none&host=as.tunnelx.space&path=/#🇩🇪 1380 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@35.157.240.237:443?security=tls&fp=chrome&packet-encoding=xudp&sni=bab-6.site&type=ws&headerType=none&host=bab-6.site&path=/vws/#🇩🇪 1440 - DE - VLESS/WS/TLS/UTLS - 443
+vless://ab7d5ea9-6eca-47c3-b14b-67378fc2d7c2@as.tunnelx.space:443?security=reality&type=raw&packetEncoding=xudp&sni=as.tunnelx.space&fp=firefox&flow=xtls-rprx-vision&sid=4e9b0c2d1a3f5768&pbk=UO3EObgU3xUrhIGEE0gfCn5ZOz8YxNcwwW6ZaYzD3SA#🇩🇪 1381 - DE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://bf645ffe-a3cc-4480-8e4c-9bcd1af41052@170.101.109.37:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A&sid=ab88d256&type=tcp&headerType=none#🇩🇪 1494 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@35.157.240.237:443?security=tls&fp=chrome&packet-encoding=xudp&sni=bab-6.site&type=ws&headerType=none&host=bab-6.site&path=/vws/#🇩🇪 1453 - DE - VLESS/WS/TLS/UTLS - 443
 
-vless://bf645ffe-a3cc-4480-8e4c-9bcd1af41052@170.101.109.37:443?security=reality&type=raw&packetEncoding=xudp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=ab88d256&pbk=rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A#🇩🇪 1495 - DE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
+vless://bf645ffe-a3cc-4480-8e4c-9bcd1af41052@170.101.109.37:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A&sid=ab88d256&type=tcp&headerType=none#🇩🇪 1505 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d23cb516-40db-4aa4-8142-6b45ff882f90@94.183.209.59:443?path=/&security=none&encryption=none&type=ws#🇩🇪 1624 - DE - VLESS/WS - 443
+vless://bf645ffe-a3cc-4480-8e4c-9bcd1af41052@170.101.109.37:443?security=reality&type=raw&packetEncoding=xudp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=ab88d256&pbk=rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A#🇩🇪 1506 - DE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d23cb516-40db-4aa4-8142-6b45ff882f90@94.183.209.59:443?security=none&type=ws&path=/&sni=pl4.lckdwn.ru#🇩🇪 1625 - DE - VLESS/WS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@82.39.171.12:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇩🇪 1687 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@82.39.171.12:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇩🇪 1668 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@82.39.171.142:443?security=reality&type=tcp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&encryption=none#🇩🇪 1688 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@82.39.171.142:443?security=reality&type=tcp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&encryption=none#🇩🇪 1669 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://e7099864-b110-493c-9541-4a4638dc8299@146.103.42.161:443?security=tls&type=ws&path=/jryRJzwfISH4eaAVKgp2Zfw&packetEncoding=xudp&alpn=http/1.1&sni=de.hvumyrpstghekb.top&fp=safari#🇩🇪 1824 - DE - VLESS/WS/TLS/UTLS - 443
 
-vless://e7099864-b110-493c-9541-4a4638dc8299@146.103.42.161:443?security=tls&type=ws&path=/jryRJzwfISH4eaAVKgp2Zfw&packetEncoding=xudp&alpn=http/1.1&sni=de.hvumyrpstghekb.top&fp=safari#🇩🇪 1803 - DE - VLESS/WS/TLS/UTLS - 443
+vless://e7099864-b110-493c-9541-4a4638dc8299@de.hvumyrpstghekb.top:443?security=tls&type=ws&path=/jryRJzwfISH4eaAVKgp2Zfw&packetEncoding=xudp&alpn=http/1.1&sni=de.hvumyrpstghekb.top&fp=safari#🇩🇪 1825 - DE - VLESS/WS/TLS/UTLS - 443
 
-vless://e7099864-b110-493c-9541-4a4638dc8299@de.hvumyrpstghekb.top:443?security=tls&type=ws&path=/jryRJzwfISH4eaAVKgp2Zfw&packetEncoding=xudp&alpn=http/1.1&sni=de.hvumyrpstghekb.top&fp=safari#🇩🇪 1804 - DE - VLESS/WS/TLS/UTLS - 443
+vless://ef5f6054-61c7-4ce8-a35b-dbcec449f242@31.77.61.89:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=jobinvest.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#🇩🇪 1871 - DE - VLESS/REALITY/PBK/VISION/UTLS - 443
 
-vless://ef5f6054-61c7-4ce8-a35b-dbcec449f242@31.77.61.89:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=jobinvest.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#🇩🇪 1848 - DE - VLESS/REALITY/PBK/VISION/UTLS - 443
-
-vless://ef5f6054-61c7-4ce8-a35b-dbcec449f242@bridge.kolhoz.fuck-rkn.xyz:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=jobinvest.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#🇩🇪 1849 - DE - VLESS/REALITY/PBK/VISION/UTLS - 443
+vless://ef5f6054-61c7-4ce8-a35b-dbcec449f242@bridge.kolhoz.fuck-rkn.xyz:443?encryption=none&flow=xtls-rprx-vision&type=tcp&security=reality&sni=jobinvest.ru&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc#🇩🇪 1872 - DE - VLESS/REALITY/PBK/VISION/UTLS - 443
 

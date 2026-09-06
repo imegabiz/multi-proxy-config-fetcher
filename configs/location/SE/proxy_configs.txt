@@ -4,59 +4,55 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 179 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://0a2dde28-70da-4863-a06f-35d007d94d35@202.155.11.249:443?fp=chrome&host=cf2.rumedia-cdn.com&path=/cdn/v3/live&security=tls&sni=cf2.rumedia-cdn.com&type=ws#🇸🇪 70 - SE - VLESS/WS/TLS/UTLS - 443
 
-vless://5d8cf280-e0f4-4539-b35c-7ff90659c0d0@185.189.45.247:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=4IoUUt2YZPsn8Y1JqOqV9LnQK0vNlY9AeV4m-83e2SE&sid=ab9d5f3c&sni=apiv14.betust.net#🇸🇪 693 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 183 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://5d8cf280-e0f4-4539-b35c-7ff90659c0d0@185.189.45.76:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&sni=apiv7.jarvesitw.ru#🇸🇪 694 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://5d8cf280-e0f4-4539-b35c-7ff90659c0d0@185.189.45.247:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=4IoUUt2YZPsn8Y1JqOqV9LnQK0vNlY9AeV4m-83e2SE&sid=ab9d5f3c&sni=apiv14.betust.net#🇸🇪 677 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://5d8cf280-e0f4-4539-b35c-7ff90659c0d0@sv7.jarvesitw.ru:443?encryption=none&security=reality&sni=apiv7.jarvesitw.ru&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&spx=/&flow=xtls-rprx-vision#🇸🇪 710 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://5d8cf280-e0f4-4539-b35c-7ff90659c0d0@185.189.45.76:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&sni=apiv7.jarvesitw.ru#🇸🇪 678 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://c6037cf7-d931-4027-af06-6bfb0f10684c@185.189.45.247:443?security=reality&encryption=none&sni=apiv14.betust.net&fp=firefox&pbk=4IoUUt2YZPsn8Y1JqOqV9LnQK0vNlY9AeV4m-83e2SE&sid=ab9d5f3c&flow=xtls-rprx-vision#🇸🇪 1548 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://5d8cf280-e0f4-4539-b35c-7ff90659c0d0@sv7.jarvesitw.ru:443?encryption=none&security=reality&sni=apiv7.jarvesitw.ru&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&spx=/&flow=xtls-rprx-vision#🇸🇪 696 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://c6037cf7-d931-4027-af06-6bfb0f10684c@185.189.45.76:443?security=reality&encryption=none&sni=apiv7.jarvesitw.ru&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&flow=xtls-rprx-vision#🇸🇪 1549 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://c6037cf7-d931-4027-af06-6bfb0f10684c@185.189.45.247:443?security=reality&encryption=none&sni=apiv14.betust.net&fp=firefox&pbk=4IoUUt2YZPsn8Y1JqOqV9LnQK0vNlY9AeV4m-83e2SE&sid=ab9d5f3c&flow=xtls-rprx-vision#🇸🇪 1561 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://c6037cf7-d931-4027-af06-6bfb0f10684c@sv7.jarvesitw.ru:443?encryption=none&security=reality&sni=apiv7.jarvesitw.ru&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&spx=/&flow=xtls-rprx-vision#🇸🇪 1561 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://c6037cf7-d931-4027-af06-6bfb0f10684c@185.189.45.76:443?security=reality&encryption=none&sni=apiv7.jarvesitw.ru&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&flow=xtls-rprx-vision#🇸🇪 1562 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.104:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1647 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://c6037cf7-d931-4027-af06-6bfb0f10684c@sv7.jarvesitw.ru:443?encryption=none&security=reality&sni=apiv7.jarvesitw.ru&fp=firefox&pbk=nyu9UP88g1wA3VirgZBRk7ND4fsONW38yIqUSJf3GEk&sid=4de8a374&spx=/&flow=xtls-rprx-vision#🇸🇪 1574 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.104:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1648 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.104:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1667 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.15:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1649 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.104:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1668 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.163:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1650 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.15:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1669 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.168:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1651 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.163:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1670 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.16:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1652 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.168:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1671 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.179:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1653 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.16:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1672 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.202:443?security=reality&type=raw&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1654 - SE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.179:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1673 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.223:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&sni=yahoo.com#🇸🇪 1655 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.202:443?security=reality&type=raw&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1674 - SE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.225:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1656 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.223:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&sni=yahoo.com#🇸🇪 1675 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.232:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&alpn=channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-&security=reality&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#🇸🇪 1657 - SE - VLESS/REALITY/PBK/SID/VISION - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.232:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&alpn=channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-channel@networld_vpn-&security=reality&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#🇸🇪 1677 - SE - VLESS/REALITY/PBK/SID/VISION - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.235:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1658 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.235:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1678 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.35:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1659 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.35:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1679 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.35:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1660 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.35:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1680 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1661 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1681 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&type=raw&packetEncoding=xudp&sni=yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1662 - SE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.74:443?security=reality&type=raw&packetEncoding=xudp&sni=yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1682 - SE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.75:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=ios&security=reality&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#🇸🇪 1663 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.75:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=yahoo.com&fp=ios&security=reality&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a#🇸🇪 1683 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.89:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1664 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.89:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1684 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.89:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1665 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.90:443?security=reality&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&fp=ios&sni=yahoo.com&type=tcp&headerType=none&host=yahoo.com&path=/#🇸🇪 1666 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.90:443?encryption=none&flow=xtls-rprx-vision&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&security=reality&sid=c39cc7310a&sni=yahoo.com&type=tcp#🇸🇪 1667 - SE - VLESS/REALITY/PBK/SID/VISION - 443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.89:443?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=ios&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#🇸🇪 1685 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
