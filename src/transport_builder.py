@@ -3,6 +3,21 @@ from typing import Dict, Optional, Tuple
 
 logger = logging.getLogger(__name__)
 
+VALID_SINGBOX_FINGERPRINTS = {
+    'chrome', 'firefox', 'edge', 'safari', '360', 'qq', 'ios', 'android',
+    'random', 'randomized',
+    'chrome_psk', 'chrome_psk_shuffle', 'chrome_padding_psk_shuffle',
+    'chrome_pq', 'chrome_pq_psk'
+}
+
+def sanitize_singbox_fingerprint(fp: Optional[str]) -> str:
+    if not fp:
+        return 'chrome'
+    normalized = str(fp).strip().lower()
+    if normalized in VALID_SINGBOX_FINGERPRINTS:
+        return normalized
+    return 'chrome'
+
 def map_transport_for_singbox(net_type: str) -> str:
     transport_map = {
         'httpupgrade': 'ws',
@@ -56,7 +71,7 @@ def build_singbox_settings(data: Dict) -> Tuple[Dict, Dict]:
                     "public_key": data.get('pbk', ''),
                     "short_id": data.get('sid', '')
                 },
-                "utls": {"enabled": True, "fingerprint": data.get('fp', 'chrome')}
+                "utls": {"enabled": True, "fingerprint": sanitize_singbox_fingerprint(data.get('fp'))}
             }
         elif tls_enabled:
             tls = {
@@ -64,7 +79,7 @@ def build_singbox_settings(data: Dict) -> Tuple[Dict, Dict]:
                 "server_name": data.get('sni', address),
                 "insecure": False,
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"],
-                "utls": {"enabled": True, "fingerprint": data.get('fp', 'chrome')}
+                "utls": {"enabled": True, "fingerprint": sanitize_singbox_fingerprint(data.get('fp'))}
             }
             if security == 'xtls':
                 tls["xtls"] = {"enabled": True}
