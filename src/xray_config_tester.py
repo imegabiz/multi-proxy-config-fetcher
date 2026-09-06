@@ -220,11 +220,16 @@ class XrayBatchTester:
                     stdout = process.stdout.read().decode('utf-8', errors='ignore') if process.stdout else ''
                     diagnostic = (stderr or stdout).strip()
                     diagnostic_lines = [
-                        line for line in diagnostic.splitlines()
+                        line.strip() for line in diagnostic.splitlines()
                         if line.strip() and not line.strip().startswith('Xray ')
+                        and 'anti-censorship' not in line
                     ]
-                    diagnostic = ' | '.join(diagnostic_lines).strip() or diagnostic
-                    logger.warning(f"Batch of {len(prepared)} failed to start ({diagnostic[:350]}), bisecting")
+                    fatal_lines = [line for line in diagnostic_lines if 'Failed to start' in line or '[Fatal]' in line]
+                    if fatal_lines:
+                        diagnostic = fatal_lines[-1]
+                    elif diagnostic_lines:
+                        diagnostic = ' | '.join(diagnostic_lines)
+                    logger.warning(f"Batch of {len(prepared)} failed to start ({diagnostic[:500]}), bisecting")
                     if len(prepared) == 1:
                         results[prepared[0][3]] = (False, None)
                         return results
