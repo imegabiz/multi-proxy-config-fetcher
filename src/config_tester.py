@@ -2,7 +2,7 @@ import os
 import json
 import tempfile
 import logging
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional, Tuple, Set
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import requests
@@ -85,10 +85,12 @@ class SingBoxBatchTester:
             return results
 
         prepared = []
+        allocated_ports: Set[int] = set()
         for idx, outbound in enumerate(outbounds):
             tag = outbound.get('tag', f'unknown-{idx}')
             try:
-                port = find_free_port()
+                port = find_free_port(exclude=allocated_ports)
+                allocated_ports.add(port)
             except Exception as e:
                 logger.error(f"Port allocation failed for {tag}: {e}")
                 results[tag] = (False, None)
@@ -116,7 +118,9 @@ class SingBoxBatchTester:
                 probe_port = prepared[0][1]
                 if not wait_for_port(process, probe_port, max_wait=5.0):
                     stderr = process.stderr.read().decode('utf-8', errors='ignore') if process.stderr else ''
-                    logger.warning(f"Batch of {len(prepared)} failed to start ({stderr[:150]}), bisecting")
+                    stdout = process.stdout.read().decode('utf-8', errors='ignore') if process.stdout else ''
+                    diagnostic = (stderr or stdout).strip()
+                    logger.warning(f"Batch of {len(prepared)} failed to start ({diagnostic[:150]}), bisecting")
                     if len(prepared) == 1:
                         results[prepared[0][3]] = (False, None)
                         return results
