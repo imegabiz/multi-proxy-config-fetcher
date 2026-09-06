@@ -148,17 +148,11 @@ def build_xray_settings(data: Dict) -> Dict:
                 "shortId": data.get('sid', ''),
                 "fingerprint": data.get('fp', 'chrome')
             }
-        elif security == 'tls' or (data.get('protocol') == 'trojan'):
+        elif security in ('tls', 'xtls') or (data.get('protocol') == 'trojan'):
             stream_settings["security"] = "tls"
             stream_settings["tlsSettings"] = {
                 "serverName": data.get('sni', address),
                 "fingerprint": data.get('fp', 'chrome'),
-                "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"]
-            }
-        elif security == 'xtls':
-            stream_settings["security"] = "xtls"
-            stream_settings["xtlsSettings"] = {
-                "serverName": data.get('sni', address),
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"]
             }
             
