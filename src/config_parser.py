@@ -9,6 +9,9 @@ from functools import lru_cache
 
 logger = logging.getLogger(__name__)
 
+def _fix_query_string(query: str) -> str:
+    return query.replace('&amp;', '&')
+
 VALID_SS_METHODS = {
     'aes-128-gcm', 'aes-192-gcm', 'aes-256-gcm',
     'chacha20-ietf-poly1305', 'xchacha20-ietf-poly1305',
@@ -103,7 +106,7 @@ def parse_vless(config: str) -> Optional[Dict]:
     
     port = url.port or 443
     
-    params = parse_qs(url.query)
+    params = parse_qs(_fix_query_string(url.query))
     security = params.get('security', ['none'])[0].lower()
     if security not in VALID_VLESS_SECURITY:
         security = 'none'
@@ -153,7 +156,7 @@ def parse_trojan(config: str) -> Optional[Dict]:
     
     port = url.port or 443
     
-    params = parse_qs(url.query)
+    params = parse_qs(_fix_query_string(url.query))
     transport_type = params.get('type', ['tcp'])[0].lower()
     if transport_type not in VALID_TRANSPORT_TYPES:
         transport_type = 'tcp'
@@ -178,6 +181,9 @@ def parse_trojan(config: str) -> Optional[Dict]:
         'security': params.get('security', ['tls'])[0],
         'fp': params.get('fp', [''])[0],
         'flow': trojan_flow,
+        'pbk': params.get('pbk', [''])[0],
+        'sid': params.get('sid', [''])[0],
+        'spx': params.get('spx', [''])[0],
         'mode': mode,
         'name': unquote(url.fragment) if url.fragment else ''
     }
@@ -196,7 +202,7 @@ def parse_hysteria2(config: str) -> Optional[Dict]:
     
     port = url.port or 443
     
-    params = parse_qs(url.query)
+    params = parse_qs(_fix_query_string(url.query))
     password = url.username or params.get('password', [''])[0]
     if not password:
         return None
@@ -313,7 +319,7 @@ def parse_wireguard(config: str) -> Optional[Dict]:
     
     port = url.port or 51820
     
-    params = parse_qs(url.query)
+    params = parse_qs(_fix_query_string(url.query))
     private_key = url.username or params.get('privatekey', [''])[0]
     if not private_key:
         return None
@@ -353,7 +359,7 @@ def parse_tuic(config: str) -> Optional[Dict]:
     except ValueError:
         return None
     
-    params = parse_qs(url.query)
+    params = parse_qs(_fix_query_string(url.query))
     
     return {
         'address': url.hostname,
