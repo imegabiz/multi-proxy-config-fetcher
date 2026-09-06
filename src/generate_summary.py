@@ -47,10 +47,10 @@ def count_raw_fetched(path='configs/channel_stats.json'):
     try:
         with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        history = data.get('history', [])
-        if not history:
+        channels = data.get('channels', [])
+        if not channels:
             return None
-        return history[-1].get('total_valid_configs')
+        return sum(c.get('metrics', {}).get('unique_configs', 0) for c in channels)
     except FileNotFoundError:
         return None
     except Exception:
