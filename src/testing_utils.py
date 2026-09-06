@@ -5,19 +5,23 @@ import signal
 import subprocess
 import logging
 import requests
-from typing import List
+from typing import List, Optional, Set
 from contextlib import closing, contextmanager
 
 logger = logging.getLogger(__name__)
 
-def find_free_port() -> int:
-    max_attempts = 10
+def find_free_port(exclude: Optional[Set[int]] = None) -> int:
+    exclude = exclude or set()
+    max_attempts = 20
     for attempt in range(max_attempts):
         with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
             try:
                 s.bind(('127.0.0.1', 0))
                 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                 port = s.getsockname()[1]
+
+                if port in exclude:
+                    continue
                 
                 with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as test_sock:
                     test_sock.settimeout(0.1)
