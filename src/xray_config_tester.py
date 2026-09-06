@@ -231,6 +231,7 @@ class XrayBatchTester:
                         diagnostic = ' | '.join(diagnostic_lines)
                     logger.warning(f"Batch of {len(prepared)} failed to start ({diagnostic[:500]}), bisecting")
                     if len(prepared) == 1:
+                        logger.warning(f"Isolated failing config: {prepared[0][3][:300]}")
                         results[prepared[0][3]] = (False, None)
                         return results
                     mid = len(prepared) // 2
