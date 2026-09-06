@@ -4,13 +4,15 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-trojan://humanity@212.183.88.136:443?host=www.calmlunch.com&path=/assignment&security=tls&sni=www.calmlunch.com&type=ws#🇦🇹 3281 - AT - Trojan/WS/TLS - 443
+trojan://humanity@212.183.88.136:443?host=www.calmlunch.com&path=/assignment&security=tls&sni=www.calmlunch.com&type=ws#🇦🇹 3282 - AT - Trojan/WS/TLS - 443
 
-vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.184.122:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=at3.moritech.net&type=tcp#🇦🇹 1615 - AT - VLESS/TLS/VISION/UTLS - 443
+trojan://humanity@46.102.156.144:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇦🇹 3295 - AT - Trojan/WS/TLS - 2053
 
-vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.36.26:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=at2.moritech.net&type=tcp#🇦🇹 1618 - AT - VLESS/TLS/VISION/UTLS - 443
+vless://af00e0c4-decf-48f2-9013-56abe9c9efcd@150.241.72.143:12200?security=reality&encryption=none&pbk=Kjw_K41-jWxqzAMtOby5y0KREhyjybuHsAHfCEFo6Sc&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=au.windconnect.pro&sid=222afa5374b722b9#🇦🇹 1407 - AT - VLESS/REALITY/PBK/SID/VISION/UTLS - 12200
 
-vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.37.154:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=at1.moritech.net&type=tcp#🇦🇹 1619 - AT - VLESS/TLS/VISION/UTLS - 443
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.36.26:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=at2.moritech.net&type=tcp#🇦🇹 1617 - AT - VLESS/TLS/VISION/UTLS - 443
 
-vless://edde565e-41f5-400e-84ea-7b87a3e84488@152.53.1.40:443?security=reality&type=tcp&packetEncoding=xudp&sni=at.quattro-tech.ru&fp=qq&flow=xtls-rprx-vision&sid=43dcff53849b81e6&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc#🇦🇹 1858 - AT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.37.154:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=at1.moritech.net&type=tcp#🇦🇹 1618 - AT - VLESS/TLS/VISION/UTLS - 443
+
+vless://edde565e-41f5-400e-84ea-7b87a3e84488@152.53.1.40:443?security=reality&type=tcp&packetEncoding=xudp&sni=at.quattro-tech.ru&fp=qq&flow=xtls-rprx-vision&sid=43dcff53849b81e6&pbk=10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc#🇦🇹 1855 - AT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
