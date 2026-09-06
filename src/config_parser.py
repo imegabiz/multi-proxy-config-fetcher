@@ -431,3 +431,33 @@ def compute_identity(config: str) -> str:
     if fragment_index != -1:
         cleaned = cleaned[:fragment_index]
     return cleaned.lower()
+
+def extract_address(config: str) -> Optional[str]:
+    try:
+        config_lower = config.lower()
+        data = None
+
+        if config_lower.startswith('vmess://'):
+            data = decode_vmess(config)
+            if data and 'add' in data:
+                return data['add']
+
+        elif config_lower.startswith('vless://'):
+            data = parse_vless(config)
+
+        elif config_lower.startswith('trojan://'):
+            data = parse_trojan(config)
+
+        elif config_lower.startswith(('hysteria2://', 'hy2://')):
+            data = parse_hysteria2(config)
+
+        elif config_lower.startswith('ss://'):
+            data = parse_shadowsocks(config)
+
+        if data and 'address' in data:
+            return data['address']
+
+        return None
+    except Exception as e:
+        logger.debug(f"Failed to extract address from config: {e}")
+        return None
