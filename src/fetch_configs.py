@@ -342,8 +342,8 @@ def save_configs(configs: List[str], config: ProxyConfig):
 
 """
             f.write(header)
-            for config in configs:
-                f.write(config + '\n\n')
+            for cfg in configs:
+                f.write(cfg + '\n\n')
         logger.info(f"Successfully saved {len(configs)} configs to {config.OUTPUT_FILE}")
     except Exception as e:
         logger.error(f"Error saving configs: {str(e)}")
