@@ -144,6 +144,7 @@ def build_xray_settings(data: Dict) -> Dict:
             stream_settings["realitySettings"] = {
                 "serverName": data.get('sni', address),
                 "publicKey": data.get('pbk', ''),
+                "password": data.get('pbk', ''),
                 "shortId": data.get('sid', ''),
                 "fingerprint": data.get('fp', 'chrome')
             }
