@@ -45,6 +45,10 @@ class ConfigEnricher:
             api['domain']: threading.Semaphore(self.MAX_CONCURRENT_PER_DOMAIN)
             for api in self.location_apis
         }
+        self.domain_discovery_locks: Dict[str, threading.Lock] = {
+            api['domain']: threading.Lock()
+            for api in self.location_apis
+        }
 
 
     def _clean_domain(self, api_input: str) -> str:
@@ -205,49 +209,39 @@ class ConfigEnricher:
         
         return None, None
 
-    def get_location_from_api(self, ip: str, api_config: dict) -> Tuple[str, str]:
-        domain = api_config['domain']
-        semaphore = self.domain_semaphores.get(domain)
-
-        with self.cache_lock:
-            if domain in self.disabled_domains:
-                return '', ''
-            if time.time() < self.domain_cooldown_until.get(domain, 0):
-                return '', ''
-            cached_pattern = self.successful_patterns.get(domain)
-
-        if cached_pattern:
-            url = cached_pattern.format(ip=ip)
-            if semaphore:
-                with semaphore:
-                    data, retry_after = self._test_url(url)
-            else:
+    def _query_cached_pattern(self, domain: str, ip: str, cached_pattern: str, semaphore) -> Tuple[str, str]:
+        url = cached_pattern.format(ip=ip)
+        if semaphore:
+            with semaphore:
                 data, retry_after = self._test_url(url)
+        else:
+            data, retry_after = self._test_url(url)
 
-            if retry_after is not None:
-                with self.cache_lock:
-                    self.domain_cooldown_until[domain] = time.time() + retry_after
-                logger.debug(f"{domain} rate-limited, cooling down for {retry_after}s")
-                return '', ''
-
-            if data:
-                country_code, country_name = self._extract_country_data(data)
-                if country_code and country_name:
-                    with self.cache_lock:
-                        self.consecutive_failures[domain] = 0
-                    return country_code, country_name
-
+        if retry_after is not None:
             with self.cache_lock:
-                self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
-                if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES \
-                        and domain not in self.disabled_domains:
-                    logger.warning(
-                        f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
-                    )
-                    self.disabled_domains.add(domain)
-            logger.debug(f"Failed: {domain} - known-good pattern failed for this address")
+                self.domain_cooldown_until[domain] = time.time() + retry_after
+            logger.debug(f"{domain} rate-limited, cooling down for {retry_after}s")
             return '', ''
 
+        if data:
+            country_code, country_name = self._extract_country_data(data)
+            if country_code and country_name:
+                with self.cache_lock:
+                    self.consecutive_failures[domain] = 0
+                return country_code, country_name
+
+        with self.cache_lock:
+            self.consecutive_failures[domain] = self.consecutive_failures.get(domain, 0) + 1
+            if self.consecutive_failures[domain] >= self.DISABLE_AFTER_CONSECUTIVE_FAILURES \
+                    and domain not in self.disabled_domains:
+                logger.warning(
+                    f"Disabling {domain} after {self.consecutive_failures[domain]} consecutive failed lookups"
+                )
+                self.disabled_domains.add(domain)
+        logger.debug(f"Failed: {domain} - known-good pattern failed for this address")
+        return '', ''
+
+    def _discover_and_query(self, domain: str, ip: str, semaphore) -> Tuple[str, str]:
         url_patterns = self._generate_url_patterns(domain, ip)
 
         for url in url_patterns:
@@ -284,6 +278,35 @@ class ConfigEnricher:
                 self.disabled_domains.add(domain)
         logger.debug(f"Failed: {domain} - no working pattern for this address")
         return '', ''
+
+    def get_location_from_api(self, ip: str, api_config: dict) -> Tuple[str, str]:
+        domain = api_config['domain']
+        semaphore = self.domain_semaphores.get(domain)
+
+        with self.cache_lock:
+            if domain in self.disabled_domains:
+                return '', ''
+            if time.time() < self.domain_cooldown_until.get(domain, 0):
+                return '', ''
+            cached_pattern = self.successful_patterns.get(domain)
+
+        if cached_pattern:
+            return self._query_cached_pattern(domain, ip, cached_pattern, semaphore)
+
+        discovery_lock = self.domain_discovery_locks.get(domain)
+        if discovery_lock is None:
+            return self._discover_and_query(domain, ip, semaphore)
+
+        with discovery_lock:
+            with self.cache_lock:
+                if domain in self.disabled_domains or time.time() < self.domain_cooldown_until.get(domain, 0):
+                    return '', ''
+                cached_pattern = self.successful_patterns.get(domain)
+
+            if cached_pattern:
+                return self._query_cached_pattern(domain, ip, cached_pattern, semaphore)
+
+            return self._discover_and_query(domain, ip, semaphore)
 
     def get_location(self, address: str) -> tuple:
         with self.cache_lock:
