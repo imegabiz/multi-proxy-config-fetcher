@@ -216,6 +216,10 @@ jobs:
       - name: Replace raw configs with tested configs for default subscription link
         run: cp configs/proxy_configs_tested.txt configs/proxy_configs.txt
       
+      - name: Split tested configs by country
+        run: python src/country_splitter.py configs/proxy_configs_tested.txt configs/location_cache.json configs/location
+        continue-on-error: true
+      
       - name: Convert configs to sing-box format
         run: python src/config_to_singbox.py
       
@@ -287,6 +291,7 @@ jobs:
           git add configs/xray_fragment_loadbalanced_config.json
           git add configs/xray_secure_loadbalanced_config.json
           git add configs/channel_stats.json
+          git add configs/location/
           git add assets/
           git add README.md
           git add README_FA.md
