@@ -18,7 +18,7 @@ VALID_SS_METHODS = {
     'chacha20', 'chacha20-ietf', 'rc4-md5'
 }
 
-VALID_VLESS_FLOWS = {'', 'xtls-rprx-origin', 'xtls-rprx-direct', 'xtls-rprx-vision'}
+VALID_VLESS_FLOWS = {'', 'xtls-rprx-vision'}
 VALID_VLESS_SECURITY = {'none', 'tls', 'reality', 'xtls'}
 VALID_TRANSPORT_TYPES = {'tcp', 'kcp', 'ws', 'http', 'h2', 'quic', 'grpc', 'httpupgrade', 'splithttp', 'xhttp', 'raw'}
 VALID_XHTTP_MODES = {'auto', 'packet-up', 'stream-up', 'stream-one'}
@@ -162,6 +162,10 @@ def parse_trojan(config: str) -> Optional[Dict]:
     if mode not in VALID_XHTTP_MODES:
         mode = ''
     
+    trojan_flow = params.get('flow', [''])[0].lower()
+    if trojan_flow and trojan_flow not in VALID_VLESS_FLOWS:
+        trojan_flow = ''
+
     return {
         'password': url.username,
         'address': url.hostname,
@@ -173,7 +177,7 @@ def parse_trojan(config: str) -> Optional[Dict]:
         'host': params.get('host', [url.hostname])[0],
         'security': params.get('security', ['tls'])[0],
         'fp': params.get('fp', [''])[0],
-        'flow': params.get('flow', [''])[0],
+        'flow': trojan_flow,
         'mode': mode,
         'name': unquote(url.fragment) if url.fragment else ''
     }
