@@ -219,7 +219,12 @@ class XrayBatchTester:
                     stderr = process.stderr.read().decode('utf-8', errors='ignore') if process.stderr else ''
                     stdout = process.stdout.read().decode('utf-8', errors='ignore') if process.stdout else ''
                     diagnostic = (stderr or stdout).strip()
-                    logger.warning(f"Batch of {len(prepared)} failed to start ({diagnostic[:150]}), bisecting")
+                    diagnostic_lines = [
+                        line for line in diagnostic.splitlines()
+                        if line.strip() and not line.strip().startswith('Xray ')
+                    ]
+                    diagnostic = ' | '.join(diagnostic_lines).strip() or diagnostic
+                    logger.warning(f"Batch of {len(prepared)} failed to start ({diagnostic[:350]}), bisecting")
                     if len(prepared) == 1:
                         results[prepared[0][3]] = (False, None)
                         return results
