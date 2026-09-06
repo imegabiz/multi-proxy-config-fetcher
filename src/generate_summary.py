@@ -43,6 +43,19 @@ def count_clash_proxies(path):
     except Exception:
         return None
 
+def count_raw_fetched(path='configs/channel_stats.json'):
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        history = data.get('history', [])
+        if not history:
+            return None
+        return history[-1].get('total_valid_configs')
+    except FileNotFoundError:
+        return None
+    except Exception:
+        return None
+
 def format_count(value):
     if value is None:
         return '⚠️ missing'
@@ -51,7 +64,7 @@ def format_count(value):
 def build_summary():
     rows = []
 
-    rows.append(('Raw fetched', 'configs/proxy_configs.txt', format_count(count_txt_configs('configs/proxy_configs.txt'))))
+    rows.append(('Raw fetched', 'configs/channel_stats.json', format_count(count_raw_fetched('configs/channel_stats.json'))))
     rows.append(('Xray-tested', 'configs/proxy_configs_tested.txt', format_count(count_txt_configs('configs/proxy_configs_tested.txt'))))
     rows.append(('Sing-box all', 'configs/singbox_configs_all.json', format_count(count_singbox_outbounds('configs/singbox_configs_all.json'))))
     rows.append(('Sing-box tested', 'configs/singbox_configs_tested.json', format_count(count_singbox_outbounds('configs/singbox_configs_tested.json'))))
