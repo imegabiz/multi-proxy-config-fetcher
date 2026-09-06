@@ -367,36 +367,6 @@ class ConfigEnricher:
             self.resolved_locations[address] = result
         return result
 
-    def extract_address(self, config: str) -> Optional[str]:
-        try:
-            config_lower = config.lower()
-            data = None
-            
-            if config_lower.startswith('vmess://'):
-                data = parser.decode_vmess(config)
-                if data and 'add' in data:
-                    return data['add']
-            
-            elif config_lower.startswith('vless://'):
-                data = parser.parse_vless(config)
-            
-            elif config_lower.startswith('trojan://'):
-                data = parser.parse_trojan(config)
-            
-            elif config_lower.startswith(('hysteria2://', 'hy2://')):
-                data = parser.parse_hysteria2(config)
-            
-            elif config_lower.startswith('ss://'):
-                data = parser.parse_shadowsocks(config)
-            
-            if data and 'address' in data:
-                return data['address']
-            
-            return None
-        except Exception as e:
-            logger.debug(f"Failed to extract address from config: {e}")
-            return None
-
     def process_configs(self, input_file: str, output_file: str):
         if os.path.exists(output_file):
             try:
@@ -427,7 +397,7 @@ class ConfigEnricher:
 
         unique_addresses = set()
         for config in configs:
-            address = self.extract_address(config)
+            address = parser.extract_address(config)
             if address:
                 unique_addresses.add(address)
 
