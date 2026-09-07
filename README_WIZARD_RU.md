@@ -124,14 +124,15 @@ pkg install sing-box -y
 2.  Enrich Configs                   Определение геолокации серверов
 3.  Rename Configs                   Применение описательных тегов
 4.  Test with Xray                   Многораундовое тестирование - ядро Xray
-5.  Convert to Sing-box              Построение формата JSON для Sing-box
-6.  Test with Sing-box               Многораундовое тестирование - ядро Sing-box
-7.  Security Filter                  Удаление небезопасных конфигов, пересборка безопасных версий
-8.  Generate Clash YAML              Построение конфигураций Clash/Mihomo
-9.  Generate Xray Balanced Config     Построение сбалансированной конфигурации Xray
-10. Generate Xray Fragment Config     Построение конфигурации Xray с Fragment (анти-DPI)
-11. Generate Charts                  Построение диаграмм производительности
-12. Generate Pipeline Summary         Вывод количества конфигураций на каждом этапе
+5.  Split Configs by Country         Разбиение протестированных конфигураций на 25 файлов по странам
+6.  Convert to Sing-box              Построение формата JSON для Sing-box
+7.  Test with Sing-box               Многораундовое тестирование - ядро Sing-box
+8.  Security Filter                  Удаление небезопасных конфигов, пересборка безопасных версий
+9.  Generate Clash YAML              Построение конфигураций Clash/Mihomo
+10. Generate Xray Balanced Config     Построение сбалансированной конфигурации Xray
+11. Generate Xray Fragment Config     Построение конфигурации Xray с Fragment (анти-DPI)
+12. Generate Charts                  Построение диаграмм производительности
+13. Generate Pipeline Summary         Вывод количества конфигураций на каждом этапе
 ```
 
 ### Однократный запуск:
@@ -150,6 +151,7 @@ bash run.sh
 |------|----------|------------------------|
 | `proxy_configs.txt` | Сырые конфигурации | v2rayNG, v2rayN |
 | `proxy_configs_tested.txt` | Протестировано Xray | v2rayNG, v2rayN ⭐ |
+| `location/<CC>/proxy_configs.txt` | Протестировано Xray, сгруппировано по стране сервера (25 папок стран, например `US`, `DE`, `GB`) | v2rayNG, v2rayN 🌍 |
 | `singbox_configs_all.json` | Все конфигурации, формат Sing-box | SFA, Hiddify, NekoBox |
 | `singbox_configs_tested.json` | Протестировано Sing-box | SFA, Hiddify, NekoBox ⭐ |
 | `singbox_configs_secure.json` | Протестировано и отфильтровано по безопасности | SFA, Hiddify 🛡️⭐ |
@@ -160,7 +162,7 @@ bash run.sh
 | `xray_loadbalanced_config.json` | Балансировщик нагрузки Xray | v2rayNG, v2rayN, Nekoray ⭐ |
 | `xray_fragment_loadbalanced_config.json` | Балансировщик нагрузки Xray с продвинутой двухэтапной фрагментацией TLS для большей устойчивости к DPI | v2rayNG, v2rayN, Nekoray 🧩⭐ |
 
-⭐ = Рекомендуется · 🛡️ = Повышенная безопасность · 🧩 = Фрагментация против цензуры
+⭐ = Рекомендуется · 🛡️ = Повышенная безопасность · 🧩 = Фрагментация против цензуры · 🌍 = По странам
 
 ---
 
@@ -221,6 +223,12 @@ URL подписки:
 http://YOUR_IP:8080/proxy_configs_tested.txt
 ```
 В v2rayNG: **Subscription → Add Subscription → ввести URL → Update**
+
+Нужны серверы только одной страны? Раздайте папку `configs` так же, а затем используйте адрес вида:
+```
+http://YOUR_IP:8080/location/US/proxy_configs.txt
+```
+Замените `US` на любой из 25 доступных кодов стран (`DE`, `GB`, `FR`, `JP` и другие).
 
 **Способ 2: прямой импорт JSON**
 ```bash
