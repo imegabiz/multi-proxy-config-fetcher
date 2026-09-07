@@ -44,8 +44,6 @@ def apply_fragment(stream_settings: Dict) -> Dict:
     stream_settings["finalmask"] = build_finalmask()
 
     tls_settings = stream_settings.get("tlsSettings")
-    if tls_settings is None:
-        tls_settings = stream_settings.get("xtlsSettings")
 
     if tls_settings is not None:
         if FRAGMENT_TLS_FINGERPRINT:
