@@ -19,8 +19,9 @@
 ### **[👉 Anonymous Proxy Hub - دسترسی به همه نقاط](https://4n0nymou3.github.io/Anonymous-Proxy-Hub/)**
 
 رابط وب شامل:
-- **۱۱ نقطه دسترسی متفاوت** برای استفاده‌های مختلف
+- **۳۶ نقطه دسترسی متفاوت** برای استفاده‌های مختلف
 - **پیکربندی‌های خام** — پیکربندی‌های اصلی بدون فیلتر
+- **بر اساس کشور** — پیکربندی‌های آزمایش‌شده با Xray که بر اساس کشور سرور در ۲۵ کشور محبوب دسته‌بندی شده‌اند، هرکدام با لینک اشتراک مخصوص خودش
 - **آزمایش‌شده با Xray** — پیکربندی‌هایی که با هسته‌ی Xray بررسی شده‌اند
 - **Xray بارگذاری‌شده متعادل** — پیکربندی‌های JSON با تعادل بار هوشمند
 - **Xray بارگذاری‌شده متعادل با Fragment** — همان پیکربندی‌های متعادل Xray به‌همراه مکانیزم پیشرفته‌ی قطعه‌بندی دومرحله‌ای TLS برای مقاومت بیشتر در برابر فیلترینگ
@@ -79,23 +80,28 @@
    - برچسب‌گذاری با ایموجی پرچم کشور
    - پشتیبانی از چند API موقعیت‌یابی
    - سیستم پشتیبان هوشمند
-3. **تغییر نام هوشمند**
+3. **توزیع بر اساس کشور**
+   - پیکربندی‌های آزمایش‌شده با Xray به‌صورت خودکار بر اساس کشور سرور دسته‌بندی می‌شوند
+   - شامل ۲۵ کشور محبوب، هرکدام با یک فایل اشتراک اختصاصی
+   - از داده‌ی موقعیت جغرافیایی که از قبل جمع‌آوری شده استفاده می‌کند، بدون هیچ فراخوانی اضافه به API
+   - اگر در یک اجرا هیچ پیکربندی‌ای برای یک کشور پیدا نشود، فایل قبلی آن کشور دست‌نخورده باقی می‌ماند و خالی نمی‌شود
+4. **تغییر نام هوشمند**
    - برچسب‌های توصیفی با جزئیات پروتکل
    - تشخیص نوع ترنسپورت (WS, GRPC, HTTP2 و غیره)
    - تشخیص ویژگی‌های امنیتی (TLS, Reality, XTLS, Vision)
    - اطلاعات پورت و کشور
-4. **سیستم آزمایش چنددوره‌ای با دو هسته**
+5. **سیستم آزمایش چنددوره‌ای با دو هسته**
    - بررسی سلامت هم با هسته‌ی Xray و هم با هسته‌ی Sing-box
-   - هر هسته در چند دور مستقل تست می‌کند (به‌صورت پیش‌فرض ۲ دور) — یک کانفیگ فقط زمانی نگه داشته می‌شود که در همه‌ی دورها موفق باشد، که کانفیگ‌های بی‌ثبات را فیلتر می‌کند
+   - هر هسته در چند دور مستقل تست می‌کند (به‌صورت پیش‌فرض ۳ دور) — یک کانفیگ فقط زمانی نگه داشته می‌شود که در همه‌ی دورها موفق باشد، که کانفیگ‌های بی‌ثبات را فیلتر می‌کند
    - آدرس تست در هر دور می‌چرخد تا یک کانفیگ فقط بر اساس یک مقصد ثابت سنجیده نشود
    - آدرس‌های تست پیش از هر اجرا به‌صورت خودکار بررسی می‌شوند و هر آدرسی که در آن لحظه در دسترس نباشد کنار گذاشته می‌شود
    - تست موازی با کارگران، تایم‌اوت و آدرس‌های تست قابل تنظیم
-5. **فیلتر امنیتی**
+6. **فیلتر امنیتی**
    - حذف روش‌های رمزنگاری ناامن
    - اعتبارسنجی تنظیمات TLS/SSL
    - فیلتر کردن پروتکل‌های منسوخ
    - ایجاد فایل‌های جداگانه برای نقاط امن Xray، Sing-box و Clash
-6. **تبدیل فرمت**
+7. **تبدیل فرمت**
    - تبدیل خودکار به فرمت JSON برای Sing-box
    - تولید پیکربندی‌های متعادل‌شده Xray، شامل یک نسخه با قطعه‌بندی پیشرفته‌ی دومرحله‌ای TLS
    - تولید فایل YAML برای Clash/Mihomo
@@ -120,8 +126,9 @@
    - پارامترهای تست را تعیین کنید
    - ترجیحات API موقعیت‌یابی را تنظیم کنید
 3. در صورت تمایل، فایل `settings/fragment_settings.py` را برای سفارشی‌سازی قطعه‌بندی پیشرفته‌ی TLS مورد استفاده در نقطه‌ی دسترسی Fragment ویرایش کنید
-4. GitHub Actions را در مخزن فورک‌شده فعال کنید
-5. پیکربندی‌ها به‌صورت خودکار طبق زمان‌بندی پروژه به‌روز خواهند شد
+4. در صورت تمایل، دیکشنری `TARGET_COUNTRIES` در فایل `src/country_splitter.py` را ویرایش کنید تا لیست کشورهایی که فایل اشتراک اختصاصی دارند تغییر کند
+5. GitHub Actions را در مخزن فورک‌شده فعال کنید
+6. پیکربندی‌ها به‌صورت خودکار طبق زمان‌بندی پروژه به‌روز خواهند شد
 
 #### راه‌اندازی محلی
 
@@ -148,7 +155,7 @@ SOURCE_URLS = [
 
 # Power Mode
 USE_MAXIMUM_POWER = True  # Fetch maximum configs
-SPECIFIC_CONFIG_COUNT = 50  # Used if USE_MAXIMUM_POWER is False
+SPECIFIC_CONFIG_COUNT = 0  # Used if USE_MAXIMUM_POWER is False
 
 # Protocol Filtering
 ENABLED_PROTOCOLS = {
@@ -166,26 +173,26 @@ MAX_CONFIG_AGE_DAYS = 1
 
 # Xray Testing
 ENABLE_XRAY_TESTER = True
-XRAY_TESTER_MAX_WORKERS = 8
-XRAY_TESTER_TIMEOUT_SECONDS = 10
+XRAY_TESTER_MAX_WORKERS = 24
+XRAY_TESTER_TIMEOUT_SECONDS = 5
 XRAY_TESTER_URLS = [
     'https://www.youtube.com/generate_204',
     'https://www.gstatic.com/generate_204',
     'https://cp.cloudflare.com'
 ]
-XRAY_TESTER_ROUNDS = 2
+XRAY_TESTER_ROUNDS = 3
 XRAY_TESTER_BATCH_SIZE = 200
 
 # Sing-box Testing
 ENABLE_SINGBOX_TESTER = True
-SINGBOX_TESTER_MAX_WORKERS = 8
-SINGBOX_TESTER_TIMEOUT_SECONDS = 10
+SINGBOX_TESTER_MAX_WORKERS = 24
+SINGBOX_TESTER_TIMEOUT_SECONDS = 5
 SINGBOX_TESTER_URLS = [
     'https://www.youtube.com/generate_204',
     'https://www.gstatic.com/generate_204',
     'https://cp.cloudflare.com'
 ]
-SINGBOX_TESTER_ROUNDS = 2
+SINGBOX_TESTER_ROUNDS = 3
 SINGBOX_TESTER_BATCH_SIZE = 200
 
 # Geolocation APIs (in priority order)
@@ -232,6 +239,7 @@ FRAGMENT_TLS_CIPHER_SUITES = "TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA25
 
 - `configs/proxy_configs.txt` - پیکربندی‌های خام دریافت‌شده
 - `configs/proxy_configs_tested.txt` - پیکربندی‌های آزمایش‌شده با Xray
+- `configs/location/<CC>/proxy_configs.txt` - پیکربندی‌های آزمایش‌شده با Xray، دسته‌بندی‌شده بر اساس کشور سرور (۲۵ پوشه‌ی کشور، مثل `US`, `DE`, `GB`)
 - `configs/singbox_configs_all.json` - همه پیکربندی‌ها در فرمت Sing-box
 - `configs/singbox_configs_tested.json` - پیکربندی‌های تست‌شده Sing-box
 - `configs/singbox_configs_secure.json` - پیکربندی‌های Sing-box فیلترشده از نظر امنیت
@@ -260,15 +268,16 @@ FRAGMENT_TLS_CIPHER_SUITES = "TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA25
 2. غنی‌سازی با داده‌های مکانی
 3. تغییر نام با برچسب‌های توصیفی
 4. تست با Xray core (چنددوره‌ای)
-5. تبدیل به فرمت Sing-box
-6. تست با Sing-box core (چنددوره‌ای)
-7. فیلتر امنیتی و تولید خروجی‌های امن Sing-box و Xray
-8. تولید فایل‌های YAML برای Clash/Mihomo
-9. تولید پیکربندی متعادل‌شده Xray
-10. تولید پیکربندی متعادل‌شده Xray با Fragment
-11. به‌روزرسانی نمودارها و گزارش‌ها
-12. تولید خلاصه‌ی اجرای پایپ‌لاین
-13. commit و push تغییرات
+5. تفکیک پیکربندی‌های تست‌شده بر اساس کشور سرور
+6. تبدیل به فرمت Sing-box
+7. تست با Sing-box core (چنددوره‌ای)
+8. فیلتر امنیتی و تولید خروجی‌های امن Sing-box و Xray
+9. تولید فایل‌های YAML برای Clash/Mihomo
+10. تولید پیکربندی متعادل‌شده Xray
+11. تولید پیکربندی متعادل‌شده Xray با Fragment
+12. به‌روزرسانی نمودارها و گزارش‌ها
+13. تولید خلاصه‌ی اجرای پایپ‌لاین
+14. commit و push تغییرات
 
 ## 🛡️ ویژگی‌های امنیتی
 
