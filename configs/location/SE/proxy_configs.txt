@@ -4,15 +4,5 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://1648bb70-bd3f-410a-aa3c-ae26b05cef2e@91.186.218.227:4443?path=/@Marisa_kristi&security=tls&encryption=none&host=jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev&fp=chrome&type=ws&sni=jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev&ech=cloudflare-ech.com https://dns.alidns.com/dns-query#🇸🇪 1148 - SE - VLESS/WS/TLS/UTLS - 4443
-
-vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 1609 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://48312288-a6eb-4cf7-9d75-73ddad1c9d1a@213.21.229.126:12345?path=/@Marisa_kristi&security=tls&encryption=none&host=jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev&fp=chrome&type=ws&sni=jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev&ech=cloudflare-ech.com https://dns.alidns.com/dns-query#🇸🇪 3599 - SE - VLESS/WS/TLS/UTLS - 12345
-
-vless://95a2e49b-b15b-4834-9b14-df413e5a428c@213.21.229.126:12345?path=/@Marisa_kristi&security=tls&encryption=none&host=8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev&fp=chrome&type=ws&sni=8n9qi6t-owl.gevc9s4n60cc3wzcmwhjyezydpmbchocxp.workers.dev&ech=cloudflare-ech.com#🇸🇪 7546 - SE - VLESS/WS/TLS/UTLS - 12345
-
-vless://a2fbf2a0-4dcc-421e-9e88-dc11191e8156@213.21.229.126:12345?security=tls&type=ws&path=/@Marisa_kristi&host=ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev&sni=ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev&fp=chrome&encryption=none#🇸🇪 8534 - SE - VLESS/WS/TLS/UTLS - 12345
-
-vless://acc10ba5-a222-44b3-8a1a-4f247ffc6466@89.22.224.146:43788?encryption=none&security=tls&sni=c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev&type=ws&host=c6dbx99g6stb418qeo.t3jmlj0r152zji4htdkm9.workers.dev&path=/@Marisa_kristi#🇸🇪 9019 - SE - VLESS/WS/TLS - 43788
+vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 1614 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
