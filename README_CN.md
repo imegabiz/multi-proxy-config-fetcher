@@ -19,8 +19,9 @@
 ### **[👉 Anonymous Proxy Hub - 访问所有端点](https://4n0nymou3.github.io/Anonymous-Proxy-Hub/)**
 
 Web 界面提供：
-- **11 个不同的端点** 以满足不同使用场景
+- **36 个不同的端点** 以满足不同使用场景
 - **原始配置** — 未过滤的原始配置
+- **按国家分类** — 经 Xray 测试的配置，按服务器所在国家分为 25 个热门国家，每个国家都有独立的订阅链接
 - **Xray 测试** — 使用 Xray core 验证的配置
 - **Xray 负载均衡** — 智能负载均衡的 JSON 配置
 - **Xray Fragment 负载均衡** — 在负载均衡 JSON 配置基础上加入了两阶段高级 TLS 分片，以增强抗 DPI 检测能力
@@ -79,23 +80,28 @@ Web 界面提供：
    - 使用国家旗帜表情进行标记
    - 支持多个地理定位 API
    - 智能回退机制
-3. **智能重命名**
+3. **按国家分发**
+   - 经 Xray 测试的配置会自动按服务器所在国家分组
+   - 覆盖 25 个热门国家，每个国家都有专属的订阅文件
+   - 复用已经收集好的地理位置数据，不产生额外的 API 调用
+   - 如果某次运行中某个国家没有匹配到任何配置，其原有文件会保持不变，不会被清空
+4. **智能重命名**
    - 带协议细节的描述性标签
    - 传输类型识别（WS、GRPC、HTTP2 等）
    - 安全特性检测（TLS、Reality、XTLS、Vision）
    - 端口与国家信息
-4. **多轮双核心测试系统**
+5. **多轮双核心测试系统**
    - 同时使用 Xray core 与 Sing-box core 进行健康检查
-   - 每个 core 会进行多轮独立测试（默认 2 轮）——只有每一轮都通过的配置才会被保留，从而过滤掉不稳定的配置
+   - 每个 core 会进行多轮独立测试（默认 3 轮）——只有每一轮都通过的配置才会被保留，从而过滤掉不稳定的配置
    - 测试 URL 会在各轮之间轮换，避免配置只依据单一目标被判定
    - 每次运行前会自动预检测试 URL，当时不可用的端点会被跳过
    - 支持并行测试，worker 数量、超时时间和测试 URL 均可配置
-5. **安全过滤**
+6. **安全过滤**
    - 移除不安全的加密方法
    - 验证 TLS/SSL 配置
    - 过滤已弃用的协议
    - 为 Xray、Sing-box 和 Clash 分别生成安全端点文件
-6. **格式转换**
+7. **格式转换**
    - 自动转换为 Sing-box JSON 格式
    - 生成 Xray 负载均衡配置，包含带有两阶段高级 TLS 分片的版本
    - 生成 Clash/Mihomo YAML 配置
@@ -120,8 +126,9 @@ Web 界面提供：
    - 测试参数
    - 地理定位 API 优先级
 3. 如需自定义 Fragment 端点使用的高级 TLS 分片，可编辑 `settings/fragment_settings.py`
-4. 在你的 fork 中启用 GitHub Actions  
-5. 配置将按照项目的计划自动更新
+4. 如需更改哪些国家会拥有专属订阅文件，可编辑 `src/country_splitter.py` 中的 `TARGET_COUNTRIES` 字典
+5. 在你的 fork 中启用 GitHub Actions  
+6. 配置将按照项目的计划自动更新
 
 #### 本地部署
 
@@ -148,7 +155,7 @@ SOURCE_URLS = [
 
 # Power Mode
 USE_MAXIMUM_POWER = True  # Fetch maximum configs
-SPECIFIC_CONFIG_COUNT = 50  # Used if USE_MAXIMUM_POWER is False
+SPECIFIC_CONFIG_COUNT = 0  # Used if USE_MAXIMUM_POWER is False
 
 # Protocol Filtering
 ENABLED_PROTOCOLS = {
@@ -166,26 +173,26 @@ MAX_CONFIG_AGE_DAYS = 1
 
 # Xray Testing
 ENABLE_XRAY_TESTER = True
-XRAY_TESTER_MAX_WORKERS = 8
-XRAY_TESTER_TIMEOUT_SECONDS = 10
+XRAY_TESTER_MAX_WORKERS = 24
+XRAY_TESTER_TIMEOUT_SECONDS = 5
 XRAY_TESTER_URLS = [
     'https://www.youtube.com/generate_204',
     'https://www.gstatic.com/generate_204',
     'https://cp.cloudflare.com'
 ]
-XRAY_TESTER_ROUNDS = 2
+XRAY_TESTER_ROUNDS = 3
 XRAY_TESTER_BATCH_SIZE = 200
 
 # Sing-box Testing
 ENABLE_SINGBOX_TESTER = True
-SINGBOX_TESTER_MAX_WORKERS = 8
-SINGBOX_TESTER_TIMEOUT_SECONDS = 10
+SINGBOX_TESTER_MAX_WORKERS = 24
+SINGBOX_TESTER_TIMEOUT_SECONDS = 5
 SINGBOX_TESTER_URLS = [
     'https://www.youtube.com/generate_204',
     'https://www.gstatic.com/generate_204',
     'https://cp.cloudflare.com'
 ]
-SINGBOX_TESTER_ROUNDS = 2
+SINGBOX_TESTER_ROUNDS = 3
 SINGBOX_TESTER_BATCH_SIZE = 200
 
 # Geolocation APIs (in priority order)
@@ -232,6 +239,7 @@ FRAGMENT_TLS_CIPHER_SUITES = "TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA25
 
 - `configs/proxy_configs.txt` - 原始抓取的配置
 - `configs/proxy_configs_tested.txt` - Xray 测试通过的配置
+- `configs/location/<CC>/proxy_configs.txt` - 按服务器所在国家分类的、经 Xray 测试的配置（共 25 个国家文件夹，例如 `US`、`DE`、`GB`）
 - `configs/singbox_configs_all.json` - 以 Sing-box 格式保存的所有配置
 - `configs/singbox_configs_tested.json` - Sing-box 测试通过的配置
 - `configs/singbox_configs_secure.json` - 安全过滤后的 Sing-box 配置
@@ -260,15 +268,16 @@ FRAGMENT_TLS_CIPHER_SUITES = "TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA25
 2. 使用地理位置数据进行丰富
 3. 以描述性标签重命名
 4. 使用 Xray core 测试（多轮）
-5. 转换为 Sing-box 格式
-6. 使用 Sing-box core 测试（多轮）
-7. 进行安全过滤，并生成安全版的 Sing-box 与 Xray 输出
-8. 生成 Clash/Mihomo YAML 配置
-9. 生成 Xray 负载均衡配置
-10. 生成带 Fragment 的 Xray 负载均衡配置
-11. 更新图表和报告
-12. 生成流水线运行摘要
-13. 提交并推送更改
+5. 按服务器所在国家拆分测试通过的配置
+6. 转换为 Sing-box 格式
+7. 使用 Sing-box core 测试（多轮）
+8. 进行安全过滤，并生成安全版的 Sing-box 与 Xray 输出
+9. 生成 Clash/Mihomo YAML 配置
+10. 生成 Xray 负载均衡配置
+11. 生成带 Fragment 的 Xray 负载均衡配置
+12. 更新图表和报告
+13. 生成流水线运行摘要
+14. 提交并推送更改
 
 ## 🛡️ 安全功能
 
