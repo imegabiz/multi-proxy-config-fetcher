@@ -15,7 +15,6 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/Mahdi0024/ProxyCollector/master/sub/proxies.txt",
     "https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_universal.txt",
     "https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt",
-    "https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/cloudflare-base64.txt",
     "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",
     "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/mix",
     "https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/all_configs.txt",
@@ -23,7 +22,6 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/Ashkan-m/v2ray/main/Sub.txt",
     "https://raw.githubusercontent.com/arshiacomplus/v2rayExtractor/refs/heads/main/mix/sub.html",
     "https://raw.githubusercontent.com/v2FreeHub/v2hub-configs/refs/heads/main/Sub-AutoUpdate",
-    "https://openproxylist.com/v2ray/rawlist/text",
     "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat",
     "https://raw.githubusercontent.com/prominbro/sub/refs/heads/main/212.txt",
     "https://raw.githubusercontent.com/luxxuria/harvester/refs/heads/main/speed_tested.txt",
@@ -34,7 +32,6 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt",
     #"https://raw.githubusercontent.com/therealaleph/Iran-configs/refs/heads/main/ir_configs.txt",
     "https://t.me/s/persianvpnhub",
-    "https://t.me/s/oneclickvpnkeys",
 ]
 
 # Set to True to fetch the maximum possible number of configurations.
