@@ -4,7 +4,9 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-trojan://humanity@212.183.88.136:443?host=www.calmlunch.com&path=/assignment&security=tls&sni=www.calmlunch.com&type=ws#🇦🇹 6896 - AT - Trojan/WS/TLS - 443
+vless://af00e0c4-decf-48f2-9013-56abe9c9efcd@150.241.72.143:12200?security=reality&encryption=none&pbk=Kjw_K41-jWxqzAMtOby5y0KREhyjybuHsAHfCEFo6Sc&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=au.windconnect.pro&sid=222afa5374b722b9#🇦🇹 8896 - AT - VLESS/REALITY/PBK/SID/VISION/UTLS - 12200
 
-trojan://humanity@46.102.156.144:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇦🇹 6922 - AT - Trojan/WS/TLS - 2053
+trojan://humanity@212.183.88.136:443?host=www.calmlunch.com&path=/assignment&security=tls&sni=www.calmlunch.com&type=ws#🇦🇹 6895 - AT - Trojan/WS/TLS - 443
+
+trojan://humanity@46.102.156.144:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇦🇹 6921 - AT - Trojan/WS/TLS - 2053
 
