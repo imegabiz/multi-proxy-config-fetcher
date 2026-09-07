@@ -4,7 +4,7 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://92089155-6602-4122-86d4-fe6de20e8c4d@31.56.189.224:3443?encryption=none&flow=xtls-rprx-vision&pbk=-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo&security=reality&sid=a1b2c3d4&sni=special.aeternavpn.space&type=tcp#🇮🇩 7449 - ID - VLESS/REALITY/PBK/SID/VISION - 3443
+vless://92089155-6602-4122-86d4-fe6de20e8c4d@31.56.189.224:3443?security=reality&encryption=none&pbk=-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=special.aeternavpn.space&sid=a1b2c3d4#🇮🇩 7413 - ID - VLESS/REALITY/PBK/SID/VISION - 3443
 
-vless://92089155-6602-4122-86d4-fe6de20e8c4d@31.56.189.224:3443?security=reality&encryption=none&pbk=-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=special.aeternavpn.space&sid=a1b2c3d4#🇮🇩 7450 - ID - VLESS/REALITY/PBK/SID/VISION - 3443
+vless://92089155-6602-4122-86d4-fe6de20e8c4d@31.56.189.224:3443?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=special.aeternavpn.space&fp=firefox&flow=xtls-rprx-vision&sid=a1b2c3d4&pbk=-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo#🇮🇩 7414 - ID - VLESS/REALITY/PBK/SID/VISION/UTLS - 3443
 

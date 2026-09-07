@@ -4,13 +4,15 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://049e56d8-0ba0-49e3-b764-ee04122b9f00@57.131.32.191:80?path=/vless/&security=none&encryption=none&type=ws#🇮🇹 249 - IT - VLESS/WS - 80
+vless://049e56d8-0ba0-49e3-b764-ee04122b9f00@57.131.32.191:80?path=/vless/&security=none&encryption=none&type=ws#🇮🇹 269 - IT - VLESS/WS - 80
 
-vless://1e280316-0408-47c4-b058-05b8f1f17f02@57.131.32.191:80?encryption=none&security=none&fp=chrome&type=ws&host=ov-italy1.09vpn.com&path=/vless/#🇮🇹 1518 - IT - VLESS/WS/UTLS - 80
+vless://049e56d8-0ba0-49e3-b764-ee04122b9f00@ov-italy1.09vpn.com:80?encryption=none&host=ov-italy1.09vpn.com&path=/vless/&security=none&type=ws#🇮🇹 270 - IT - VLESS/WS - 80
 
-vless://1e280316-0408-47c4-b058-05b8f1f17f02@ov-italy1.09vpn.com:80?path=/vless/&security=none&encryption=none&type=ws#🇮🇹 1519 - IT - VLESS/WS - 80
+vless://1e280316-0408-47c4-b058-05b8f1f17f02@57.131.32.191:80?encryption=none&security=none&fp=chrome&type=ws&host=ov-italy1.09vpn.com&path=/vless/#🇮🇹 1496 - IT - VLESS/WS/UTLS - 80
 
-vless://9bbd487f-8f84-4ad7-b897-681c3f7d95dc@150.241.73.194:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=9hU6AMKLyYk7iFeX-JF_6bd5ek-0CdHmk7t38raL9T4&sid=2e11269895800a3c&sni=logomarket.mervi.icu#🇮🇹 7892 - IT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://1e280316-0408-47c4-b058-05b8f1f17f02@ov-italy1.09vpn.com:80?path=/vless/&security=none&encryption=none&type=ws#🇮🇹 1497 - IT - VLESS/WS - 80
 
-vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@158.180.231.216:443?type=ws&encryption=none&host=bab-6.site&path=/vws/&security=tls&sni=bab-6.site&fp=chrome&packetEncoding=xudp#🇮🇹 9490 - IT - VLESS/WS/TLS/UTLS - 443
+vless://9bbd487f-8f84-4ad7-b897-681c3f7d95dc@150.241.73.194:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=9hU6AMKLyYk7iFeX-JF_6bd5ek-0CdHmk7t38raL9T4&sid=2e11269895800a3c&sni=logomarket.mervi.icu#🇮🇹 7843 - IT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@158.180.231.216:443?type=ws&encryption=none&host=bab-6.site&path=/vws/&security=tls&sni=bab-6.site&fp=chrome&packetEncoding=xudp#🇮🇹 9445 - IT - VLESS/WS/TLS/UTLS - 443
 
