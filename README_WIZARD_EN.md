@@ -124,14 +124,15 @@ pkg install sing-box -y
 2.  Enrich Configs                   Detect server locations
 3.  Rename Configs                   Apply descriptive tags
 4.  Test with Xray                   Health test - multi-round, Xray core
-5.  Convert to Sing-box               Build the Sing-box JSON format
-6.  Test with Sing-box                Health test - multi-round, Sing-box core
-7.  Security Filter                  Remove insecure configs, rebuild secure outputs
-8.  Generate Clash YAML               Build Clash/Mihomo configs
-9.  Generate Xray Balanced Config     Build the load-balanced Xray config
-10. Generate Xray Fragment Config     Build the Fragment (anti-DPI) Xray config
-11. Generate Charts                  Build the performance charts
-12. Generate Pipeline Summary         Print a config count for every stage
+5.  Split Configs by Country         Group Xray-tested configs into 25 country files
+6.  Convert to Sing-box               Build the Sing-box JSON format
+7.  Test with Sing-box                Health test - multi-round, Sing-box core
+8.  Security Filter                  Remove insecure configs, rebuild secure outputs
+9.  Generate Clash YAML               Build Clash/Mihomo configs
+10. Generate Xray Balanced Config     Build the load-balanced Xray config
+11. Generate Xray Fragment Config     Build the Fragment (anti-DPI) Xray config
+12. Generate Charts                  Build the performance charts
+13. Generate Pipeline Summary         Print a config count for every stage
 ```
 
 ### Run once:
@@ -150,6 +151,7 @@ Each run also writes a timestamped log file under `logs/run_<date>.log`, and log
 |------|-------------|----------------|
 | `proxy_configs.txt` | Raw configs | v2rayNG, v2rayN |
 | `proxy_configs_tested.txt` | Xray-tested | v2rayNG, v2rayN ⭐ |
+| `location/<CC>/proxy_configs.txt` | Xray-tested, grouped by server country (25 country folders, e.g. `US`, `DE`, `GB`) | v2rayNG, v2rayN 🌍 |
 | `singbox_configs_all.json` | All configs, Sing-box format | SFA, Hiddify, NekoBox |
 | `singbox_configs_tested.json` | Sing-box tested | SFA, Hiddify, NekoBox ⭐ |
 | `singbox_configs_secure.json` | Tested & security-filtered | SFA, Hiddify 🛡️⭐ |
@@ -160,7 +162,7 @@ Each run also writes a timestamped log file under `logs/run_<date>.log`, and log
 | `xray_loadbalanced_config.json` | Xray load balancer | v2rayNG, v2rayN, Nekoray ⭐ |
 | `xray_fragment_loadbalanced_config.json` | Xray load balancer with advanced two-stage TLS fragmentation for stronger DPI resistance | v2rayNG, v2rayN, Nekoray 🧩⭐ |
 
-⭐ = Recommended · 🛡️ = High security · 🧩 = Anti-censorship fragmentation
+⭐ = Recommended · 🛡️ = High security · 🧩 = Anti-censorship fragmentation · 🌍 = Per-country
 
 ---
 
@@ -221,6 +223,12 @@ Subscription URL:
 http://YOUR_IP:8080/proxy_configs_tested.txt
 ```
 In v2rayNG: **Subscription → Add Subscription → Enter URL → Update**
+
+Want only servers from one country? Serve the `configs` folder the same way, then use a URL like:
+```
+http://YOUR_IP:8080/location/US/proxy_configs.txt
+```
+Replace `US` with any of the 25 available country codes (`DE`, `GB`, `FR`, `JP`, and so on).
 
 **Method 2: Direct JSON import**
 ```bash
