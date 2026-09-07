@@ -246,16 +246,13 @@ class ConfigRenamer:
             
             if 'vision' in flow:
                 info_parts.append('VISION')
-            elif 'xtls-rprx-direct' in flow:
-                info_parts.append('DIRECT')
-            elif 'xtls' in flow:
-                info_parts.append('XTLS-FLOW')
             
             if data.get('fp'):
                 info_parts.append('UTLS')
         
         elif protocol_type == "Trojan":
             transport_type = data.get('type', 'tcp').lower()
+            security = data.get('security', 'tls').lower()
             flow = data.get('flow', '').lower()
             
             if transport_type == 'ws':
@@ -274,13 +271,18 @@ class ConfigRenamer:
                 info_parts.append('HTTPUPGRADE')
             elif transport_type in ('http', 'h2'):
                 info_parts.append('HTTP2')
-                
-            info_parts.append('TLS')
+            
+            if security == 'reality':
+                info_parts.append('REALITY')
+                if data.get('pbk'):
+                    info_parts.append('PBK')
+                if data.get('sid'):
+                    info_parts.append('SID')
+            else:
+                info_parts.append('TLS')
             
             if 'vision' in flow:
                 info_parts.append('VISION')
-            elif 'xtls' in flow:
-                info_parts.append('XTLS')
             
             if data.get('fp'):
                 info_parts.append('UTLS')
