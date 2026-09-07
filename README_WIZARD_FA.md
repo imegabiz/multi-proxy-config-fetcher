@@ -124,14 +124,15 @@ pkg install sing-box -y
 ۲.  Enrich Configs                   تشخیص موقعیت جغرافیایی سرورها
 ۳.  Rename Configs                   اعمال برچسب‌های توصیفی
 ۴.  Test with Xray                   تست سلامت چنددوره‌ای با هسته‌ی Xray
-۵.  Convert to Sing-box              ساخت فرمت JSON برای Sing-box
-۶.  Test with Sing-box               تست سلامت چنددوره‌ای با هسته‌ی Sing-box
-۷.  Security Filter                  حذف کانفیگ‌های ناامن و بازسازی خروجی‌های امن
-۸.  Generate Clash YAML              ساخت کانفیگ‌های Clash/Mihomo
-۹.  Generate Xray Balanced Config     ساخت کانفیگ متعادل‌شده‌ی Xray
-۱۰. Generate Xray Fragment Config     ساخت کانفیگ Xray با Fragment (ضدفیلترینگ)
-۱۱. Generate Charts                  ساخت نمودارهای عملکرد
-۱۲. Generate Pipeline Summary         نمایش تعداد کانفیگ در هر مرحله
+۵.  Split Configs by Country         تفکیک کانفیگ‌های تست‌شده به ۲۵ فایل کشوری
+۶.  Convert to Sing-box              ساخت فرمت JSON برای Sing-box
+۷.  Test with Sing-box               تست سلامت چنددوره‌ای با هسته‌ی Sing-box
+۸.  Security Filter                  حذف کانفیگ‌های ناامن و بازسازی خروجی‌های امن
+۹.  Generate Clash YAML              ساخت کانفیگ‌های Clash/Mihomo
+۱۰. Generate Xray Balanced Config     ساخت کانفیگ متعادل‌شده‌ی Xray
+۱۱. Generate Xray Fragment Config     ساخت کانفیگ Xray با Fragment (ضدفیلترینگ)
+۱۲. Generate Charts                  ساخت نمودارهای عملکرد
+۱۳. Generate Pipeline Summary         نمایش تعداد کانفیگ در هر مرحله
 ```
 
 ### اجرای یک‌باره:
@@ -150,6 +151,7 @@ bash run.sh
 |------|-------|----------------|
 | `proxy_configs.txt` | کانفیگ‌های خام | v2rayNG, v2rayN |
 | `proxy_configs_tested.txt` | تست‌شده با Xray | v2rayNG, v2rayN ⭐ |
+| `location/<CC>/proxy_configs.txt` | تست‌شده با Xray، دسته‌بندی‌شده بر اساس کشور سرور (۲۵ پوشه‌ی کشور، مثل `US`, `DE`, `GB`) | v2rayNG, v2rayN 🌍 |
 | `singbox_configs_all.json` | همه کانفیگ‌ها، فرمت Sing-box | SFA, Hiddify, NekoBox |
 | `singbox_configs_tested.json` | تست‌شده با Sing-box | SFA, Hiddify, NekoBox ⭐ |
 | `singbox_configs_secure.json` | تست‌شده و فیلترشده از نظر امنیت | SFA, Hiddify 🛡️⭐ |
@@ -160,7 +162,7 @@ bash run.sh
 | `xray_loadbalanced_config.json` | تعادل بار Xray | v2rayNG, v2rayN, Nekoray ⭐ |
 | `xray_fragment_loadbalanced_config.json` | تعادل بار Xray با قطعه‌بندی پیشرفته‌ی دومرحله‌ای TLS برای مقاومت بیشتر در برابر فیلترینگ | v2rayNG, v2rayN, Nekoray 🧩⭐ |
 
-⭐ = پیشنهادی · 🛡️ = امنیت بالا · 🧩 = قطعه‌بندی ضدفیلترینگ
+⭐ = پیشنهادی · 🛡️ = امنیت بالا · 🧩 = قطعه‌بندی ضدفیلترینگ · 🌍 = مخصوص هر کشور
 
 ---
 
@@ -221,6 +223,12 @@ python3 -m http.server 8080
 http://YOUR_IP:8080/proxy_configs_tested.txt
 ```
 در v2rayNG: **Subscription ← Add Subscription ← وارد کردن URL ← Update**
+
+فقط سرورهای یک کشور خاص رو می‌خواید؟ پوشه‌ی `configs` رو به همون روش سرو کنید، بعد از آدرسی مثل این استفاده کنید:
+```
+http://YOUR_IP:8080/location/US/proxy_configs.txt
+```
+به‌جای `US` می‌تونید از هر کدوم از ۲۵ کد کشور موجود استفاده کنید (`DE`, `GB`, `FR`, `JP` و غیره).
 
 **روش ۲: وارد کردن مستقیم JSON**
 ```bash
