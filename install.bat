@@ -22,12 +22,7 @@ echo      - Restart your computer
 echo      - Open Ubuntu from Start Menu
 echo      - Run: bash install.sh
 echo.
-echo   2. Git Bash
-echo      - Install Git for Windows: https://git-scm.com/download/win
-echo      - Open Git Bash
-echo      - Run: bash install.sh
-echo.
-echo   3. Docker (Advanced)
+echo   2. Docker (Advanced)
 echo      - Install Docker Desktop
 echo      - Run the project in a Linux container
 echo.
