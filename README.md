@@ -19,8 +19,9 @@ All proxy configurations and endpoints are available through our unified web int
 ### **[👉 Anonymous Proxy Hub - Access All Endpoints](https://4n0nymou3.github.io/Anonymous-Proxy-Hub/)**
 
 The web interface provides:
-- **11 Different Endpoints** for various use cases
+- **36 Different Endpoints** for various use cases
 - **Raw Configurations** - Unfiltered original configs
+- **By Country** - Xray-tested configs grouped into 25 popular countries, each with its own subscription link
 - **Xray Tested** - Configs verified with Xray core
 - **Xray Load Balanced** - Smart load-balanced JSON configs
 - **Xray Fragment Load Balanced** - Load-balanced JSON configs with advanced two-stage TLS fragmentation for stronger DPI resistance
@@ -79,23 +80,28 @@ Sources scoring below 30% are automatically disabled to maintain system quality.
    - Country flag emoji tagging
    - Support for multiple geolocation APIs
    - Intelligent fallback system
-3. **Smart Renaming**
+3. **Country-Based Distribution**
+   - Xray-tested configs are automatically grouped by server country
+   - Covers 25 popular countries, each getting its own dedicated subscription file
+   - Reuses the geolocation data already collected, with no extra API calls
+   - A country with no matching configs in a given run keeps its previous file untouched instead of being emptied
+4. **Smart Renaming**
    - Descriptive tags with protocol details
    - Transport type identification (WS, GRPC, HTTP2, etc.)
    - Security feature detection (TLS, Reality, XTLS, Vision)
    - Port and country information
-4. **Multi-Round, Two-Core Testing System**
+5. **Multi-Round, Two-Core Testing System**
    - Health checks using both the Xray core and the Sing-box core
-   - Each core tests in multiple independent rounds (2 by default) - a config is only kept if it passes every round, filtering out unstable "flaky" configs
+   - Each core tests in multiple independent rounds (3 by default) - a config is only kept if it passes every round, filtering out unstable "flaky" configs
    - The test URL is rotated between rounds so configs aren't judged against a single destination
    - Test URLs are automatically pre-checked before each run, and any endpoint that is unreachable at that moment is skipped
    - Parallel testing with configurable workers, timeout, and test URLs
-5. **Security Filtering**
+6. **Security Filtering**
    - Removes insecure encryption methods
    - Validates TLS/SSL configurations
    - Filters deprecated protocols
    - Generates separate secure endpoint files for Xray, Sing-box, and Clash
-6. **Format Conversion**
+7. **Format Conversion**
    - Automatic conversion to Sing-box JSON format
    - Xray load-balanced configuration generation, including a variant with advanced two-stage TLS fragmentation
    - Clash/Mihomo YAML configuration generation
@@ -120,8 +126,9 @@ Sources scoring below 30% are automatically disabled to maintain system quality.
    - Testing parameters
    - Geolocation API preferences
 3. Edit `settings/fragment_settings.py` if you want to customize the advanced TLS fragmentation used in the Fragment endpoint
-4. Enable GitHub Actions in your forked repository
-5. Configurations will auto-update automatically on the project's schedule
+4. Edit the `TARGET_COUNTRIES` dictionary in `src/country_splitter.py` if you want to change which countries get their own subscription file
+5. Enable GitHub Actions in your forked repository
+6. Configurations will auto-update automatically on the project's schedule
 
 #### Local Setup
 
@@ -148,7 +155,7 @@ SOURCE_URLS = [
 
 # Power Mode
 USE_MAXIMUM_POWER = True  # Fetch maximum configs
-SPECIFIC_CONFIG_COUNT = 50  # Used if USE_MAXIMUM_POWER is False
+SPECIFIC_CONFIG_COUNT = 0  # Used if USE_MAXIMUM_POWER is False
 
 # Protocol Filtering
 ENABLED_PROTOCOLS = {
@@ -166,26 +173,26 @@ MAX_CONFIG_AGE_DAYS = 1
 
 # Xray Testing
 ENABLE_XRAY_TESTER = True
-XRAY_TESTER_MAX_WORKERS = 8
-XRAY_TESTER_TIMEOUT_SECONDS = 10
+XRAY_TESTER_MAX_WORKERS = 24
+XRAY_TESTER_TIMEOUT_SECONDS = 5
 XRAY_TESTER_URLS = [
     'https://www.youtube.com/generate_204',
     'https://www.gstatic.com/generate_204',
     'https://cp.cloudflare.com'
 ]
-XRAY_TESTER_ROUNDS = 2
+XRAY_TESTER_ROUNDS = 3
 XRAY_TESTER_BATCH_SIZE = 200
 
 # Sing-box Testing
 ENABLE_SINGBOX_TESTER = True
-SINGBOX_TESTER_MAX_WORKERS = 8
-SINGBOX_TESTER_TIMEOUT_SECONDS = 10
+SINGBOX_TESTER_MAX_WORKERS = 24
+SINGBOX_TESTER_TIMEOUT_SECONDS = 5
 SINGBOX_TESTER_URLS = [
     'https://www.youtube.com/generate_204',
     'https://www.gstatic.com/generate_204',
     'https://cp.cloudflare.com'
 ]
-SINGBOX_TESTER_ROUNDS = 2
+SINGBOX_TESTER_ROUNDS = 3
 SINGBOX_TESTER_BATCH_SIZE = 200
 
 # Geolocation APIs (in priority order)
@@ -232,6 +239,7 @@ The system generates multiple output files for different use cases:
 
 - `configs/proxy_configs.txt` - Raw fetched configurations
 - `configs/proxy_configs_tested.txt` - Xray-tested configurations
+- `configs/location/<CC>/proxy_configs.txt` - Xray-tested configurations grouped by server country (25 country folders, e.g. `US`, `DE`, `GB`)
 - `configs/singbox_configs_all.json` - All configs in Sing-box format
 - `configs/singbox_configs_tested.json` - Sing-box tested configs
 - `configs/singbox_configs_secure.json` - Security-filtered Sing-box configs
@@ -260,15 +268,16 @@ The workflow performs these steps in order:
 2. Enrich with geolocation data
 3. Rename with descriptive tags
 4. Test with Xray core (multi-round)
-5. Convert to Sing-box format
-6. Test with Sing-box core (multi-round)
-7. Filter for security and generate the secure Sing-box and Xray outputs
-8. Generate Clash/Mihomo YAML configs
-9. Generate the load-balanced Xray config
-10. Generate the Fragment-enabled load-balanced Xray config
-11. Update charts and reports
-12. Generate the pipeline run summary
-13. Commit and push changes
+5. Split tested configs by server country
+6. Convert to Sing-box format
+7. Test with Sing-box core (multi-round)
+8. Filter for security and generate the secure Sing-box and Xray outputs
+9. Generate Clash/Mihomo YAML configs
+10. Generate the load-balanced Xray config
+11. Generate the Fragment-enabled load-balanced Xray config
+12. Update charts and reports
+13. Generate the pipeline run summary
+14. Commit and push changes
 
 ## 🛡️ Security Features
 
