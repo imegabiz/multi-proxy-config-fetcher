@@ -4,21 +4,23 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://2297ea1f-2415-4a2c-be20-4a3a978283a2@193.238.154.18:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc&security=reality&sid=76132b3b39704c44&sni=es1.hat.onl&type=tcp#🇪🇸 1701 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://2297ea1f-2415-4a2c-be20-4a3a978283a2@193.238.154.18:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc&security=reality&sid=76132b3b39704c44&sni=es1.hat.onl&type=tcp#🇪🇸 1707 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://2297ea1f-2415-4a2c-be20-4a3a978283a2@193.238.154.18:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=es1.hat.onl&fp=chrome&pbk=V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc&sid=76132b3b39704c44&type=tcp&headerType=none&host=/?BIA_TELEGRAM@MARAMBASHi#🇪🇸 1702 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://2297ea1f-2415-4a2c-be20-4a3a978283a2@193.238.154.18:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=es1.hat.onl&fp=chrome&pbk=V3uMWEfDQAPFP6o5ED8Jtk0rJBPs7IlOLf_Wh8w_jXc&sid=76132b3b39704c44&type=tcp&headerType=none&host=/?BIA_TELEGRAM@MARAMBASHi#🇪🇸 1708 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://43c23116-1115-4af4-a0f0-56f02841a605@185.254.205.79:19842?security=reality&encryption=none&pbk=sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.tesla.com&sid=25ebc9e0a912#🇪🇸 3329 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 19842
+vless://43c23116-1115-4af4-a0f0-56f02841a605@185.254.205.79:19842?security=reality&type=raw&packetEncoding=xudp&sni=www.tesla.com&fp=chrome&flow=xtls-rprx-vision&sid=25ebc9e0a912&pbk=sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM#🇪🇸 3320 - ES - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 19842
 
-vless://43c23116-1115-4af4-a0f0-56f02841a605@185.254.205.79:19842?security=reality&type=raw&packetEncoding=xudp&sni=www.tesla.com&fp=chrome&flow=xtls-rprx-vision&sid=25ebc9e0a912&pbk=sfOfuQeJBlKfDnPL_EMWUxMIiFAN8BNKjtWDUvlsjzM#🇪🇸 3330 - ES - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 19842
+vless://898537d9-ce3a-4937-bbef-c0fa61c07791@93.189.94.67:48296?security=reality&encryption=none&pbk=ga1wUMMknP4pwJfUNOOvD9I35XV4q3c73byXPYbRxBE&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.sony.com&sid=109657bb2dbe99#🇪🇸 6816 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 48296
 
-vless://898537d9-ce3a-4937-bbef-c0fa61c07791@93.189.94.67:48296?security=reality&encryption=none&pbk=ga1wUMMknP4pwJfUNOOvD9I35XV4q3c73byXPYbRxBE&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.sony.com&sid=109657bb2dbe99#🇪🇸 6789 - ES - VLESS/REALITY/PBK/SID/VISION/UTLS - 48296
+vless://898537d9-ce3a-4937-bbef-c0fa61c07791@93.189.94.67:48296?security=reality&type=raw&packetEncoding=xudp&sni=www.sony.com&fp=firefox&flow=xtls-rprx-vision&sid=109657bb2dbe99&pbk=ga1wUMMknP4pwJfUNOOvD9I35XV4q3c73byXPYbRxBE#🇪🇸 6817 - ES - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 48296
 
-vless://898537d9-ce3a-4937-bbef-c0fa61c07791@93.189.94.67:48296?security=reality&type=raw&packetEncoding=xudp&sni=www.sony.com&fp=firefox&flow=xtls-rprx-vision&sid=109657bb2dbe99&pbk=ga1wUMMknP4pwJfUNOOvD9I35XV4q3c73byXPYbRxBE#🇪🇸 6790 - ES - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 48296
+trojan://humanity@185.114.72.31:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇪🇸 6923 - ES - Trojan/WS/TLS - 2053
 
-trojan://humanity@185.114.72.31:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇪🇸 6914 - ES - Trojan/WS/TLS - 2053
+trojan://humanity@185.18.250.245:443?path=/assignment&security=tls&insecure=1&host=www.calmlunch.com&type=ws&allowInsecure=1&sni=www.calmlunch.com#🇪🇸 6925 - ES - Trojan/WS/TLS - 443
 
-trojan://humanity@185.18.250.252:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇪🇸 6918 - ES - Trojan/WS/TLS - 443
+trojan://humanity@185.18.250.252:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇪🇸 6927 - ES - Trojan/WS/TLS - 443
 
-trojan://humanity@213.182.199.137:443?path=/assignment&security=tls&alpn=http/1.1&host=www.pleadcourt.org&fp=chrome&type=ws&sni=www.pleadcourt.org#🇪🇸 6951 - ES - Trojan/WS/TLS/UTLS - 443
+trojan://humanity@212.227.144.37:8443?path=/assignment&security=tls&alpn=v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇪🇸 6960 - ES - Trojan/WS/TLS - 8443
+
+trojan://humanity@213.182.199.137:443?path=/assignment&security=tls&alpn=http/1.1&host=www.pleadcourt.org&fp=chrome&type=ws&sni=www.pleadcourt.org#🇪🇸 6961 - ES - Trojan/WS/TLS/UTLS - 443
 
