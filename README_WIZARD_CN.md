@@ -124,14 +124,15 @@ pkg install sing-box -y
 2.  Enrich Configs                   检测服务器地理位置
 3.  Rename Configs                   应用描述性标签
 4.  Test with Xray                   多轮健康测试 - Xray core
-5.  Convert to Sing-box              构建 Sing-box JSON 格式
-6.  Test with Sing-box               多轮健康测试 - Sing-box core
-7.  Security Filter                  移除不安全配置，重建安全版输出
-8.  Generate Clash YAML              构建 Clash/Mihomo 配置
-9.  Generate Xray Balanced Config     构建负载均衡的 Xray 配置
-10. Generate Xray Fragment Config     构建带 Fragment（抗 DPI）的 Xray 配置
-11. Generate Charts                  构建性能图表
-12. Generate Pipeline Summary         打印每个阶段的配置数量
+5.  Split Configs by Country         将测试通过的配置拆分为 25 个国家文件
+6.  Convert to Sing-box              构建 Sing-box JSON 格式
+7.  Test with Sing-box               多轮健康测试 - Sing-box core
+8.  Security Filter                  移除不安全配置，重建安全版输出
+9.  Generate Clash YAML              构建 Clash/Mihomo 配置
+10. Generate Xray Balanced Config     构建负载均衡的 Xray 配置
+11. Generate Xray Fragment Config     构建带 Fragment（抗 DPI）的 Xray 配置
+12. Generate Charts                  构建性能图表
+13. Generate Pipeline Summary         打印每个阶段的配置数量
 ```
 
 ### 运行一次：
@@ -150,6 +151,7 @@ bash run.sh
 |------|------|----------|
 | `proxy_configs.txt` | 原始配置 | v2rayNG, v2rayN |
 | `proxy_configs_tested.txt` | Xray 测试通过 | v2rayNG, v2rayN ⭐ |
+| `location/<CC>/proxy_configs.txt` | Xray 测试通过，按服务器所在国家分类（25 个国家文件夹，例如 `US`、`DE`、`GB`） | v2rayNG, v2rayN 🌍 |
 | `singbox_configs_all.json` | 所有配置，Sing-box 格式 | SFA, Hiddify, NekoBox |
 | `singbox_configs_tested.json` | Sing-box 测试通过 | SFA, Hiddify, NekoBox ⭐ |
 | `singbox_configs_secure.json` | 已测试且安全过滤 | SFA, Hiddify 🛡️⭐ |
@@ -160,7 +162,7 @@ bash run.sh
 | `xray_loadbalanced_config.json` | Xray 负载均衡 | v2rayNG, v2rayN, Nekoray ⭐ |
 | `xray_fragment_loadbalanced_config.json` | 带两阶段高级 TLS 分片的 Xray 负载均衡配置，抗 DPI 能力更强 | v2rayNG, v2rayN, Nekoray 🧩⭐ |
 
-⭐ = 推荐 · 🛡️ = 高安全性 · 🧩 = 抗审查分片
+⭐ = 推荐 · 🛡️ = 高安全性 · 🧩 = 抗审查分片 · 🌍 = 按国家分类
 
 ---
 
@@ -221,6 +223,12 @@ python3 -m http.server 8080
 http://YOUR_IP:8080/proxy_configs_tested.txt
 ```
 在 v2rayNG 中：**Subscription → Add Subscription → 输入 URL → Update**
+
+只想要某一个国家的服务器？用同样的方法提供 `configs` 文件夹服务，然后使用类似这样的地址：
+```
+http://YOUR_IP:8080/location/US/proxy_configs.txt
+```
+把 `US` 换成 25 个可用国家代码中的任意一个（`DE`、`GB`、`FR`、`JP` 等）。
 
 **方法二：直接导入 JSON**
 ```bash
