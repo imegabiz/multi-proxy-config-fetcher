@@ -415,6 +415,8 @@ run_step "Rename Configs" "\$PYTHON_CMD src/rename_configs.py configs/location_c
 
 run_step "Test with Xray" "\$PYTHON_CMD src/xray_config_tester.py configs/proxy_configs.txt configs/proxy_configs_tested.txt"
 
+run_step "Split Configs by Country" "\$PYTHON_CMD src/country_splitter.py configs/proxy_configs_tested.txt configs/location_cache.json configs/location"
+
 run_step "Convert to Sing-box" "\$PYTHON_CMD src/config_to_singbox.py"
 
 run_step "Test with Sing-box" "\$PYTHON_CMD src/config_tester.py configs/singbox_configs_all.json configs/singbox_configs_tested.json"
@@ -622,6 +624,12 @@ case "$1" in
         
         echo "📁 Output files:"
         ls -lh configs/*.txt configs/*.json 2>/dev/null | awk '{print "   ", $9, "-", $5}'
+        
+        if [ -d "configs/location" ]; then
+            loc_count=$(find configs/location -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l | tr -d ' ')
+            echo ""
+            echo "🌍 Country subscriptions: $loc_count folders in configs/location/"
+        fi
         
         echo ""
         echo "📝 Recent logs:"
