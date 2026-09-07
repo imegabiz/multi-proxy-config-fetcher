@@ -91,7 +91,7 @@ XRAY_TESTER_URLS = [
 # Each round tests against exactly one URL, and that URL changes between
 # rounds, so a config is checked against more than one destination overall
 # without paying the cost of trying multiple URLs within the same round.
-# Higher values are more accurate but take longer to run. 2 is a good default.
+# Higher values are more accurate but take longer to run. 3 is a good default.
 XRAY_TESTER_ROUNDS = 3
 
 # Maximum number of configs tested together inside a single shared Xray process.
@@ -136,7 +136,7 @@ SINGBOX_TESTER_URLS = [
 # Each round tests against exactly one URL, and that URL changes between
 # rounds, so a config is checked against more than one destination overall
 # without paying the cost of trying multiple URLs within the same round.
-# Higher values are more accurate but take longer to run. 2 is a good default.
+# Higher values are more accurate but take longer to run. 3 is a good default.
 SINGBOX_TESTER_ROUNDS = 3
 
 # Maximum number of configs tested together inside a single shared Sing-box process.
