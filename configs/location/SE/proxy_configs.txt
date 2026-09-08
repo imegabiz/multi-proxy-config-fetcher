@@ -4,7 +4,7 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://14f4be39-cb89-4f2b-8200-704666b6fa4e@95.85.241.209:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0&type=tcp&headerType=none#🇸🇪 1024 - SE - VLESS/REALITY/PBK/VISION/UTLS - 443
+vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 1543 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 1538 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://476d23b8-ab0e-4297-aebf-2c373f7538f0@213.21.250.193:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=api.sream-rutube.shop&alpn=networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-&fp=chrome&security=reality&pbk=fn0RLpDpJr5BJvYeX8W7OgGYoW4nARJ6jZg-sWIAozA#🇸🇪 3332 - SE - VLESS/REALITY/PBK/VISION/UTLS - 443
 
