@@ -12,6 +12,18 @@ logger = logging.getLogger(__name__)
 def _fix_query_string(query: str) -> str:
     return query.replace('&amp;', '&')
 
+def repair_trapped_fragment_params(config: str) -> str:
+    parts = config.split('#')
+    if len(parts) < 3:
+        return config
+    base = parts[0]
+    middle = parts[1]
+    rest = '#'.join(parts[2:])
+    if '=' in middle and '&' in middle:
+        separator = '&' if '?' in base else '?'
+        return base + separator + middle + '#' + rest
+    return config
+
 VALID_SS_METHODS = {
     'aes-128-gcm', 'aes-192-gcm', 'aes-256-gcm',
     'chacha20-ietf-poly1305', 'xchacha20-ietf-poly1305',
@@ -96,6 +108,8 @@ def parse_vless(config: str) -> Optional[Dict]:
     if not config or not isinstance(config, str) or not config.startswith('vless://'):
         return None
     
+    config = repair_trapped_fragment_params(config)
+    
     try:
         url = urlparse(config)
     except Exception:
@@ -145,6 +159,8 @@ def parse_vless(config: str) -> Optional[Dict]:
 def parse_trojan(config: str) -> Optional[Dict]:
     if not config or not isinstance(config, str) or not config.startswith('trojan://'):
         return None
+    
+    config = repair_trapped_fragment_params(config)
     
     try:
         url = urlparse(config)
