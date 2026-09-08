@@ -4,35 +4,43 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://36a857e4-f3d4-43aa-8b90-d7da849da989@104.18.12.149:443?security=tls&type=ws&path=/eyJqdW5rIjoib0RnakxTZUZvOSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=&host=002.inc-electrocell-001-002.workers.dev&packetEncoding=xudp&alpn=http/1.1&sni=002.Inc-ElectROcElL-001-002.WoRKERS.DEV&fp=chrome&encryption=none#🇨🇦 2530 - CA - VLESS/WS/TLS/UTLS - 443
+vless://0bd6aa8d-3bdb-4fa3-893e-75a844e2e409@104.16.98.215:8880?security=none&type=ws&path=/pyip=ProxyIP.JP.CMLiussss.net&host=wispy-cake-ec69.193-bc6.workers.dev&packetEncoding=xudp#🇨🇦 646 - CA - VLESS/WS - 8880
 
-vless://5934b979-e128-4c90-a600-744b97bffc8c@5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev:443?alpn=http/1.1&ed=2560&eh=Sec-WebSocket-Protocol&encryption=none&fp=ios&host=5dktcuajb2a1jxix7csnrmeucg.mahrademami.workers.dev&path=/vl/Fi3kP8cNjBoo8UPv&security=tls&sni=5DKTCUajb2a1jxIX7csNrmEUCg.MAhRADeMAmi.wORkeRs.dEV&type=ws#🇨🇦 4491 - CA - VLESS/WS/TLS/UTLS - 443
+vless://20f21d96-3700-46d9-9f63-5933403c0c18@104.16.98.215:8880?encryption=none&host=restless-math-7bde.299-75c.workers.dev&path=/pyip=ProxyIP.JP.CMLiussss.net&security=none&type=ws#🇨🇦 1557 - CA - VLESS/WS - 8880
 
-vless://5990e0a5-fc5f-43c6-8fdc-39612c60a9cd@172.66.132.196:8880?host=jolly-butterfly-24e0.212-cb3.workers.dev&path=/pyip&security=none&type=ws#🇨🇦 4518 - CA - VLESS/WS - 8880
+vless://37fce9ce-9fec-4f30-89a0-fbb1f6f33b3c@172.67.179.98:8880?security=false&fp=chrome&type=ws&headerType=none&host=white-night-afee.419-acc.workers.dev&path=/pyip=ProxyIP.US.CMLiussss.net#🇨🇦 2565 - CA - VLESS/WS/UTLS - 8880
 
-vless://5a4d9f40-56db-402a-9fbc-31c9229bdcf6@172.66.132.196:8880?packet-encoding=xudp&type=ws&headerType=none&host=floral-resonance-4baf.468.workers.dev&path=/pyip=ProxyIP.US.CMLiussss.net#🇨🇦 4565 - CA - VLESS/WS - 8880
+vless://395d040e-a04a-43d7-a1e9-8635f545879a@104.17.70.206:2096?security=tls&type=ws&path=/shalana&host=shalana.xyz&packetEncoding=xudp&sni=shalana.xyz&fp=chrome#🇨🇦 2620 - CA - VLESS/WS/TLS/UTLS - 2096
 
-vless://6202b230-417c-4d8e-b624-0f71afa9c75d@23.227.60.30:8880?security=none&type=ws&path=/&host=vms.lifetime18.workers.dev&packetEncoding=xudp#🇨🇦 4953 - CA - VLESS/WS - 8880
+vless://3bc49320-3dcd-4f30-9215-a4fa964e54c7@104.17.181.19:8880?path=/pyip=ProxyIP.JP.CMLiussss.net&security=none&encryption=none&host=tight-moon-2d50.457.workers.dev&type=ws#🇨🇦 2747 - CA - VLESS/WS - 8880
 
-vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&encryption=none&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net&sid=3d3c1e645f763ee3#🇨🇦 5143 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://4a40e7a6-9179-42c1-9bd7-eefec23a62f8@104.21.55.229:8880?security=none&type=ws&host=soft-meadow-980a.458.workers.dev&path=/pyip=ProxyIP.KR.CMLiussss.net#🇨🇦 3689 - CA - VLESS/WS - 8880
 
-vless://7893b302-3882-4c38-9ab6-6313f1575d1a@cf.udpid.org:443?security=tls&type=ws&path=/@zyzzzoao&host=cf.udpid.org&packetEncoding=xudp&sni=cf.udpid.org&fp=chrome#🇨🇦 5939 - CA - VLESS/WS/TLS/UTLS - 443
+vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&encryption=none&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net&sid=3d3c1e645f763ee3#🇨🇦 5156 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://7b102311-43fd-4e8f-877e-8090623c101d@104.17.28.42:8443?encryption=none&security=tls&sni=round-art-52ee.eadfgv.workers.dev&allowInsecure=true&fp=chrome&type=ws&host=round-art-52ee.eadfgv.workers.dev&path=/&packetEncoding=xudp#🇨🇦 6050 - CA - VLESS/WS/TLS/UTLS - 8443
+vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&encryption=none&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net&sid=3d3c1e645f763ee3#🇨🇦 5157 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://7c6a566b-4c4a-b8f2-1719-a3096b424141@104.21.5.173:2096?security=tls&type=ws&path=/sync&host=peekconfigg.vipserver1-39d.workers.dev&sni=peekconfigg.vipserver1-39d.workers.dev&fp=chrome&encryption=none#🇨🇦 6106 - CA - VLESS/WS/TLS/UTLS - 2096
+vless://8a51f3d9-30cc-44e6-8d31-700211a29066@130.94.115.231:2087?type=ws&encryption=none&path=/721740e567c7&packetEncoding=xudp#🇨🇦 6809 - CA - VLESS/WS - 2087
 
-vless://8a51f3d9-30cc-44e6-8d31-700211a29066@130.94.115.231:2087?type=ws&encryption=none&path=/721740e567c7&packetEncoding=xudp#🇨🇦 6808 - CA - VLESS/WS - 2087
+vless://8cde6cd0-7903-4aef-8ce8-528fa9677d7b@104.21.55.229:8880?security=none&type=ws&host=steep-glitter-7c3c.367-5c9.workers.dev&path=/pyip=ProxyIP.JP.CMLiussss.net#🇨🇦 6916 - CA - VLESS/WS - 8880
 
-vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?flow=xtls-rprx-vision&encryption=none&security=reality&sni=google.com&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&sid=0e&type=tcp&headerType=none#🇨🇦 8671 - CA - VLESS/REALITY/PBK/SID/VISION - 41373
+vless://8e7ce77a-d889-4dbf-b095-1d0eca88f6dc@172.67.179.98:8880?type=ws&headerType=none&host=broad-bread-2a6d.433-b9b.workers.dev&path=/pyip=ProxyIP.JP.CMLiussss.net#🇨🇦 7042 - CA - VLESS/WS - 8880
 
-vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?security=reality&type=raw&sni=google.com&fp=chrome&flow=xtls-rprx-vision&sid=0e&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&encryption=none#🇨🇦 8672 - CA - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 41373
+vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?security=reality&type=tcp&sni=google.com&fp=chrome&flow=xtls-rprx-vision&sid=0e&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&encryption=none#🇨🇦 8721 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 41373
 
-vless://b2f2f9f2-1864-48ea-839b-22815faff1f1@stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev:443?encryption=none&security=tls&type=ws#🇨🇦 9210 - CA - VLESS/WS/TLS - 443
+vless://a8c23fe7-d2bb-46ba-a14e-8847f1944642@104.16.98.215:8880?encryption=none&host=billowing-fire-a10b.301-d6c.workers.dev&path=/pyip=ProxyIP.SG.CMLiussss.net&security=none&type=ws#🇨🇦 8785 - CA - VLESS/WS - 8880
 
-trojan://humanity@104.16.7.70:443?path=/assignment&security=tls&insecure=0&host=www.ignitelimit.com&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇨🇦 6767 - CA - Trojan/WS/TLS - 443
+vless://b01cadb4-428b-42d2-8c56-d6c13e582ede@lingering-water-9e69.219.workers.dev:8880?type=ws&sni=lingering-water-9e69.219.workers.dev#🇨🇦 9198 - CA - VLESS/WS - 8880
 
-trojan://humanity@104.18.12.149:443?security=tls&type=ws&sni=www.ignitelimit.com&path=/assignment&host=www.ignitelimit.com#🇨🇦 6791 - CA - Trojan/WS/TLS - 443
+vless://b8cd08fd-a19a-4ad0-b8ae-b664b89791da@104.17.181.19:8880?encryption=none&type=ws&host=sweet-scene-bffd.312-860.workers.dev&path=/pyip=ProxyIP.KR.CMLiussss.net&security=none#🇨🇦 9514 - CA - VLESS/WS - 8880
 
-trojan://humanity@join-telegram-channel-tirexnet.trex.kdns.fr:443?path=/assignment&security=tls&alpn=h3,h2,http/1.1&insecure=0&host=www.ignitelimit.com&fp=chrome&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇨🇦 7016 - CA - Trojan/WS/TLS/UTLS - 443
+trojan://humanity@104.16.174.6:443?type=ws&host=www.ignitelimit.com&path=/assignment&security=tls&sni=www.ignitelimit.com#🇨🇦 6768 - CA - Trojan/WS/TLS - 443
+
+trojan://humanity@104.18.152.133:443?type=ws&host=www.ignitelimit.com&path=/assignment&security=tls&sni=www.ignitelimit.com#🇨🇦 6810 - CA - Trojan/WS/TLS - 443
+
+trojan://humanity@104.21.46.3:443?security=tls&sni=www.ignitelimit.com&type=ws&host=www.ignitelimit.com&path=/assignment#🇨🇦 6883 - CA - Trojan/WS/TLS - 443
+
+trojan://humanity@162.159.136.234:443?type=ws&security=tls&host=www.ignitelimit.com&path=/assignment&sni=www.ignitelimit.com&alpn=h2,http/1.1#🇨🇦 6897 - CA - Trojan/WS/TLS - 443
+
+trojan://humanity@join-telegram-channel-tirexnet.trex.kdns.fr:443?path=/assignment&security=tls&alpn=h3,h2,http/1.1&insecure=0&host=www.ignitelimit.com&fp=chrome&type=ws&allowInsecure=0&sni=www.ignitelimit.com#🇨🇦 7026 - CA - Trojan/WS/TLS/UTLS - 443
 

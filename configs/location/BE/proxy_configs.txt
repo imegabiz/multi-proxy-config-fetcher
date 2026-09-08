@@ -4,9 +4,9 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?encryption=none&host=neth8.lunariai.ru&path=/&security=none&type=ws#🇧🇪 9823 - BE - VLESS/WS - 443
+vless://c21631d5-36c9-4664-b575-97eca17456be@2.27.205.59:443?encryption=none&host=neth8.lunariai.ru&path=/&security=none&type=ws#🇧🇪 9852 - BE - VLESS/WS - 443
 
-vless://c21631d5-36c9-4664-b575-97eca17456be@neth8.lunariai.ru:443?allowInsecure=1&type=ws&host=neth8.lunariai.ru&path=/#🇧🇪 9824 - BE - VLESS/WS - 443
+vless://c21631d5-36c9-4664-b575-97eca17456be@neth8.lunariai.ru:443?allowInsecure=1&type=ws&host=neth8.lunariai.ru&path=/#🇧🇪 9853 - BE - VLESS/WS - 443
 
-vless://c21631d5-36c9-4664-b575-97eca17456be@neth8.lunariai.ru:443?type=ws#🇧🇪 9825 - BE - VLESS/WS - 443
+vless://c21631d5-36c9-4664-b575-97eca17456be@neth8.lunariai.ru:443?type=ws#🇧🇪 9854 - BE - VLESS/WS - 443
 
