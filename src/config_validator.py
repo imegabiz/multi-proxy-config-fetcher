@@ -180,6 +180,7 @@ class ConfigValidator:
         config = re.sub(r'[\x00-\x08\x0B-\x1F\x7F-\x9F]', '', config)
         config = re.sub(r'[^\S\r\n]+', ' ', config)
         config = config.strip()
+        config = parser.repair_trapped_fragment_params(config)
         return config
 
     @staticmethod
