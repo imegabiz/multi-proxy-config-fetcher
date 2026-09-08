@@ -4,7 +4,5 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://1e1c72f4-325b-4db0-b2d4-dc9c7cddc46a@dump.whit3.net:443?security=reality&encryption=none&pbk=PIidHZ5GTRywDVjazexbmaRDlnqY277LTZKUPzjM0Xg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dump.whit3.net&sid=ce70facae52ed769#🇨🇭 1443 - CH - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-trojan://humanity@91.245.225.79:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇨🇭 7006 - CH - Trojan/WS/TLS - 2053
+trojan://humanity@91.245.225.79:2053?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#🇨🇭 6938 - CH - Trojan/WS/TLS - 2053
 
