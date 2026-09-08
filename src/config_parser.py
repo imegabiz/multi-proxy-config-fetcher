@@ -124,7 +124,7 @@ def parse_vless(config: str) -> Optional[Dict]:
         mode = ''
     
     return {
-        'uuid': url.username,
+        'uuid': unquote(url.username),
         'address': url.hostname,
         'port': port,
         'flow': flow,
@@ -170,7 +170,7 @@ def parse_trojan(config: str) -> Optional[Dict]:
         trojan_flow = ''
 
     return {
-        'password': url.username,
+        'password': unquote(url.username),
         'address': url.hostname,
         'port': port,
         'sni': params.get('sni', [url.hostname])[0],
@@ -203,7 +203,7 @@ def parse_hysteria2(config: str) -> Optional[Dict]:
     port = url.port or 443
     
     params = parse_qs(_fix_query_string(url.query))
-    password = url.username or params.get('password', [''])[0]
+    password = unquote(url.username) if url.username else params.get('password', [''])[0]
     if not password:
         return None
     
@@ -320,7 +320,7 @@ def parse_wireguard(config: str) -> Optional[Dict]:
     port = url.port or 51820
     
     params = parse_qs(_fix_query_string(url.query))
-    private_key = url.username or params.get('privatekey', [''])[0]
+    private_key = unquote(url.username) if url.username else params.get('privatekey', [''])[0]
     if not private_key:
         return None
     
@@ -356,6 +356,8 @@ def parse_tuic(config: str) -> Optional[Dict]:
     
     try:
         uuid, password = url.username.split(':', 1)
+        uuid = unquote(uuid)
+        password = unquote(password)
     except ValueError:
         return None
     
