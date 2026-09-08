@@ -348,7 +348,7 @@ def save_configs(configs: List[str], config: ProxyConfig):
     except Exception as e:
         logger.error(f"Error saving configs: {str(e)}")
 
-def save_channel_stats(config: ProxyConfig):
+def save_channel_stats(config: ProxyConfig, total_saved: int = None):
     try:
         history = []
         if os.path.exists(config.STATS_FILE):
@@ -393,6 +393,7 @@ def save_channel_stats(config: ProxyConfig):
             'active_channels': active_channels,
             'total_channels': total_channels,
             'total_valid_configs': total_valid_configs,
+            'total_saved_configs': total_saved if total_saved is not None else total_valid_configs,
             'avg_score': avg_score,
             'avg_response_time': avg_response_time
         })
@@ -421,7 +422,7 @@ def main():
         else:
             logger.error("No valid configs found!")
             
-        save_channel_stats(config)
+        save_channel_stats(config, total_saved=len(configs) if configs else 0)
             
     except Exception as e:
         logger.error(f"Error in main execution: {str(e)}")
