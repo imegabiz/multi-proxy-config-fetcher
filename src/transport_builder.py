@@ -18,6 +18,14 @@ def sanitize_singbox_fingerprint(fp: Optional[str]) -> str:
         return normalized
     return 'chrome'
 
+def sanitize_xray_fingerprint(fp: Optional[str]) -> str:
+    if not fp:
+        return 'chrome'
+    normalized = str(fp).strip().lower()
+    if normalized in VALID_SINGBOX_FINGERPRINTS:
+        return normalized
+    return 'chrome'
+
 def map_transport_for_singbox(net_type: str) -> str:
     transport_map = {
         'httpupgrade': 'ws',
@@ -108,15 +116,25 @@ def build_xray_settings(data: Dict) -> Dict:
             stream_settings["grpcSettings"] = {
                 "serviceName": data.get('path', data.get('serviceName', ''))
             }
-        elif net_type in ('http', 'h2'):
-            stream_settings["httpSettings"] = {
-                "host": [data.get('host', address)],
-                "path": data.get('path', '/')
+        elif net_type in ('http', 'h2', 'h3'):
+            stream_settings["network"] = "xhttp"
+            stream_settings["xhttpSettings"] = {
+                "path": data.get('path', '/'),
+                "host": data.get('host', address),
+                "mode": "stream-one"
             }
         elif net_type == 'quic':
-            stream_settings["quicSettings"] = {"security": "none", "header": {"type": "none"}}
+            stream_settings["network"] = "xhttp"
+            stream_settings["xhttpSettings"] = {
+                "path": data.get('path', '/'),
+                "host": data.get('host', address),
+                "mode": "stream-one"
+            }
         elif net_type == 'kcp':
-            stream_settings["kcpSettings"] = {"header": {"type": "none"}}
+            stream_settings["kcpSettings"] = {}
+            stream_settings["finalmask"] = {
+                "udp": [{"type": "mkcp-original", "settings": {}}]
+            }
         elif net_type == 'httpupgrade':
             stream_settings["httpupgradeSettings"] = {
                 "path": data.get('path', '/'),
@@ -146,13 +164,13 @@ def build_xray_settings(data: Dict) -> Dict:
                 "publicKey": data.get('pbk', ''),
                 "password": data.get('pbk', ''),
                 "shortId": data.get('sid', ''),
-                "fingerprint": data.get('fp', 'chrome')
+                "fingerprint": sanitize_xray_fingerprint(data.get('fp'))
             }
         elif security in ('tls', 'xtls') or (data.get('protocol') == 'trojan'):
             stream_settings["security"] = "tls"
             stream_settings["tlsSettings"] = {
                 "serverName": data.get('sni', address),
-                "fingerprint": data.get('fp', 'chrome'),
+                "fingerprint": sanitize_xray_fingerprint(data.get('fp')),
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"]
             }
             
