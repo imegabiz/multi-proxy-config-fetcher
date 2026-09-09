@@ -4,15 +4,25 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://2211972b-a45a-4951-a640-6173d573e637@54.37.136.194:2053?encryption=none&pbk=3nFTPdoFnfcwN1xnLwegJmBycLqRH6TRsrbD2XnQbjM&security=reality&sid=bfc5464d84de3b3b&sni=www.cloudflare.com&type=tcp#🇵🇱 1575 - PL - VLESS/REALITY/PBK/SID - 2053
+vless://2211972b-a45a-4951-a640-6173d573e637@54.37.136.194:2053?encryption=none&pbk=3nFTPdoFnfcwN1xnLwegJmBycLqRH6TRsrbD2XnQbjM&security=reality&sid=bfc5464d84de3b3b&sni=www.cloudflare.com&type=tcp#🇵🇱 1483 - PL - VLESS/REALITY/PBK/SID - 2053
 
-vless://758f49d3-5f5f-47e7-bfa4-4ce96faf800d@2.26.224.233:8443?encryption=none&fp=firefox&pbk=NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU&security=reality&sid=f747a7a5793b5714&sni=cdn.shopify.com&type=grpc#🇵🇱 5608 - PL - VLESS/GRPC/REALITY/PBK/SID/UTLS - 8443
+vless://758f49d3-5f5f-47e7-bfa4-4ce96faf800d@2.26.224.233:8443?encryption=none&fp=firefox&pbk=NI5Rkfn6zO_gF-UC1nuvJwu4SDakCXh3ygJOKU1EITU&security=reality&sid=f747a7a5793b5714&sni=cdn.shopify.com&type=grpc#🇵🇱 5384 - PL - VLESS/GRPC/REALITY/PBK/SID/UTLS - 8443
 
-vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.115:2087?encryption=none&type=ws&host=Telegram-Leviko_v2ray&path=/4bc027a44532&security=none#🇵🇱 9520 - PL - VLESS/WS - 2087
+vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.115:2087?path=/4bc027a44532&encryption=none&type=ws#🇵🇱 9303 - PL - VLESS/WS - 2087
 
-vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.115:2087?path=/4bc027a44532&encryption=none&type=ws#🇵🇱 9521 - PL - VLESS/WS - 2087
+vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.83:2087?type=ws&encryption=none&path=/4bc027a44532&packetEncoding=xudp#🇵🇱 9304 - PL - VLESS/WS - 2087
 
-vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.83:2087?type=ws&encryption=none&path=/4bc027a44532&packetEncoding=xudp#🇵🇱 9522 - PL - VLESS/WS - 2087
+vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?security=none&type=ws&path=/4bc027a44532&packetEncoding=xudp&encryption=none#🇵🇱 9305 - PL - VLESS/WS - 2087
 
-vless://bf443e4a-aa9e-4509-abf0-d0f6828d57be@178.95.170.98:2087?security=none&type=ws&path=/4bc027a44532&packetEncoding=xudp&encryption=none#🇵🇱 9523 - PL - VLESS/WS - 2087
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@144.31.5.64:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=pl6.moritech.net&type=tcp#🇵🇱 9817 - PL - VLESS/TLS/VISION/UTLS - 443
+
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@144.31.5.64:443?security=tls&alpn=h2&encryption=none&insecure=0&host=/?BIA--TELEGRAM--MARAMBASHI--MARAMBASHI&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl6.moritech.net#🇵🇱 9819 - PL - VLESS/TLS/VISION/UTLS - 443
+
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@144.31.5.64:443?security=tls&alpn=h2&encryption=none&insecure=0&host=/?TELEGRAM--TOOTFFARANGI&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl6.moritech.net#🇵🇱 9820 - PL - VLESS/TLS/VISION/UTLS - 443
+
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.248.234:443?security=tls&flow=xtls-rprx-vision&fp=firefox&alpn=h2&sni=viper-22.moriarty-web.com&type=tcp&headerType=none&path=/#🇵🇱 9827 - PL - VLESS/TLS/VISION/UTLS - 443
+
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.249.170:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=pl1-ded.moritech.net&type=tcp#🇵🇱 9828 - PL - VLESS/TLS/VISION/UTLS - 443
+
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@pl6.moritech.net:443?security=tls&alpn=v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=pl6.moritech.net#🇵🇱 9836 - PL - VLESS/TLS/VISION/UTLS - 443
 
