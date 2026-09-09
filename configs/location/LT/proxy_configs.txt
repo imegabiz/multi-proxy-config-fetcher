@@ -4,45 +4,35 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://106d20f6-d70a-40e2-b69b-8e82baf8d117@107.181.151.241:443?flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=60500a63ad12&type=tcp&path=/#🇱🇹 802 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://106d20f6-d70a-40e2-b69b-8e82baf8d117@staging.lastilhame.monster:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sni=www.microsoft.com&sid=60500a63ad12#🇱🇹 795 - LT - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://106d20f6-d70a-40e2-b69b-8e82baf8d117@staging.lastilhame.monster:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sni=www.microsoft.com&sid=60500a63ad12#🇱🇹 803 - LT - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
+vless://2ba7f500-017b-4891-87a0-e4e62a4ad52d@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=9409f73c2fd7&sni=www.microsoft.com#🇱🇹 1843 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://2ba7f500-017b-4891-87a0-e4e62a4ad52d@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=9409f73c2fd7&sni=www.microsoft.com#🇱🇹 1858 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://2f6e2b17-4d5e-4a12-8979-f53fdd347580@107.181.151.241:443?security=reality&type=tcp&packetEncoding=none&sni=www.mozilla.org&fp=chrome&flow=xtls-rprx-vision&sid=5c8a8e6c615b&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg#🇱🇹 2076 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://2f6e2b17-4d5e-4a12-8979-f53fdd347580@107.181.151.241:443?security=reality&type=tcp&packetEncoding=none&sni=www.mozilla.org&fp=chrome&flow=xtls-rprx-vision&sid=5c8a8e6c615b&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg#🇱🇹 2112 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://2f6e2b17-4d5e-4a12-8979-f53fdd347580@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=5c8a8e6c615b&sni=www.mozilla.org#🇱🇹 2077 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://2f6e2b17-4d5e-4a12-8979-f53fdd347580@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=5c8a8e6c615b&sni=www.mozilla.org#🇱🇹 2113 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://317bc783-340f-453c-afb5-b6bf637c0b23@107.181.151.241:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=fc994ae7eb10&sni=www.tradingview.com#🇱🇹 2158 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://317bc783-340f-453c-afb5-b6bf637c0b23@107.181.151.241:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=fc994ae7eb10&sni=www.tradingview.com#🇱🇹 2191 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://317bc783-340f-453c-afb5-b6bf637c0b23@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=fc994ae7eb10&sni=www.tradingview.com#🇱🇹 2159 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://317bc783-340f-453c-afb5-b6bf637c0b23@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=fc994ae7eb10&sni=www.tradingview.com#🇱🇹 2192 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://455cfdc6-9abf-4e40-863f-5ff6cc63457c@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=18e4d2d21241&sni=www.microsoft.com#🇱🇹 3066 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://455cfdc6-9abf-4e40-863f-5ff6cc63457c@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=18e4d2d21241&sni=www.microsoft.com#🇱🇹 3086 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://594d466e-8ac3-4fda-b1d1-eeb817853518@staging.lastilhame.monster:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=5a018643df03&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&encryption=none#🇱🇹 4183 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://4d017db2-7655-4276-9557-e2ec25b04ee7@107.181.151.39:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.tradingview.com&fp=chrome&flow=xtls-rprx-vision&sid=ee1716767f9b&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk&encryption=none#🇱🇹 3551 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://67eb6b17-7797-4ded-bf52-423c4c5f6cbd@87.239.249.137:443?security=reality&encryption=none&pbk=G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.foxsports.com&sid=91af08b1ce1f#🇱🇹 4850 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://4d017db2-7655-4276-9557-e2ec25b04ee7@server.slavkiti.monster:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.tradingview.com&fp=chrome&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk&sid=ee1716767f9b&type=tcp&headerType=none#🇱🇹 3552 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://67eb6b17-7797-4ded-bf52-423c4c5f6cbd@lists.soloramtin.cyou:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.foxsports.com&fp=chrome&pbk=G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY&sid=91af08b1ce1f&type=tcp&headerType=none&host=v2rayNplus--v2rayNplus--v2rayNplus--#🇱🇹 4851 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://594d466e-8ac3-4fda-b1d1-eeb817853518@staging.lastilhame.monster:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=5a018643df03&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&encryption=none#🇱🇹 4210 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://aded66f1-de12-4c3c-af9e-a21d6e7d9c96@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=2a80364e93d9&sni=www.foxsports.com#🇱🇹 8470 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://68cf8d29-5aa0-44b3-88a9-f1a576b6e84c@server.slavkiti.monster:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=73a9e631a09b&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk&encryption=none#🇱🇹 4914 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@88.119.176.24:443?security=reality&encryption=none&fm=https://t.me/ShadowFlux2&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&host=BIA_TELEGRAM?=@ShadowFlux2---@ShadowFlux2---@ShadowFlux2---@ShadowFlux2---@ShadowFlux2&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=lit9.helper-internet.com&sid=ff776ff77be48b88#🇱🇹 8491 - LT - VLESS/REALITY/PBK/SID/VISION - 443
 
-vless://6dfc9149-1ff9-41c3-8563-0ef284381731@107.181.151.39:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk&sid=1374bddeb25d&sni=www.tradingview.com#🇱🇹 5048 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@88.119.176.24:443?security=reality&type=tcp&packetEncoding=none&sni=lit9.helper-internet.com&fp=chrome&flow=xtls-rprx-vision&sid=ff776ff77be48b88&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE#🇱🇹 8492 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://6dfc9149-1ff9-41c3-8563-0ef284381731@server.slavkiti.monster:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.tradingview.com&fp=chrome&flow=xtls-rprx-vision&sid=1374bddeb25d&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk&encryption=none#🇱🇹 5049 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@lit9.helper-internet.com:443?security=reality&flow=xtls-rprx-vision&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&sid=ff776ff77be48b88&fp=firefox&sni=lit9.helper-internet.com&type=tcp&headerType=none&host=lit9.helper-internet.com&path=/#🇱🇹 8494 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://aded66f1-de12-4c3c-af9e-a21d6e7d9c96@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=2a80364e93d9&sni=www.foxsports.com#🇱🇹 8650 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@lit9.helper-internet.com:443?security=reality&type=tcp&sni=lit9.helper-internet.com&fp=chrome&flow=xtls-rprx-vision&sid=ff776ff77be48b88&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&encryption=none#🇱🇹 8495 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@88.119.176.24:443?security=reality&encryption=none&fm=https://t.me/ShadowFlux2&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&host=BIA_TELEGRAM?=@ShadowFlux2---@ShadowFlux2---@ShadowFlux2---@ShadowFlux2---@ShadowFlux2&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=lit9.helper-internet.com&sid=ff776ff77be48b88#🇱🇹 8670 - LT - VLESS/REALITY/PBK/SID/VISION - 443
-
-vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@88.119.176.24:443?security=reality&encryption=none&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=lit9.helper-internet.com&sid=ff776ff77be48b88#🇱🇹 8671 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@lit9.helper-internet.com:443?security=reality&flow=xtls-rprx-vision&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&sid=ff776ff77be48b88&fp=firefox&sni=lit9.helper-internet.com&type=tcp&headerType=none&host=lit9.helper-internet.com&path=/#🇱🇹 8673 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://ae8e0f7d-b661-41ca-b55d-d8c383adb2f8@lit9.helper-internet.com:443?security=reality&type=tcp&sni=lit9.helper-internet.com&fp=chrome&flow=xtls-rprx-vision&sid=ff776ff77be48b88&pbk=W-zf_ncm9sYALF5EqvUsxqTkYGdAw-tQczT2SqwVMGE&encryption=none#🇱🇹 8674 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://b60cab55-e7a1-413d-a297-ddd7bad3fb62@server.slavkiti.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk&sid=bbcab8fa80a3&sni=www.microsoft.com#🇱🇹 8981 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://c09cfd91-b234-4998-9bed-a0211b7f5c3c@144.31.243.220:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=-qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04&sid=abcd1234&sni=lt.yservice.help#🇱🇹 9372 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://c09cfd91-b234-4998-9bed-a0211b7f5c3c@144.31.243.220:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=firefox&pbk=-qLezG1nUEtvOJi-Ra7WRYv-aHkv3PSefEuXpWV2G04&sid=abcd1234&sni=lt.yservice.help#🇱🇹 9166 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
