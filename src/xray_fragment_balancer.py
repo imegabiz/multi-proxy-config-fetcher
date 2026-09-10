@@ -2,7 +2,7 @@ import json
 import os
 import sys
 import logging
-from typing import Dict, Optional, List
+from typing import Dict, Optional
 import config_parser as parser
 import transport_builder
 import xray_template
@@ -82,7 +82,11 @@ class ConfigToXrayFragment:
         }
         return outbound
 
-    def convert_vless(self, data: Dict) -> Dict:
+    def convert_vless(self, data: Dict) -> Optional[Dict]:
+        stream_settings = transport_builder.build_xray_settings(data)
+        if stream_settings.get("security") not in ("tls", "reality"):
+            logger.warning(f"Skipping VLESS {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.9.9+)")
+            return None
         outbound = {
             "protocol": "vless",
             "settings": {
@@ -101,11 +105,15 @@ class ConfigToXrayFragment:
                     }
                 ]
             },
-            "streamSettings": apply_fragment(transport_builder.build_xray_settings(data))
+            "streamSettings": apply_fragment(stream_settings)
         }
         return outbound
 
-    def convert_trojan(self, data: Dict) -> Dict:
+    def convert_trojan(self, data: Dict) -> Optional[Dict]:
+        stream_settings = transport_builder.build_xray_settings(data)
+        if stream_settings.get("security") not in ("tls", "reality"):
+            logger.warning(f"Skipping Trojan {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.9.9+)")
+            return None
         outbound = {
             "protocol": "trojan",
             "settings": {
@@ -118,7 +126,7 @@ class ConfigToXrayFragment:
                     }
                 ]
             },
-            "streamSettings": apply_fragment(transport_builder.build_xray_settings(data))
+            "streamSettings": apply_fragment(stream_settings)
         }
         return outbound
 
@@ -136,9 +144,9 @@ class ConfigToXrayFragment:
                     }
                 ]
             },
-            "streamSettings": apply_fragment({
+            "streamSettings": {
                 "network": "tcp"
-            })
+            }
         }
 
     def process_configs(self):
@@ -152,14 +160,14 @@ class ConfigToXrayFragment:
             logger.error(f"Error reading {self.input_file}: {e}")
             return
 
-        final_config = xray_template.get_xray_template("👽 Anonymous Multi Balanced + Fragment")
+        final_config = xray_template.get_xray_template("👽 Anonymous Multi Fragment Balanced")
         temp_outbounds = []
-
+        
         for line in lines:
             line = line.strip()
             if not line or line.startswith('//'):
                 continue
-
+            
             line_lower = line.lower()
             outbound = None
             data = None
@@ -187,15 +195,15 @@ class ConfigToXrayFragment:
             if outbound:
                 outbound["tag"] = f"proxy-{len(temp_outbounds) + 1}"
                 temp_outbounds.append(outbound)
-
+        
         if not temp_outbounds:
             logger.error("No valid configs found to convert.")
             return
 
         temp_outbounds.extend(xray_template.get_utility_outbounds())
-
+        
         final_config["outbounds"] = temp_outbounds
-
+        
         try:
             os.makedirs(os.path.dirname(self.output_file) or '.', exist_ok=True)
             with open(self.output_file, 'w', encoding='utf-8') as f:
