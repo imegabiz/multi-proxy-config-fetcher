@@ -4,5 +4,5 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://d1a6a033-fdbd-46a6-a177-3370ba042b9f@46.28.67.55:443?security=reality&amp;encryption=none&amp;pbk=i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=www.cloudflare.com&amp;sid=d06d78e974491b6e#🇷🇴 9789 - RO - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://4fb82973-a7f1-4fc2-9958-cb21f5162f06@ro-xh02.tcp-reset-club.net:8443?encryption=none&security=reality&sni=s3.netavex.com&fp=chrome&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&sid=e0&type=xhttp&path=/assets/v2/pkg&mode=stream-one&extra={"xmux":{"maxConcurrency":"16-32"}}#🇷🇴 105 - RO - VLESS/XHTTP/REALITY/PBK/SID/UTLS - 8443
 
