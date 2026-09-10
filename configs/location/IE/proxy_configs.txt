@@ -4,5 +4,7 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.5.163:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=ir-viper.failspace.top&type=tcp#🇮🇪 1619 - IE - VLESS/TLS/VISION/UTLS - 443
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@50.7.5.164:443?alpn=h2&encryption=none&flow=xtls-rprx-vision&fp=firefox&security=tls&sni=ir.failspace.top&type=tcp#🇮🇪 9984 - IE - VLESS/TLS/VISION/UTLS - 443
+
+vless://cd3bb7d9-7df3-4644-ac05-c260990ac277@ir.failspace.top:443?type=tcp&headerType=none&security=tls&encryption=none&sni=ir.failspace.top&fp=firefox&alpn=h2&flow=xtls-rprx-vision#🇮🇪 9992 - IE - VLESS/TLS/VISION/UTLS - 443
 

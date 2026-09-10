@@ -4,17 +4,23 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&encryption=none&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net&sid=3d3c1e645f763ee3#🇨🇦 4801 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://4e4f1f70-5e56-4a76-bb9d-db087f4690c4@188.114.97.6:443?encryption=none&security=tls&type=ws&host=jp3.yohototo.top&path=/tyxyws&sni=jp3.yohototo.top&fp=unsafe&cs=TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256&fm={"tcp": [{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["5", "94", "1"], "delays": ["0"], "maxSplit": "0"}},{"type": "fragment", "settings": {"packets": "1-1", "lengths": ["109", "1"], "delays": ["1"], "maxSplit": "355"}}]}#🇨🇦 3743 - CA - VLESS/WS/TLS/UTLS - 443
 
-vless://8a51f3d9-30cc-44e6-8d31-700211a29066@130.94.115.231:2087?type=ws&encryption=none&path=/721740e567c7&packetEncoding=xudp#🇨🇦 6333 - CA - VLESS/WS - 2087
+vless://50c91104-c1fc-471e-914f-3ad252a0a34c@188.114.97.6:443?security=tls&type=ws&path=/pyip=ProxyIP.US.CMLiussss.net&host=quiet-snowflake-e1dd.374-ac3.workers.dev&packetEncoding=xudp&sni=quiet-snowflake-e1dd.374-ac3.workers.dev&fp=unsafe#🇨🇦 3850 - CA - VLESS/WS/TLS/UTLS - 443
 
-vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?security=reality&type=raw&sni=google.com&fp=chrome&flow=xtls-rprx-vision&sid=0e&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&encryption=none#🇨🇦 8101 - CA - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 41373
+vless://661f395d-b153-4199-a04b-693f5fe7f261@158.69.112.254:443?security=reality&encryption=none&pbk=wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y&host=/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.speedtest.net&sid=3d3c1e645f763ee3#🇨🇦 4979 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
-vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?security=reality&type=tcp#1⛑️@oneclickvpnkeys&sni=google.com&fp=chrome&flow=xtls-rprx-vision&sid=0e&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&encryption=none#🇨🇦 8102 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 41373
+vless://7e89c315-6436-4800-e287-c16d26d407a8@104.19.230.21:2053?encryption=none&type=xhttp&mode=auto&host=mind.esmahdi9.com&path=/@v2_line&security=tls&fp=chrome&sni=mind.esmahdi9.com&alpn=h3,h2,http/1.1&fragment=4-7,1-1,tlshello#🇨🇦 6025 - CA - VLESS/XHTTP/TLS/UTLS - 2053
 
-vless://c928859b-424d-429c-b1fe-c99137af7c4b@151.244.30.176:443?flow=xtls-rprx-vision&fp=chrome&pbk=V4MbF_aWSZ8bw6WbRL_wApaf4uagzBnu0c62g3dyNQY&security=reality&sid=c16225938b61882e&sni=smartcaptcha.yandexcloud.net&type=tcp#🇨🇦 9464 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://8a51f3d9-30cc-44e6-8d31-700211a29066@130.94.115.231:2087?type=ws&encryption=none&path=/721740e567c7&packetEncoding=xudp#🇨🇦 6602 - CA - VLESS/WS - 2087
 
-vless://ca52e2b6-fb9f-4dac-b6dc-49da9923f251@209.200.246.148:443?security=reality&type=raw&packetEncoding=xudp&sni=www.cloudflare.com&fp=firefox&flow=xtls-rprx-vision&sid=f98843107912e782&pbk=uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk#🇨🇦 9505 - CA - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
+vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?security=reality&type=tcp#1⛑️@oneclickvpnkeys&sni=google.com&fp=chrome&flow=xtls-rprx-vision&sid=0e&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&encryption=none#🇨🇦 8406 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 41373
 
-vless://d165fa7e-fa7a-414f-8c75-15f18bce5105@66.70.179.198:2053?type=tcp&security=reality&fp=firefox&pbk=wA5Vklw2gN0kMwC7JEmudiPbsKyTeSfbZNvpLiDUBEU&sid=bb437dca4f03116e&sni=www.apple.com#🇨🇦 9782 - CA - VLESS/REALITY/PBK/SID/UTLS - 2053
+vless://b2f2f9f2-1864-48ea-839b-22815faff1f1@188.114.97.6:443?security=tls&type=ws&host=stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev&path=/9BozNyvQ8VdRvsYX?ed=2560&sni=stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev&alpn=http/1.1&fp=unsafe&cs=TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256&fm={"tcp": [{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["5", "94", "1"], "delays": ["0"], "maxSplit": "0"}},{"type": "fragment", "settings": {"packets": "1-1", "lengths": ["109", "1"], "delays": ["1"], "maxSplit": "355"}}]}&packetEncoding=xudp#🇨🇦 8940 - CA - VLESS/WS/TLS/UTLS - 443
+
+vless://c928859b-424d-429c-b1fe-c99137af7c4b@151.244.30.176:443?flow=xtls-rprx-vision&fp=chrome&pbk=V4MbF_aWSZ8bw6WbRL_wApaf4uagzBnu0c62g3dyNQY&security=reality&sid=c16225938b61882e&sni=smartcaptcha.yandexcloud.net&type=tcp#🇨🇦 9812 - CA - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+
+trojan://humanity@104.18.12.149:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment#🇨🇦 6225 - CA - Trojan/WS/TLS - 443
+
+trojan://humanity@104.18.152.210:443?host=www.ignitelimit.com&path=/assignment&security=tls&sni=www.ignitelimit.com&type=ws#🇨🇦 6265 - CA - Trojan/WS/TLS - 443
 

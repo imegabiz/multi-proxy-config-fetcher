@@ -4,5 +4,5 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://9a829166-3da9-4445-babe-1612ee5fa9ae@2.26.128.83:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=w88Ys8dVF9DuslGwUD05J9-FHNoAT9qmPysCvHiEmmg&security=reality&sid=1b40e7c2a1d8f635&sni=emaar.ru&type=tcp#🇨🇿 7644 - CZ - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+vless://3c48b5f5-7766-4896-874e-b3ba1860e83a@85.137.165.160:443?type=tcp&headerType=none&security=reality&encryption=none&sni=w-mebel.pro&fp=firefox&pbk=R7NfFaabgh-0a2KR0Bfmn3a-O6mDT550OgXUDygDKBs&sid=c603efb3ddaf633d&flow=xtls-rprx-vision#🇨🇿 2632 - CZ - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
