@@ -1,7 +1,7 @@
 import json
 import os
 import logging
-from typing import Dict
+from typing import Dict, Optional
 import config_parser as parser
 import transport_builder
 import xray_template
@@ -38,7 +38,11 @@ class ConfigToXray:
         }
         return outbound
 
-    def convert_vless(self, data: Dict) -> Dict:
+    def convert_vless(self, data: Dict) -> Optional[Dict]:
+        stream_settings = transport_builder.build_xray_settings(data)
+        if stream_settings.get("security") not in ("tls", "reality"):
+            logger.warning(f"Skipping VLESS {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.9.9+)")
+            return None
         outbound = {
             "protocol": "vless",
             "settings": {
@@ -57,11 +61,15 @@ class ConfigToXray:
                     }
                 ]
             },
-            "streamSettings": transport_builder.build_xray_settings(data)
+            "streamSettings": stream_settings
         }
         return outbound
 
-    def convert_trojan(self, data: Dict) -> Dict:
+    def convert_trojan(self, data: Dict) -> Optional[Dict]:
+        stream_settings = transport_builder.build_xray_settings(data)
+        if stream_settings.get("security") not in ("tls", "reality"):
+            logger.warning(f"Skipping Trojan {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.9.9+)")
+            return None
         outbound = {
             "protocol": "trojan",
             "settings": {
@@ -74,7 +82,7 @@ class ConfigToXray:
                     }
                 ]
             },
-            "streamSettings": transport_builder.build_xray_settings(data)
+            "streamSettings": stream_settings
         }
         return outbound
 
