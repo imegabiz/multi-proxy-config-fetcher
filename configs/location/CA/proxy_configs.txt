@@ -4,5 +4,5 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:2082?path=/fp&encryption=none&host=hhlfy.twiladaphne.ndjp.net&type=ws#🇨🇦 219 - CA - VLESS/WS - 2082
+trojan://humanity@104.16.72.41:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment#🇨🇦 8 - CA - Trojan/WS/TLS - 443
 

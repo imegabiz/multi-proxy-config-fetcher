@@ -4,13 +4,5 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&packetEncoding=xudp&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=raw#🇸🇪 1458 - SE - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://20d7c485-5d24-49b5-a5cc-bb7a7daf9908@193.148.59.178:443?flow=xtls-rprx-vision&fp=chrome&pbk=-GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE&security=reality&sid=e3daad69&sni=www.apple.com&type=tcp#🇸🇪 1459 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://8316ca95-b32f-49a5-9de6-7e43aa6b710a@31.76.81.64:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=NTJCvwK9s4l-yhiIxwXto2a08mjRHVUHvWbAqADp_wg&security=reality&sid=c3577d33d1cb890b&sni=swstp2g.nodeserv.xyz&type=tcp#🇸🇪 6213 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://8316ca95-b32f-49a5-9de6-7e43aa6b710a@swstp2g.nodeserv.xyz:443?type=tcp&headerType=none&security=reality&encryption=none&sni=swstp2g.nodeserv.xyz&fp=edge&pbk=NTJCvwK9s4l-yhiIxwXto2a08mjRHVUHvWbAqADp_wg&sid=c3577d33d1cb890b&flow=xtls-rprx-vision#🇸🇪 6215 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
-vless://97423fab-93df-4061-be7a-e6ca8d7eb3d7@91.186.218.227:4443?path=/@Marisa_kristi&security=tls&encryption=none&host=5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev&fp=chrome&type=ws&sni=5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev&ech=cloudflare-ech.com https://dns.alidns.com/dns-query#🇸🇪 7338 - SE - VLESS/WS/TLS/UTLS - 4443
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.225:443?flow=xtls-rprx-vision&security=reality&sni=yahoo.com&fp=ios&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&sid=c39cc7310a&type=tcp&path=/#🇸🇪 201 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
 
