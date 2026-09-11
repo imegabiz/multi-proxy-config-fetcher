@@ -22,7 +22,7 @@ class XrayBatchTester:
         self.timeout = timeout
         self.test_url = test_url if test_url else 'https://www.youtube.com/generate_204'
         self.concurrency = max(1, concurrency)
-        self.unsupported_protocols = ['tuic://', 'wireguard://']
+        self.unsupported_protocols = ['tuic://', 'wireguard://', 'hysteria2://', 'hy2://']
         self._verify_xray()
 
     def _verify_xray(self):
