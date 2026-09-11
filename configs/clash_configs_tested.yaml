@@ -1,0 +1,953 @@
+{
+  "mixed-port": 7890,
+  "allow-lan": false,
+  "unified-delay": false,
+  "log-level": "silent",
+  "mode": "rule",
+  "tcp-concurrent": true,
+  "geo-auto-update": true,
+  "geo-update-interval": 168,
+  "external-controller": "127.0.0.1:9090",
+  "external-ui": "ui",
+  "profile": {
+    "store-selected": true,
+    "store-fake-ip": true
+  },
+  "tun": {
+    "enable": true,
+    "stack": "mixed",
+    "auto-route": true,
+    "strict-route": true,
+    "auto-detect-interface": true,
+    "dns-hijack": [
+      "any:53",
+      "tcp://any:53"
+    ],
+    "mtu": 9000
+  },
+  "sniffer": {
+    "enable": true,
+    "force-dns-mapping": true,
+    "parse-pure-ip": true,
+    "override-destination": true,
+    "sniff": {
+      "HTTP": {
+        "ports": [
+          80,
+          8080
+        ]
+      },
+      "TLS": {
+        "ports": [
+          443,
+          8443,
+          2053,
+          2083,
+          2087,
+          2096
+        ]
+      }
+    }
+  },
+  "dns": {
+    "enable": true,
+    "respect-rules": true,
+    "use-system-hosts": false,
+    "listen": "127.0.0.1:1053",
+    "ipv6": false,
+    "nameserver": [
+      "https://8.8.8.8/dns-query#✅ Anonymous Multi"
+    ],
+    "proxy-server-nameserver": [
+      "8.8.8.8#DIRECT"
+    ],
+    "direct-nameserver": [
+      "8.8.8.8#DIRECT"
+    ],
+    "direct-nameserver-follow-policy": true,
+    "nameserver-policy": {
+      "rule-set:geosite-ir": "8.8.8.8#DIRECT"
+    },
+    "enhanced-mode": "fake-ip",
+    "fake-ip-range": "198.18.0.1/16",
+    "fake-ip-filter-mode": "blacklist",
+    "fake-ip-filter": [
+      "+.lan",
+      "+.local"
+    ]
+  },
+  "proxies": [
+    {
+      "name": "🇺🇸 10 - US - VLESS/REALITY/PBK/VISION - 443",
+      "type": "vless",
+      "server": "47.253.226.114",
+      "port": 443,
+      "uuid": "055a1ce8-2a16-4a0d-a2c2-22826c9b2413",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "www.cloudflare.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc",
+        "short-id": ""
+      }
+    },
+    {
+      "name": "🇷🇺 30 - RU - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 14406",
+      "type": "vless",
+      "server": "85.198.70.200",
+      "port": 14406,
+      "uuid": "237f91bf-102e-4077-8cc3-baebccb42936",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "vk.ru",
+      "skip-cert-verify": false,
+      "client-fingerprint": "firefox",
+      "reality-opts": {
+        "public-key": "ldAmsl3dqTCUBmlmA8CS9ZnpznP6cFWj9AxNddWnbxY",
+        "short-id": "1a2b3c4d5e6f7a8b"
+      }
+    },
+    {
+      "name": "🇳🇱 58 - NL - VLESS/TLS/UTLS - 8443",
+      "type": "vless",
+      "server": "193.23.194.167",
+      "port": 8443,
+      "uuid": "32349ee8-8551-45fa-a265-8704cec72936",
+      "network": "tcp",
+      "tls": true,
+      "servername": "neth.lckdwn.ru",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "alpn": [
+        "h2",
+        "http/1.1"
+      ]
+    },
+    {
+      "name": "🇬🇧 66 - GB - VLESS/REALITY/PBK/SID/VISION/UTLS - 51847",
+      "type": "vless",
+      "server": "3.9.135.156",
+      "port": 51847,
+      "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "www.tesla.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc",
+        "short-id": "0eec442e7b34d2f2"
+      }
+    },
+    {
+      "name": "🇺🇸 92 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.195",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 93 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.197",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 94 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.198",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 95 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.206",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 96 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.214",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 97 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.216",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 98 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "15.204.97.219",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 99 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "51.158.206.103",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 100 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "51.158.206.12",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 101 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.19",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 102 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.20",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 103 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.25",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 104 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.26",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 105 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.29",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 106 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "51.158.206.34",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 107 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.80",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 108 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.86",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 109 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.87",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 110 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "51.158.206.8",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 111 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.93",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 112 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+      "type": "vless",
+      "server": "51.158.206.96",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 113 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.97",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇳🇱 114 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "51.158.206.98",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇫🇷 115 - FR - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "62.210.91.10",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇫🇷 116 - FR - VLESS/REALITY/PBK/SID/VISION - 23576",
+      "type": "vless",
+      "server": "62.210.91.2",
+      "port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "fuck.rkn",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+        "short-id": "01"
+      }
+    },
+    {
+      "name": "🇺🇸 122 - US - VLESS/REALITY/PBK/VISION - 8443",
+      "type": "vless",
+      "server": "31.58.50.200",
+      "port": 8443,
+      "uuid": "4b2fbd30-1a64-4b27-aea9-713d62c9e69b",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "tradingview.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU",
+        "short-id": ""
+      }
+    },
+    {
+      "name": "🇷🇺 144 - RU - VLESS/RAW/REALITY/PBK/SID/UTLS - 26424",
+      "type": "vless",
+      "server": "45.12.75.242",
+      "port": 26424,
+      "uuid": "633f424e-2b11-48da-a6b3-a849dd71456f",
+      "network": "tcp",
+      "tls": true,
+      "servername": "ya.ru",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0",
+        "short-id": "23103e1e"
+      }
+    },
+    {
+      "name": "🇬🇧 208 - GB - VLESS/REALITY/PBK/VISION/UTLS - 8443",
+      "type": "vless",
+      "server": "31.58.181.88",
+      "port": 8443,
+      "uuid": "863ce48d-6b5e-4682-b5d7-0c9b43895841",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "tradingview.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "firefox",
+      "reality-opts": {
+        "public-key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc",
+        "short-id": ""
+      }
+    },
+    {
+      "name": "🇫🇷 272 - FR - VLESS/WS/TLS - 443",
+      "type": "vless",
+      "server": "149.202.58.99",
+      "port": 443,
+      "uuid": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",
+      "network": "ws",
+      "ws-opts": {
+        "path": "/vws/",
+        "headers": {
+          "Host": "149.202.58.99"
+        }
+      },
+      "tls": true,
+      "servername": "bab-6.site",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "alpn": [
+        "h2",
+        "http/1.1"
+      ]
+    },
+    {
+      "name": "🇺🇸 273 - US - VLESS/WS/TLS - 443",
+      "type": "vless",
+      "server": "154.9.227.100",
+      "port": 443,
+      "uuid": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",
+      "network": "ws",
+      "ws-opts": {
+        "path": "/vws/",
+        "headers": {
+          "Host": "bab-6.site"
+        }
+      },
+      "tls": true,
+      "servername": "bab-6.site",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "alpn": [
+        "h2",
+        "http/1.1"
+      ]
+    },
+    {
+      "name": "🇩🇪 292 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+      "type": "vless",
+      "server": "170.101.109.37",
+      "port": 443,
+      "uuid": "bf645ffe-a3cc-4480-8e4c-9bcd1af41052",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "www.cloudflare.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "qq",
+      "reality-opts": {
+        "public-key": "rTnh7Y8RsSA5HSvFf-pWT49x8va6U6XHMRgNiMuwB0A",
+        "short-id": "ab88d256"
+      }
+    },
+    {
+      "name": "🇺🇸 307 - US - VLESS/REALITY/PBK/VISION - 36925",
+      "type": "vless",
+      "server": "ww9.levikogjgfdd.ir",
+      "port": 36925,
+      "uuid": "c9fd0fb1-8251-4106-b09a-f4b426736f67",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "www.cloudflare.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0",
+        "short-id": ""
+      }
+    },
+    {
+      "name": "🇩🇪 308 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 2083",
+      "type": "vless",
+      "server": "178.105.61.61",
+      "port": 2083,
+      "uuid": "cb077bf2-70b7-457b-af42-27cdc3e0e544",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "178.105.61.61",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "H0nCazQFHVhSObfqSUhGLhK7KRwKzTMggIBPjnMMqhk",
+        "short-id": "af04ff8094115e93"
+      }
+    },
+    {
+      "name": "🇸🇪 319 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+      "type": "vless",
+      "server": "169.40.42.225",
+      "port": 443,
+      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "yahoo.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "ios",
+      "reality-opts": {
+        "public-key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+        "short-id": "c39cc7310a"
+      }
+    },
+    {
+      "name": "🇫🇷 348 - FR - VLESS/TLS/VISION/UTLS - 443",
+      "type": "vless",
+      "server": "162.19.10.99",
+      "port": 443,
+      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "nasnet-162191099-direct.mbghalibaf.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "alpn": [
+        "h2"
+      ]
+    },
+    {
+      "name": "🇫🇷 349 - FR - VLESS/TLS/VISION - 443",
+      "type": "vless",
+      "server": "nasnet-162191099-direct.mbghalibaf.com",
+      "port": 443,
+      "uuid": "e8b1500b-e9e8-5492-8312-f4eadf7d0767",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "nasnet-162191099-direct.mbghalibaf.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "chrome",
+      "alpn": [
+        "h2",
+        "http/1.1"
+      ]
+    },
+    {
+      "name": "🇱🇹 360 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+      "type": "vless",
+      "server": "2.56.124.241",
+      "port": 443,
+      "uuid": "eec2f6a7-c10f-43b0-b133-61f9bf9bbc27",
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "tls": true,
+      "servername": "www.amazon.com",
+      "skip-cert-verify": false,
+      "client-fingerprint": "firefox",
+      "reality-opts": {
+        "public-key": "bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw",
+        "short-id": "72104d27a0f5f62e"
+      }
+    }
+  ],
+  "proxy-groups": [
+    {
+      "name": "✅ Anonymous Multi",
+      "type": "select",
+      "proxies": [
+        "🚀 Best Ping",
+        "🇺🇸 10 - US - VLESS/REALITY/PBK/VISION - 443",
+        "🇷🇺 30 - RU - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 14406",
+        "🇳🇱 58 - NL - VLESS/TLS/UTLS - 8443",
+        "🇬🇧 66 - GB - VLESS/REALITY/PBK/SID/VISION/UTLS - 51847",
+        "🇺🇸 92 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 93 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 94 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 95 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 96 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 97 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 98 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 99 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 100 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 101 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 102 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 103 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 104 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 105 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 106 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 107 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 108 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 109 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 110 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 111 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 112 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 113 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 114 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇫🇷 115 - FR - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇫🇷 116 - FR - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇺🇸 122 - US - VLESS/REALITY/PBK/VISION - 8443",
+        "🇷🇺 144 - RU - VLESS/RAW/REALITY/PBK/SID/UTLS - 26424",
+        "🇬🇧 208 - GB - VLESS/REALITY/PBK/VISION/UTLS - 8443",
+        "🇫🇷 272 - FR - VLESS/WS/TLS - 443",
+        "🇺🇸 273 - US - VLESS/WS/TLS - 443",
+        "🇩🇪 292 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+        "🇺🇸 307 - US - VLESS/REALITY/PBK/VISION - 36925",
+        "🇩🇪 308 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 2083",
+        "🇸🇪 319 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+        "🇫🇷 348 - FR - VLESS/TLS/VISION/UTLS - 443",
+        "🇫🇷 349 - FR - VLESS/TLS/VISION - 443",
+        "🇱🇹 360 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "🚀 Best Ping",
+      "type": "url-test",
+      "proxies": [
+        "🇺🇸 10 - US - VLESS/REALITY/PBK/VISION - 443",
+        "🇷🇺 30 - RU - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 14406",
+        "🇳🇱 58 - NL - VLESS/TLS/UTLS - 8443",
+        "🇬🇧 66 - GB - VLESS/REALITY/PBK/SID/VISION/UTLS - 51847",
+        "🇺🇸 92 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 93 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 94 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 95 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 96 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 97 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇺🇸 98 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 99 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 100 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 101 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 102 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 103 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 104 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 105 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 106 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 107 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 108 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 109 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 110 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 111 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 112 - NL - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576",
+        "🇳🇱 113 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇳🇱 114 - NL - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇫🇷 115 - FR - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇫🇷 116 - FR - VLESS/REALITY/PBK/SID/VISION - 23576",
+        "🇺🇸 122 - US - VLESS/REALITY/PBK/VISION - 8443",
+        "🇷🇺 144 - RU - VLESS/RAW/REALITY/PBK/SID/UTLS - 26424",
+        "🇬🇧 208 - GB - VLESS/REALITY/PBK/VISION/UTLS - 8443",
+        "🇫🇷 272 - FR - VLESS/WS/TLS - 443",
+        "🇺🇸 273 - US - VLESS/WS/TLS - 443",
+        "🇩🇪 292 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+        "🇺🇸 307 - US - VLESS/REALITY/PBK/VISION - 36925",
+        "🇩🇪 308 - DE - VLESS/REALITY/PBK/SID/VISION/UTLS - 2083",
+        "🇸🇪 319 - SE - VLESS/REALITY/PBK/SID/VISION/UTLS - 443",
+        "🇫🇷 348 - FR - VLESS/TLS/VISION/UTLS - 443",
+        "🇫🇷 349 - FR - VLESS/TLS/VISION - 443",
+        "🇱🇹 360 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 180,
+      "tolerance": 50
+    }
+  ],
+  "rule-providers": {
+    "geosite-malware": {
+      "type": "http",
+      "format": "text",
+      "behavior": "domain",
+      "path": "./ruleset/geosite-malware.txt",
+      "interval": 86400,
+      "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt"
+    },
+    "geosite-phishing": {
+      "type": "http",
+      "format": "text",
+      "behavior": "domain",
+      "path": "./ruleset/geosite-phishing.txt",
+      "interval": 86400,
+      "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt"
+    },
+    "geosite-cryptominers": {
+      "type": "http",
+      "format": "text",
+      "behavior": "domain",
+      "path": "./ruleset/geosite-cryptominers.txt",
+      "interval": 86400,
+      "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt"
+    },
+    "geosite-ads": {
+      "type": "http",
+      "format": "text",
+      "behavior": "domain",
+      "path": "./ruleset/geosite-ads.txt",
+      "interval": 86400,
+      "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.txt"
+    },
+    "geosite-ir": {
+      "type": "http",
+      "format": "text",
+      "behavior": "domain",
+      "path": "./ruleset/geosite-ir.txt",
+      "interval": 86400,
+      "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ir.txt"
+    },
+    "geoip-ir": {
+      "type": "http",
+      "format": "text",
+      "behavior": "ipcidr",
+      "path": "./ruleset/geoip-ir.txt",
+      "interval": 86400,
+      "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/ircidr.txt"
+    }
+  },
+  "rules": [
+    "GEOIP,lan,DIRECT,no-resolve",
+    "NETWORK,udp,REJECT",
+    "RULE-SET,geosite-malware,REJECT",
+    "RULE-SET,geosite-phishing,REJECT",
+    "RULE-SET,geosite-cryptominers,REJECT",
+    "RULE-SET,geosite-ads,REJECT",
+    "RULE-SET,geosite-ir,DIRECT",
+    "RULE-SET,geoip-ir,DIRECT",
+    "MATCH,✅ Anonymous Multi"
+  ],
+  "ntp": {
+    "enable": true,
+    "server": "time.cloudflare.com",
+    "port": 123,
+    "interval": 30
+  }
+}
