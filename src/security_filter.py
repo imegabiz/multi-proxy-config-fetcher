@@ -1,6 +1,5 @@
 import json
 import os
-import sys
 import logging
 from typing import Dict, List, Set, Optional
 import transport_builder
