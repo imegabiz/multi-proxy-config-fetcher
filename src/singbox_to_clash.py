@@ -25,14 +25,22 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
     transport = outbound.get('transport') or {}
     tls = outbound.get('tls') or {}
     reality = tls.get('reality') or {}
+    net_type = transport.get('type', 'tcp')
 
-    ws_opts = {}
-    if transport.get('type') == 'ws':
-        ws_opts_inner = {'path': transport.get('path', '/')}
+    transport_fields = {'network': 'tcp'}
+    if net_type == 'ws':
+        ws_opts = {'path': transport.get('path', '/')}
         host = (transport.get('headers') or {}).get('Host')
         if host:
-            ws_opts_inner['headers'] = {'Host': host}
-        ws_opts = {'ws-opts': ws_opts_inner}
+            ws_opts['headers'] = {'Host': host}
+        transport_fields = {'network': 'ws', 'ws-opts': ws_opts}
+    elif net_type == 'grpc':
+        transport_fields = {'network': 'grpc', 'grpc-opts': {'grpc-service-name': transport.get('service_name', '')}}
+    elif net_type == 'http':
+        transport_fields = {
+            'network': 'h2',
+            'h2-opts': {'host': transport.get('host') or [server], 'path': transport.get('path', '/')}
+        }
 
     tls_fields = {}
     if tls.get('enabled'):
@@ -59,9 +67,8 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
             'uuid': outbound.get('uuid', ''),
             'alterId': int(outbound.get('alter_id', 0)),
             'cipher': outbound.get('security', 'auto'),
-            'network': transport.get('type', 'tcp'),
         }
-        proxy.update(ws_opts)
+        proxy.update(transport_fields)
         proxy.update(tls_fields)
         return proxy
 
@@ -72,12 +79,11 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
             'server': server,
             'port': int(port),
             'uuid': outbound.get('uuid', ''),
-            'network': transport.get('type', 'tcp'),
         }
         flow = outbound.get('flow', '')
         if flow:
             proxy['flow'] = flow
-        proxy.update(ws_opts)
+        proxy.update(transport_fields)
         proxy.update(tls_fields)
         return proxy
 
@@ -91,9 +97,14 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
             'sni': tls.get('server_name', server),
             'skip-cert-verify': tls.get('insecure', False),
         }
-        if transport.get('type') == 'ws':
-            proxy['network'] = 'ws'
-            proxy.update(ws_opts)
+        if net_type in ('ws', 'grpc'):
+            proxy.update(transport_fields)
+        if tls_fields.get('client-fingerprint'):
+            proxy['client-fingerprint'] = tls_fields['client-fingerprint']
+        if tls_fields.get('alpn'):
+            proxy['alpn'] = tls_fields['alpn']
+        if tls_fields.get('reality-opts'):
+            proxy['reality-opts'] = tls_fields['reality-opts']
         return proxy
 
     elif proxy_type == 'hysteria2':
@@ -102,7 +113,7 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
             'type': 'hysteria2',
             'server': server,
             'port': int(port),
-            'auth': outbound.get('password', ''),
+            'password': outbound.get('password', ''),
             'sni': tls.get('server_name', server),
             'skip-cert-verify': tls.get('insecure', True),
         }
