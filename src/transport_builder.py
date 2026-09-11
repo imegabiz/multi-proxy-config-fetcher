@@ -74,10 +74,11 @@ def build_singbox_settings(data: Dict) -> Tuple[Dict, Dict]:
                 "utls": {"enabled": True, "fingerprint": sanitize_fingerprint(data.get('fp'))}
             }
         elif tls_enabled:
+            insecure_flag = str(data.get('insecure', '0')).lower() in ('1', 'true')
             tls = {
                 "enabled": True,
                 "server_name": data.get('sni', address),
-                "insecure": False,
+                "insecure": insecure_flag,
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"],
                 "utls": {"enabled": True, "fingerprint": sanitize_fingerprint(data.get('fp'))}
             }
