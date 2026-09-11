@@ -16,7 +16,7 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/zieng2/wl/refs/heads/main/vless_universal.txt",
     #"https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt",
     #"https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",
-    #"https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/mix",
+    "https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/mix",
     #"https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/all_configs.txt",
     #"https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
     "https://raw.githubusercontent.com/Ashkan-m/v2ray/main/Sub.txt",
