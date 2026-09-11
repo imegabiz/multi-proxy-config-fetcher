@@ -2,14 +2,12 @@ import json
 import os
 import sys
 import logging
-import base64
 import socket
 import requests
 import time
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Dict, Optional, Tuple, List, Set
-from urllib.parse import urlparse, parse_qs
 from collections import Counter
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'settings'))
 from user_settings import LOCATION_APIS
