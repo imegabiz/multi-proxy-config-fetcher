@@ -1,25 +1,109 @@
 {
-  "188.220.67.181": [
-    "🇬🇧",
-    "United Kingdom of Great Britain and Northern Ireland"
+  "91.224.86.107": [
+    "🇺🇦",
+    "Ukraine"
   ],
-  "51.158.206.19": [
+  "157.238.208.110": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "193.233.87.41": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "104.18.12.149": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "51.158.206.12": [
     "🇳🇱",
     "Netherlands (Kingdom of the)"
   ],
-  "172.64.52.230": [
+  "178.105.61.61": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "87.242.94.175": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "46.254.18.60": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "172.67.182.89": [
     "🇨🇦",
     "Canada"
   ],
-  "104.19.229.21": [
+  "154.9.227.100": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "172.64.150.28": [
     "🇨🇦",
     "Canada"
   ],
-  "134.122.154.210": [
-    "🇸🇬",
-    "Singapore"
+  "147.45.226.155": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
   ],
-  "104.21.19.226": [
+  "51.158.206.80": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "31.58.50.200": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "87.120.84.32": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "172.67.217.240": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "46.29.142.57": [
+    "🇭🇺",
+    "Hungary"
+  ],
+  "31.58.181.88": [
+    "🇳🇱",
+    "The Netherlands"
+  ],
+  "193.23.194.167": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "mfa.gov.ua": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "15.204.97.197": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "172.66.140.62": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "93.123.85.32": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "188.220.67.140": [
+    "🇬🇧",
+    "United Kingdom of Great Britain and Northern Ireland"
+  ],
+  "172.67.148.36": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "178.95.170.115": [
+    "🇵🇱",
+    "Poland"
+  ],
+  "104.19.0.21": [
     "🇨🇦",
     "Canada"
   ],
@@ -27,31 +111,31 @@
     "🇨🇦",
     "Canada"
   ],
-  "178.95.170.83": [
-    "🇵🇱",
-    "Poland"
-  ],
-  "15.204.97.206": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "31.76.76.28": [
+  "51.158.206.86": [
     "🇳🇱",
     "Netherlands (Kingdom of the)"
   ],
-  "146.235.16.130": [
-    "🇸🇬",
-    "Singapore"
+  "195.216.168.158": [
+    "🇪🇸",
+    "Spain"
   ],
-  "89.36.161.222": [
-    "🇱🇻",
-    "Latvia"
+  "104.17.121.71": [
+    "🇨🇦",
+    "Canada"
   ],
-  "82.24.203.37": [
+  "168.119.103.176": [
     "🇩🇪",
     "Germany"
   ],
-  "51.158.206.26": [
+  "91.107.179.8": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "159.195.137.29": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "201.24.49.53": [
     "🇳🇱",
     "Netherlands (Kingdom of the)"
   ],
@@ -59,89 +143,65 @@
     "🇺🇸",
     "United States of America"
   ],
-  "62.210.91.10": [
-    "🇫🇷",
-    "France"
-  ],
-  "68.183.65.82": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "104.26.13.40": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "193.233.217.22": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "md5.univesalsrv.com": [
-    "🇲🇩",
-    "Moldova (the Republic of)"
-  ],
-  "147.45.226.155": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "104.16.72.41": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "172.67.208.166": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "193.23.194.167": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "45.130.125.201": [
-    "🇸🇨",
-    "Seychelles"
-  ],
-  "195.216.168.158": [
-    "🇪🇸",
-    "Spain"
-  ],
-  "185.86.144.101": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "45.130.125.126": [
-    "🇸🇨",
-    "Seychelles"
-  ],
-  "172.67.209.127": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "23.237.192.18": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "log.bpminecraft.com": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "31.58.181.88": [
-    "🇳🇱",
-    "The Netherlands"
-  ],
-  "faxf32gkfzoxqv.fx6hsv0.ccwu.cc": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "194.58.41.39": [
-    "🇩🇪",
-    "Germany"
-  ],
   "rs1.univesalsrv.com": [
     "🇷🇸",
     "Serbia"
   ],
-  "93.77.188.102": [
+  "87.242.127.110": [
     "🇷🇺",
     "Russian Federation"
+  ],
+  "51.158.206.8": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "188.42.145.180": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "188.225.32.115": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "167.68.4.199": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "46.243.142.42": [
+    "🇳🇱",
+    "The Netherlands"
+  ],
+  "itproxy4.lockdwn.com": [
+    "🏳️",
+    "Unknown"
+  ],
+  "188.72.103.4": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "31.76.76.28": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "8.6.112.6": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "185.178.208.176": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "104.16.107.139": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "65.109.238.140": [
+    "🇫🇮",
+    "Finland"
+  ],
+  "18.132.102.151": [
+    "🇬🇧",
+    "United Kingdom of Great Britain and Northern Ireland"
   ],
   "45.144.28.39": [
     "🇫🇷",
@@ -151,647 +211,11 @@
     "🇨🇦",
     "Canada"
   ],
-  "51.158.206.12": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "172.67.148.36": [
+  "log.bpminecraft.com": [
     "🇨🇦",
     "Canada"
-  ],
-  "51.158.206.34": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "104.16.72.101": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "163.8.195.241": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "188.114.97.8": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "18.169.49.13": [
-    "🇬🇧",
-    "United Kingdom of Great Britain and Northern Ireland"
-  ],
-  "restless-base-fe24.alirezahabibi20009.workers.dev": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "mfa.gov.ua": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "217.16.27.113": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "159.195.137.29": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "104.16.107.139": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "94.156.232.254": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "15.204.97.195": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "82.24.203.10": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "51.158.206.20": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "ww13.levikogjgfdd.ir": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "51.158.206.98": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "95.129.236.76": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "212.233.121.186": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "141.193.27.4": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "51.158.206.25": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "bg5.univesalsrv.com": [
-    "🇧🇬",
-    "Bulgaria"
-  ],
-  "waysi.waysi6688.workers.dev": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "172.67.204.201": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "15.204.97.198": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "95.129.236.216": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "193.233.255.45": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "15.204.97.214": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "138.124.60.146": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "104.18.12.149": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "151.101.56.7": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "185.178.208.176": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "85.198.70.200": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "167.82.76.27": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "194.146.223.231": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "104.19.214.98": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "91.224.86.107": [
-    "🇺🇦",
-    "Ukraine"
-  ],
-  "51.158.206.86": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "144.31.5.64": [
-    "🇵🇱",
-    "Poland"
-  ],
-  "154.9.227.100": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "188.225.45.152": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "mute-dawn-f27b.375.workers.dev": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "www.shopify.com": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "188.114.97.6": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "51.158.206.8": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "144.31.93.231": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "89.35.14.32": [
-    "🇲🇩",
-    "Moldova (the Republic of)"
-  ],
-  "87.120.84.32": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "172.67.204.218": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "188.225.32.115": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "185.223.57.10": [
-    "🇵🇱",
-    "Poland"
-  ],
-  "itproxy4.lockdwn.com": [
-    "🏳️",
-    "Unknown"
-  ],
-  "199.232.78.160": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "ww9.levikogjgfdd.ir": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "172.67.178.142": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "172.67.217.240": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "189.74.97.47": [
-    "🇺🇿",
-    "Uzbekistan"
-  ],
-  "yx.zhourf2006.dpdns.org": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "cf.9999669.xyz": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "15.204.97.219": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "neth8.lunariai.ru": [
-    "🇧🇪",
-    "Belgium"
-  ],
-  "104.21.7.43": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "87.242.127.110": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "104.16.98.215": [
-    "🇨🇦",
-    "Canada"
-  ],
-  "168.222.194.138": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "63.141.128.22": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "157.238.208.110": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "129.154.192.50": [
-    "🇰🇷",
-    "Korea (the Republic of)"
-  ],
-  "46.101.196.101": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "51.158.206.97": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "85.120.144.98": [
-    "🇲🇩",
-    "Moldova (the Republic of)"
-  ],
-  "162.159.152.4": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "206.1.96.228": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "188.225.62.104": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "178.105.61.61": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "193.233.87.41": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "rubifen.adaspoloandco.com": [
-    "🇫🇷",
-    "France"
-  ],
-  "51.38.70.192": [
-    "🇫🇷",
-    "France"
-  ],
-  "45.131.4.115": [
-    "🇧🇿",
-    "Belize"
-  ],
-  "test.ghwhdr51.workers.dev": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "172.67.213.218": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "87.242.94.175": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "31.58.50.200": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "178.72.167.151": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "104.17.20.32": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "172.65.90.52": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "94.183.209.58": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "46.29.142.57": [
-    "🇭🇺",
-    "Hungary"
-  ],
-  "188.114.96.37": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "201.24.49.233": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "162.19.10.99": [
-    "🇫🇷",
-    "France"
-  ],
-  "157.90.165.181": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "151.243.182.249": [
-    "🇵🇱",
-    "Poland"
-  ],
-  "45.12.75.242": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "83.147.246.153": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "201.24.49.53": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "93.123.85.32": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "185.154.193.137": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "45.128.78.6": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "212.193.26.71": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "201.24.49.69": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "51.158.206.80": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "188.225.46.98": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "188.72.103.4": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "213.219.214.33": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "95.85.230.35": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "208.103.161.5": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "204.216.216.23": [
-    "🇮🇹",
-    "Italy"
-  ],
-  "18.132.102.151": [
-    "🇬🇧",
-    "United Kingdom of Great Britain and Northern Ireland"
-  ],
-  "172.64.150.66": [
-    "🇺🇸",
-    "United States of America"
   ],
   "151.101.56.6": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "94.183.209.59": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "149.202.58.99": [
-    "🇫🇷",
-    "France"
-  ],
-  "108.162.198.178": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "84.201.170.9": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "172.67.182.89": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "nasnet-162191099-direct.mbghalibaf.com": [
-    "🇫🇷",
-    "France"
-  ],
-  "62.210.91.2": [
-    "🇫🇷",
-    "France"
-  ],
-  "185.136.12.190": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "51.158.206.96": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "81.95.4.189": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "172.66.140.62": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "hys41.wba-pn.ru": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "51.158.206.93": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "104.21.15.145": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "169.40.42.225": [
-    "🇸🇪",
-    "Sweden"
-  ],
-  "5.78.48.21": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "51.158.206.103": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "188.220.67.224": [
-    "🇬🇧",
-    "United Kingdom of Great Britain and Northern Ireland"
-  ],
-  "150.40.126.19": [
-    "🇷🇸",
-    "Serbia"
-  ],
-  "167.68.4.199": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "15.204.97.197": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "50.7.33.218": [
-    "🇫🇷",
-    "France"
-  ],
-  "185.189.47.107": [
-    "🇸🇪",
-    "Sweden"
-  ],
-  "188.42.145.180": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "51.158.206.29": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "185.229.9.74": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "2.56.124.241": [
-    "🇱🇹",
-    "Lithuania"
-  ],
-  "104.17.121.71": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "178.95.170.115": [
-    "🇵🇱",
-    "Poland"
-  ],
-  "104.21.88.129": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "8.6.112.6": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "157.22.133.130": [
-    "🇺🇿",
-    "Uzbekistan"
-  ],
-  "192.166.82.74": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "51.158.206.87": [
-    "🇳🇱",
-    "Netherlands (Kingdom of the)"
-  ],
-  "185.40.153.217": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "172.64.150.28": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "188.220.67.140": [
-    "🇬🇧",
-    "United Kingdom of Great Britain and Northern Ireland"
-  ],
-  "193.58.121.95": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "47.253.226.114": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "185.141.227.155": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "46.254.18.60": [
-    "🇷🇺",
-    "Russian Federation"
-  ],
-  "168.119.103.176": [
-    "🇩🇪",
-    "Germany"
-  ],
-  "172.64.144.145": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "laoye.in-gect.fun": [
-    "🇱🇻",
-    "Latvia"
-  ],
-  "usejh2.neobo-tooth.ru": [
-    "🇫🇷",
-    "France"
-  ],
-  "lczoox-b5gygc-24w8tc.rozhaghadri.workers.dev": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "172.67.143.56": [
-    "🇺🇸",
-    "United States of America"
-  ],
-  "104.21.74.214": [
     "🇺🇸",
     "United States of America"
   ],
@@ -799,11 +223,411 @@
     "🇩🇪",
     "Germany"
   ],
+  "94.183.209.59": [
+    "🇵🇱",
+    "Poland"
+  ],
+  "5.78.48.21": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "104.21.74.214": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "md5.univesalsrv.com": [
+    "🇲🇩",
+    "Moldova (the Republic of)"
+  ],
+  "51.158.206.96": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "104.26.13.40": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "waysi.waysi6688.workers.dev": [
+    "🇨🇦",
+    "Canada"
+  ],
+  "188.114.96.37": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "46.101.196.101": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "157.22.133.130": [
+    "🇺🇿",
+    "Uzbekistan"
+  ],
+  "51.158.206.97": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "51.158.206.103": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "108.162.198.178": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "2.56.124.241": [
+    "🇱🇹",
+    "Lithuania"
+  ],
+  "ww9.levikogjgfdd.ir": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "157.90.165.181": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "168.222.194.138": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "51.158.206.93": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "185.189.47.107": [
+    "🇸🇪",
+    "Sweden"
+  ],
+  "89.36.161.222": [
+    "🇱🇻",
+    "Latvia"
+  ],
+  "206.1.96.228": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "151.243.182.249": [
+    "🇵🇱",
+    "Poland"
+  ],
+  "104.21.15.145": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "188.68.218.110": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "45.12.75.242": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "188.114.97.8": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "95.129.236.216": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "185.86.144.101": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "172.64.150.66": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "63.141.128.22": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "193.233.217.22": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "144.31.5.64": [
+    "🇵🇱",
+    "Poland"
+  ],
+  "185.241.195.146": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "104.21.7.43": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "104.16.72.41": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "104.19.214.98": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "45.130.125.126": [
+    "🇸🇨",
+    "Seychelles"
+  ],
+  "15.204.97.219": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "93.77.188.102": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "193.233.255.45": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "45.130.125.201": [
+    "🇸🇨",
+    "Seychelles"
+  ],
+  "15.204.97.195": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "172.67.204.201": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "hys41.wba-pn.ru": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "51.158.206.34": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "nasnet-162191099-direct.mbghalibaf.com": [
+    "🇫🇷",
+    "France"
+  ],
+  "162.159.152.4": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "restless-base-fe24.alirezahabibi20009.workers.dev": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "162.19.10.99": [
+    "🇫🇷",
+    "France"
+  ],
+  "104.21.88.129": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "85.198.70.200": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "185.223.57.10": [
+    "🇵🇱",
+    "Poland"
+  ],
+  "172.67.209.127": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "sweden1.banovano.space": [
+    "🇸🇪",
+    "Sweden"
+  ],
+  "51.158.206.87": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "47.253.226.114": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "172.64.144.145": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "188.225.46.167": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "104.16.72.101": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "94.156.232.254": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "104.17.20.32": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "62.210.91.2": [
+    "🇫🇷",
+    "France"
+  ],
+  "188.225.45.152": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "169.40.42.225": [
+    "🇸🇪",
+    "Sweden"
+  ],
+  "151.101.56.7": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "185.229.9.74": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "51.158.206.98": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "172.64.52.230": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "15.204.97.214": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "204.216.216.23": [
+    "🇮🇹",
+    "Italy"
+  ],
+  "185.22.235.63": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "138.124.60.146": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "95.129.236.76": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "83.147.246.153": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "144.31.93.231": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "45.131.4.115": [
+    "🇧🇿",
+    "Belize"
+  ],
+  "81.95.4.189": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "18.169.49.13": [
+    "🇬🇧",
+    "United Kingdom of Great Britain and Northern Ireland"
+  ],
+  "146.235.16.130": [
+    "🇸🇬",
+    "Singapore"
+  ],
+  "82.24.203.10": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "51.158.206.25": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "test.ghwhdr51.workers.dev": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "188.114.97.6": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "192.166.82.74": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "104.17.52.199": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "201.24.49.69": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "laoye.in-gect.fun": [
+    "🇱🇻",
+    "Latvia"
+  ],
+  "194.58.41.39": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "141.193.27.4": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "89.35.14.32": [
+    "🇲🇩",
+    "Moldova (the Republic of)"
+  ],
   "sc-thenetherlands1.09vpn.com": [
     "🇳🇱",
     "Netherlands (Kingdom of the)"
   ],
-  "cloudflare.seeck.cn": [
+  "185.40.153.217": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "104.19.229.21": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "104.21.229.127": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "188.225.62.104": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "172.67.204.218": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "faxf32gkfzoxqv.fx6hsv0.ccwu.cc": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "45.128.78.6": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "cf.9999669.xyz": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "yx.zhourf2006.dpdns.org": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "lczoox-b5gygc-24w8tc.rozhaghadri.workers.dev": [
     "🇺🇸",
     "United States of America"
   ],
@@ -811,35 +635,223 @@
     "🇺🇸",
     "United States of America"
   ],
-  "185.241.195.146": [
-    "🇷🇺",
-    "Russian Federation"
+  "172.65.90.52": [
+    "🇺🇸",
+    "United States of America"
   ],
-  "nt-irancell.xelfona.ir": [
+  "201.24.49.233": [
     "🇳🇱",
     "Netherlands (Kingdom of the)"
   ],
-  "finite-node.rtxconfigz.com": [
-    "🇫🇷",
-    "France"
+  "172.67.178.142": [
+    "🇺🇸",
+    "United States of America"
   ],
-  "185.22.235.181": [
-    "🇷🇺",
-    "Russian Federation"
+  "129.154.192.50": [
+    "🇰🇷",
+    "Korea (the Republic of)"
+  ],
+  "199.232.78.160": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "163.8.195.241": [
+    "🇩🇪",
+    "Germany"
   ],
   "91.224.87.22": [
     "🇷🇺",
     "Russian Federation"
   ],
+  "172.67.208.166": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "134.122.154.210": [
+    "🇸🇬",
+    "Singapore"
+  ],
+  "15.204.97.198": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "68.183.65.82": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "84.201.170.9": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "51.158.206.20": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "212.67.9.113": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "23.237.192.18": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "193.58.121.95": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "51.38.70.192": [
+    "🇫🇷",
+    "France"
+  ],
+  "172.67.143.56": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "finite-node.rtxconfigz.com": [
+    "🇫🇷",
+    "France"
+  ],
+  "46.148.235.16": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "62.210.91.10": [
+    "🇫🇷",
+    "France"
+  ],
+  "188.220.67.181": [
+    "🇬🇧",
+    "United Kingdom of Great Britain and Northern Ireland"
+  ],
+  "172.67.213.218": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "46.243.235.188": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "94.183.209.58": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "104.16.98.215": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "50.7.33.218": [
+    "🇫🇷",
+    "France"
+  ],
+  "51.158.206.26": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "15.204.97.206": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "188.220.67.224": [
+    "🇬🇧",
+    "United Kingdom of Great Britain and Northern Ireland"
+  ],
+  "51.158.206.19": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "217.16.27.113": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "178.95.170.83": [
+    "🇵🇱",
+    "Poland"
+  ],
   "cf-vless-4cf55824.aimall.fr": [
     "🇺🇸",
     "United States of America"
   ],
-  "65.109.238.140": [
-    "🇫🇮",
-    "Finland"
+  "104.21.19.226": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "95.85.230.35": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "185.136.12.190": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "neth8.lunariai.ru": [
+    "🇧🇪",
+    "Belgium"
+  ],
+  "ww13.levikogjgfdd.ir": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "213.219.214.33": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "usejh2.neobo-tooth.ru": [
+    "🇫🇷",
+    "France"
+  ],
+  "51.158.206.29": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "189.74.97.47": [
+    "🇺🇿",
+    "Uzbekistan"
+  ],
+  "188.225.39.107": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "149.202.58.99": [
+    "🇫🇷",
+    "France"
   ],
   "k2.cloud--vpn.site": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "82.24.203.37": [
+    "🇩🇪",
+    "Germany"
+  ],
+  "netherlands1.banovano.space": [
+    "🇳🇱",
+    "Netherlands (Kingdom of the)"
+  ],
+  "172.67.213.252": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "www.shopify.com": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "178.72.167.151": [
+    "🇷🇺",
+    "Russian Federation"
+  ],
+  "mute-dawn-f27b.375.workers.dev": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "rubifen.adaspoloandco.com": [
+    "🇫🇷",
+    "France"
+  ],
+  "cloudflare.seeck.cn": [
+    "🇺🇸",
+    "United States of America"
+  ],
+  "208.103.161.5": [
     "🇺🇸",
     "United States of America"
   ]
