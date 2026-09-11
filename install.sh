@@ -174,7 +174,9 @@ install_xray() {
         linux|macos)
             bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install >/dev/null 2>&1 || {
                 print_warning "Auto-install failed, trying manual method..."
-                local xray_version=$(curl -s "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+                local xray_version=$(curl -s "https://api.github.com/repos/XTLS/Xray-core/releases" | python3 -c "import json,sys
+releases=[r for r in json.load(sys.stdin) if not r.get('draft')]
+print(sorted(releases, key=lambda r: r['published_at'])[-1]['tag_name'] if releases else '')" 2>/dev/null)
                 local os_type=$(uname -s | tr '[:upper:]' '[:lower:]')
                 local arch_type=$(uname -m)
                 
@@ -221,7 +223,9 @@ install_xray() {
             esac
             
             print_status "Detecting latest Xray version..."
-            local xray_version=$(curl -s "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+            local xray_version=$(curl -s "https://api.github.com/repos/XTLS/Xray-core/releases" | python3 -c "import json,sys
+releases=[r for r in json.load(sys.stdin) if not r.get('draft')]
+print(sorted(releases, key=lambda r: r['published_at'])[-1]['tag_name'] if releases else '')" 2>/dev/null)
             
             if [ -z "$xray_version" ]; then
                 print_warning "Failed to detect Xray version, using fallback..."
