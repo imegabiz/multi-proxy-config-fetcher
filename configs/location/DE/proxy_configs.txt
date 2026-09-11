@@ -6,9 +6,9 @@
 
 vless://2cca8201-c93e-40eb-bd8a-fea4170c169e@185.136.12.190:443?mode=auto&path=/api/v1/&security=tls&alpn=h2&encryption=none&insecure=0&host=deu683.lackerdeu.org&fp=firefox&type=xhttp&allowInsecure=0&sni=deu683.lackerdeu.org#🇩🇪 52 - DE - VLESS/XHTTP/TLS/UTLS - 443
 
-vless://81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20@91.233.8.141:443?security=reality&encryption=none&pbk=k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=tnt-cloud.ru&sid=6e5f2a3b#🇩🇪 192 - DE - VLESS/REALITY/PBK/SID/VISION - 443
+vless://81d8f575-a9c3-03e7-be6b-c0e1dc1d2e20@91.233.8.141:443?security=reality&encryption=none&pbk=k76Ze8R0E5NyZwvBZT1A4n0zlVXxTeHQDAs0bBqiGQw&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=tnt-cloud.ru&sid=6e5f2a3b#🇩🇪 190 - DE - VLESS/REALITY/PBK/SID/VISION - 443
 
-vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@81.95.4.189:443?path=/vws/&security=tls&encryption=none&insecure=0&host=bab-6.site&fp=chrome&type=ws&allowInsecure=0&sni=bab-6.site#🇩🇪 284 - DE - VLESS/WS/TLS/UTLS - 443
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@81.95.4.189:443?path=/vws/&security=tls&encryption=none&insecure=0&host=bab-6.site&fp=chrome&type=ws&allowInsecure=0&sni=bab-6.site#🇩🇪 278 - DE - VLESS/WS/TLS/UTLS - 443
 
 ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206Y09pQyszSmhBWE13ZEdWNWV4bnJNU29ySlUwUmw1cWxMQ2JDQXVEbFdZND06SlRvdStKU21aT0F5ck1MZHZOQmNYRm0wWTlsdVovOHUxN2llNDhqUWZWYz0@141.95.29.163:2083#🇩🇪 1 - DE - SS/2022/BLAKE3 - 2083
 
@@ -24,7 +24,7 @@ hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@89.125.156.80:443?insecu
 
 hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@pixelcast.wwwinternetvideo.click:443?insecure=1&sni=pixelcast.wwwinternetvideo.click#🇩🇪 5 - DE - Hysteria2/QUIC - 443
 
-hysteria2://BPvdjudCGodsF67hRP3xgBYvcKp48coTsh6ANydLhQs=@fin14qr.wwwinternetvideo.click:443?insecure=1&sni=fin14qr.wwwinternetvideo.click#🇩🇪 8 - DE - Hysteria2/QUIC - 443
+hysteria2://QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s@162.249.125.133:443?security=tls&obfs=salamander&obfs-password=c1b4086fea89914496c7e10967a419216566&insecure=0&sni=hy2-new.aspidnet.xyz#🇩🇪 31 - DE - Hysteria2/QUIC/OBFS - 443
 
 hysteria2://V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8@144.31.221.57:443?insecure=1&sni=player.wwwinternetvideo.click#🇩🇪 32 - DE - Hysteria2/QUIC - 443
 
