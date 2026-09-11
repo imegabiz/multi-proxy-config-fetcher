@@ -1,9 +1,5 @@
 import json
-import base64
-import sys
-import os
 from typing import Dict, Optional
-from urllib.parse import urlparse, parse_qs
 import logging
 import config_parser as parser
 import transport_builder
