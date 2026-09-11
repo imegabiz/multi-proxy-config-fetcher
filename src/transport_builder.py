@@ -10,15 +10,7 @@ VALID_SINGBOX_FINGERPRINTS = {
     'chrome_pq', 'chrome_pq_psk'
 }
 
-def sanitize_singbox_fingerprint(fp: Optional[str]) -> str:
-    if not fp:
-        return 'chrome'
-    normalized = str(fp).strip().lower()
-    if normalized in VALID_SINGBOX_FINGERPRINTS:
-        return normalized
-    return 'chrome'
-
-def sanitize_xray_fingerprint(fp: Optional[str]) -> str:
+def sanitize_fingerprint(fp: Optional[str]) -> str:
     if not fp:
         return 'chrome'
     normalized = str(fp).strip().lower()
@@ -79,7 +71,7 @@ def build_singbox_settings(data: Dict) -> Tuple[Dict, Dict]:
                     "public_key": data.get('pbk', ''),
                     "short_id": data.get('sid', '')
                 },
-                "utls": {"enabled": True, "fingerprint": sanitize_singbox_fingerprint(data.get('fp'))}
+                "utls": {"enabled": True, "fingerprint": sanitize_fingerprint(data.get('fp'))}
             }
         elif tls_enabled:
             tls = {
@@ -87,7 +79,7 @@ def build_singbox_settings(data: Dict) -> Tuple[Dict, Dict]:
                 "server_name": data.get('sni', address),
                 "insecure": False,
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"],
-                "utls": {"enabled": True, "fingerprint": sanitize_singbox_fingerprint(data.get('fp'))}
+                "utls": {"enabled": True, "fingerprint": sanitize_fingerprint(data.get('fp'))}
             }
             if security == 'xtls':
                 tls["xtls"] = {"enabled": True}
@@ -116,14 +108,7 @@ def build_xray_settings(data: Dict) -> Dict:
             stream_settings["grpcSettings"] = {
                 "serviceName": data.get('path', data.get('serviceName', ''))
             }
-        elif net_type in ('http', 'h2', 'h3'):
-            stream_settings["network"] = "xhttp"
-            stream_settings["xhttpSettings"] = {
-                "path": data.get('path', '/'),
-                "host": data.get('host', address),
-                "mode": "stream-one"
-            }
-        elif net_type == 'quic':
+        elif net_type in ('http', 'h2', 'h3', 'quic'):
             stream_settings["network"] = "xhttp"
             stream_settings["xhttpSettings"] = {
                 "path": data.get('path', '/'),
@@ -164,13 +149,13 @@ def build_xray_settings(data: Dict) -> Dict:
                 "publicKey": data.get('pbk', ''),
                 "password": data.get('pbk', ''),
                 "shortId": data.get('sid', ''),
-                "fingerprint": sanitize_xray_fingerprint(data.get('fp'))
+                "fingerprint": sanitize_fingerprint(data.get('fp'))
             }
-        elif security in ('tls', 'xtls') or (data.get('protocol') == 'trojan'):
+        elif security in ('tls', 'xtls'):
             stream_settings["security"] = "tls"
             stream_settings["tlsSettings"] = {
                 "serverName": data.get('sni', address),
-                "fingerprint": sanitize_xray_fingerprint(data.get('fp')),
+                "fingerprint": sanitize_fingerprint(data.get('fp')),
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"]
             }
             
