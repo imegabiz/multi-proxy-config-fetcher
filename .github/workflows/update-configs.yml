@@ -22,12 +22,12 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       
@@ -171,7 +171,7 @@ jobs:
           echo "✗ Failed to install Sing-box after $MAX_RETRIES attempts"
           echo "Trying fallback method with hardcoded version..."
           
-          FALLBACK_VERSION="1.14.0"
+          FALLBACK_VERSION="1.13.11"
           FALLBACK_URL="https://github.com/SagerNet/sing-box/releases/download/v${FALLBACK_VERSION}/sing-box_${FALLBACK_VERSION}_linux_amd64.deb"
           
           echo "Using fallback URL: $FALLBACK_URL"
