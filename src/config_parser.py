@@ -227,6 +227,7 @@ def parse_hysteria2(config: str) -> Optional[Dict]:
         'address': url.hostname,
         'port': port,
         'password': password,
+        'security': 'tls',
         'sni': params.get('sni', [url.hostname])[0],
         'obfs': params.get('obfs', [''])[0],
         'obfs-password': params.get('obfs-password', [''])[0],
