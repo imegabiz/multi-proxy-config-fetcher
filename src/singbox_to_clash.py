@@ -108,7 +108,7 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
         return proxy
 
     elif proxy_type == 'hysteria2':
-        return {
+        proxy = {
             'name': name,
             'type': 'hysteria2',
             'server': server,
@@ -117,6 +117,11 @@ def singbox_outbound_to_clash_proxy(outbound: Dict) -> Optional[Dict]:
             'sni': tls.get('server_name', server),
             'skip-cert-verify': tls.get('insecure', True),
         }
+        obfs = outbound.get('obfs') or {}
+        if obfs.get('type'):
+            proxy['obfs'] = obfs['type']
+            proxy['obfs-password'] = obfs.get('password', '')
+        return proxy
 
     elif proxy_type == 'shadowsocks':
         return {
