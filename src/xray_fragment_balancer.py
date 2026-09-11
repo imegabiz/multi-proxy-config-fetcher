@@ -85,7 +85,7 @@ class ConfigToXrayFragment:
     def convert_vless(self, data: Dict) -> Optional[Dict]:
         stream_settings = transport_builder.build_xray_settings(data)
         if stream_settings.get("security") not in ("tls", "reality"):
-            logger.warning(f"Skipping VLESS {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.9.9+)")
+            logger.warning(f"Skipping VLESS {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.7.11+)")
             return None
         outbound = {
             "protocol": "vless",
@@ -112,7 +112,7 @@ class ConfigToXrayFragment:
     def convert_trojan(self, data: Dict) -> Optional[Dict]:
         stream_settings = transport_builder.build_xray_settings(data)
         if stream_settings.get("security") not in ("tls", "reality"):
-            logger.warning(f"Skipping Trojan {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.9.9+)")
+            logger.warning(f"Skipping Trojan {data.get('address', '?')}:{data.get('port')} - no TLS/REALITY (incompatible with Xray 26.7.11+)")
             return None
         outbound = {
             "protocol": "trojan",
@@ -144,9 +144,9 @@ class ConfigToXrayFragment:
                     }
                 ]
             },
-            "streamSettings": {
+            "streamSettings": apply_fragment({
                 "network": "tcp"
-            }
+            })
         }
 
     def process_configs(self):
@@ -160,7 +160,7 @@ class ConfigToXrayFragment:
             logger.error(f"Error reading {self.input_file}: {e}")
             return
 
-        final_config = xray_template.get_xray_template("👽 Anonymous Multi Fragment Balanced")
+        final_config = xray_template.get_xray_template("👽 Anonymous Multi Balanced + Fragment")
         temp_outbounds = []
         
         for line in lines:
