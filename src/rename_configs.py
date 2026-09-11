@@ -3,10 +3,8 @@ import base64
 import sys
 import os
 from typing import Dict, Optional, List, Tuple
-from urllib.parse import urlparse, parse_qs, unquote
+from urllib.parse import urlparse, parse_qs
 import logging
-import re
-import binascii
 import config_parser as parser
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
