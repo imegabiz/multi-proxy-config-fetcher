@@ -1,8 +1,0 @@
-//profile-title: base64:8J+RvUFub255bW91cy1STw==
-//profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
-//support-url: https://t.me/An0nymou3Bot
-//profile-web-page-url: https://github.com/4n0nymou3
-
-vless://4fb82973-a7f1-4fc2-9958-cb21f5162f06@ro-xh02.tcp-reset-club.net:8443?encryption=none&security=reality&sni=s3.netavex.com&fp=chrome&pbk=Gu_QdtOX6E8pZcYvDWgHKA5dxcit7hrpU27sizCEWXg&sid=e0&type=xhttp&path=/assets/v2/pkg&mode=stream-one&extra={"xmux":{"maxConcurrency":"16-32"}}#🇷🇴 105 - RO - VLESS/XHTTP/REALITY/PBK/SID/UTLS - 8443
-

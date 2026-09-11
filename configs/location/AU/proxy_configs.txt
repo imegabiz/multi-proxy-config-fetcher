@@ -1,8 +1,0 @@
-//profile-title: base64:8J+RvUFub255bW91cy1BVQ==
-//profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
-//support-url: https://t.me/An0nymou3Bot
-//profile-web-page-url: https://github.com/4n0nymou3
-
-vless://731f177e-00aa-480c-b935-661456139a32@103.75.119.126:2087?type=ws&encryption=none&path=/7586c69d3dc9&packetEncoding=xudp#🇦🇺 5424 - AU - VLESS/WS - 2087
-

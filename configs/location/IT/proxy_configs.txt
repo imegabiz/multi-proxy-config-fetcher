@@ -1,8 +1,0 @@
-//profile-title: base64:8J+RvUFub255bW91cy1JVA==
-//profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
-//support-url: https://t.me/An0nymou3Bot
-//profile-web-page-url: https://github.com/4n0nymou3
-
-vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?encryption=none&security=none&type=tcp#🇮🇹 158 - IT - VLESS - 10086
-

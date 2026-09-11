@@ -1,8 +1,0 @@
-//profile-title: base64:8J+RvUFub255bW91cy1DQQ==
-//profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
-//support-url: https://t.me/An0nymou3Bot
-//profile-web-page-url: https://github.com/4n0nymou3
-
-trojan://eabf1999fefbb7d2@waysi.waysi6688.workers.dev:2087?alpn=http/1.1&ed=2560&eh=Sec-WebSocket-Protocol&fp=ios&host=waysi.waysi6688.workers.dev&path=/tr/sMpzOZ0eWEt6jbZ1jjN3BaM7LLoQ&sni=WaYSi.wAYsI6688.WOrkeRS.deV&type=ws#🇨🇦 6 - CA - Trojan/WS/TLS/UTLS - 2087
-

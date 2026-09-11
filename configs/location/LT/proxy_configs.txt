@@ -1,8 +1,0 @@
-//profile-title: base64:8J+RvUFub255bW91cy1MVA==
-//profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
-//support-url: https://t.me/An0nymou3Bot
-//profile-web-page-url: https://github.com/4n0nymou3
-
-vless://eec2f6a7-c10f-43b0-b133-61f9bf9bbc27@2.56.124.241:443?flow=xtls-rprx-vision&security=reality&sni=www.amazon.com&fp=firefox&pbk=bPbAdn6ogLbiv5cRe5d12EL7FhooAIVrC3-fg90P-Bw&sid=72104d27a0f5f62e&type=tcp&path=/#🇱🇹 356 - LT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
-
