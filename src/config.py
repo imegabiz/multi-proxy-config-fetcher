@@ -6,7 +6,6 @@ import sys
 from urllib.parse import urlparse
 from dataclasses import dataclass
 import logging
-from math import inf
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'settings'))
 from user_settings import (
