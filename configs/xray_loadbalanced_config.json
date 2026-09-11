@@ -93,44 +93,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.178.208.176",
-            "port": 443,
-            "users": [
-              {
-                "id": "1f7aa247-62bf-4c2a-a783-e6d2f6d14c41",
-                "flow": "",
-                "encryption": "none",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/stream/615428/socket",
-          "headers": {
-            "Host": "founders-blog.online"
-          }
-        },
-        "tlsSettings": {
-          "serverName": "founders-blog.online",
-          "fingerprint": "chrome",
-          "alpn": [
-            "h3",
-            "h2"
-          ]
-        }
-      },
-      "tag": "proxy-2"
-    },
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "85.198.70.200",
             "port": 14406,
             "users": [
@@ -155,7 +117,7 @@
           "fingerprint": "firefox"
         }
       },
-      "tag": "proxy-3"
+      "tag": "proxy-2"
     },
     {
       "protocol": "vless",
@@ -184,6 +146,37 @@
           "password": "aKfJokRORjNdwkn0XY6KA_PIfjytp4E0liM5v72LM1w",
           "shortId": "8e21c5f4",
           "fingerprint": "firefox"
+        }
+      },
+      "tag": "proxy-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "146.235.16.130",
+            "port": 19825,
+            "users": [
+              {
+                "id": "2d1ad594-80a4-4bfb-87a6-038e39701f51",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "sg2-8sb.6121999.dpdns.org",
+          "publicKey": "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI",
+          "password": "GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI",
+          "shortId": "6ba85179e30d4fc2",
+          "fingerprint": "chrome"
         }
       },
       "tag": "proxy-4"
@@ -1162,6 +1155,44 @@
       "settings": {
         "vnext": [
           {
+            "address": "154.9.227.100",
+            "port": 443,
+            "users": [
+              {
+                "id": "b585dc5e-55bf-4a8b-913a-27c9ccac05c3",
+                "flow": "",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "wsSettings": {
+          "path": "/vws/",
+          "headers": {
+            "Host": "bab-6.site"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "bab-6.site",
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      },
+      "tag": "proxy-36"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
             "address": "ww9.levikogjgfdd.ir",
             "port": 36925,
             "users": [
@@ -1186,7 +1217,38 @@
           "fingerprint": "chrome"
         }
       },
-      "tag": "proxy-36"
+      "tag": "proxy-37"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "169.40.42.104",
+            "port": 443,
+            "users": [
+              {
+                "id": "d65cc14c-f53f-4fe2-b262-97856601319c",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "yahoo.com",
+          "publicKey": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "password": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
+          "shortId": "c39cc7310a",
+          "fingerprint": "ios"
+        }
+      },
+      "tag": "proxy-38"
     },
     {
       "protocol": "vless",
@@ -1217,7 +1279,7 @@
           ]
         }
       },
-      "tag": "proxy-37"
+      "tag": "proxy-39"
     },
     {
       "protocol": "vless",
@@ -1249,18 +1311,18 @@
           ]
         }
       },
-      "tag": "proxy-38"
+      "tag": "proxy-40"
     },
     {
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "188.225.24.89",
-            "port": 8449,
+            "address": "5.253.42.164",
+            "port": 40443,
             "users": [
               {
-                "id": "fdaafea8-afc7-4ece-9dc4-1e2609c43913",
+                "id": "e99ba96d-dec8-42eb-be53-19e71eef7cab",
                 "flow": "xtls-rprx-vision",
                 "encryption": "none",
                 "level": 8
@@ -1270,48 +1332,43 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "akashi.vk-portal.net",
-          "publicKey": "XF3wXFapd311fC0M0APxbrf3cIaGnyKU7BR4Pv_l7Rs",
-          "password": "XF3wXFapd311fC0M0APxbrf3cIaGnyKU7BR4Pv_l7Rs",
-          "shortId": "15954a1c5a3d5bfc",
-          "fingerprint": "firefox"
+          "serverName": "deepl.com",
+          "publicKey": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
+          "password": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
+          "shortId": "68a8",
+          "fingerprint": "chrome"
         }
       },
-      "tag": "proxy-39"
+      "tag": "proxy-41"
     },
     {
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "188.42.145.180",
-            "port": 443,
-            "password": "humanity",
+            "address": "86.38.247.109",
+            "port": 2087,
+            "password": "sshs8_6481354771",
             "level": 8
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "tls",
-        "wsSettings": {
-          "path": "/assignment",
-          "headers": {
-            "Host": "www.volumeroot.com"
-          }
-        },
         "tlsSettings": {
-          "serverName": "www.volumeroot.com",
+          "serverName": "ul-singapore1.09vpn.com",
           "fingerprint": "chrome",
           "alpn": [
+            "h2",
             "http/1.1"
           ]
         }
       },
-      "tag": "proxy-40"
+      "tag": "proxy-42"
     },
     {
       "protocol": "freedom",

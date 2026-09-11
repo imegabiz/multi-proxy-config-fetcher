@@ -4,25 +4,27 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?encryption=none&flow=xtls-rprx-vision&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc&security=reality&sni=www.cloudflare.com&type=tcp#🇺🇸 19 - US - VLESS/REALITY/PBK/VISION - 443
+vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?encryption=none&flow=xtls-rprx-vision&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc&security=reality&sni=www.cloudflare.com&type=tcp#🇺🇸 11 - US - VLESS/REALITY/PBK/VISION - 443
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.195:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 113 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.195:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 95 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.197:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 114 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.197:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 96 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.198:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 115 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.198:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 97 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.206:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 116 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.206:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 98 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.214:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 117 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.214:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 99 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.216:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 118 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.216:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 100 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.219:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 119 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.219:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#🇺🇸 101 - US - VLESS/REALITY/PBK/SID/VISION/UTLS - 23576
 
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@ww13.levikogjgfdd.ir:23576?security=reality&encryption=none&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=fuck.rkn&sid=01#🇺🇸 138 - US - VLESS/REALITY/PBK/SID/VISION - 23576
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@ww13.levikogjgfdd.ir:23576?security=reality&encryption=none&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=fuck.rkn&sid=01#🇺🇸 120 - US - VLESS/REALITY/PBK/SID/VISION - 23576
 
-vless://4b2fbd30-1a64-4b27-aea9-713d62c9e69b@31.58.50.200:8443?encryption=none&flow=xtls-rprx-vision&pbk=mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU&security=reality&sni=tradingview.com&type=tcp#🇺🇸 143 - US - VLESS/REALITY/PBK/VISION - 8443
+vless://4b2fbd30-1a64-4b27-aea9-713d62c9e69b@31.58.50.200:8443?encryption=none&flow=xtls-rprx-vision&pbk=mr5AF0LFyDzYDRoYAwH6QNcHXL77-LoiwRx50ZzU8QU&security=reality&sni=tradingview.com&type=tcp#🇺🇸 125 - US - VLESS/REALITY/PBK/VISION - 8443
 
-vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@ww9.levikogjgfdd.ir:36925?security=reality&encryption=none&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com#🇺🇸 304 - US - VLESS/REALITY/PBK/VISION - 36925
+vless://b585dc5e-55bf-4a8b-913a-27c9ccac05c3@154.9.227.100:443?encryption=none&security=tls&sni=bab-6.site&type=ws&host=bab-6.site&path=/vws/#🇺🇸 273 - US - VLESS/WS/TLS - 443
+
+vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@ww9.levikogjgfdd.ir:36925?security=reality&encryption=none&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0&host=Telegram-Leviko_v2ray&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com#🇺🇸 298 - US - VLESS/REALITY/PBK/VISION - 36925
 
