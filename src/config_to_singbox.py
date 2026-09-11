@@ -57,6 +57,8 @@ class ConfigToSingbox:
                     "type": "hysteria2", "tag": tag, "server": data['address'], "server_port": data['port'],
                     "password": data['password'], "tls": tls
                 }
+                if data.get('obfs') and data.get('obfs-password'):
+                    outbound["obfs"] = {"type": data['obfs'], "password": data['obfs-password']}
          
             elif config_lower.startswith('ss://'):
                 data = parser.parse_shadowsocks(config)
