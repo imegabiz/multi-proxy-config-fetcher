@@ -20,24 +20,24 @@ def sanitize_fingerprint(fp: Optional[str]) -> str:
 
 def map_transport_for_singbox(net_type: str) -> str:
     transport_map = {
-        'httpupgrade': 'ws',
         'splithttp': 'http',
-        'xhttp': 'http'
+        'xhttp': 'http',
+        'h3': 'http'
     }
     return transport_map.get(net_type, net_type)
 
 def build_singbox_settings(data: Dict, alpn_override: Optional[list] = None) -> Tuple[Dict, Dict]:
     transport = {}
     tls = {"enabled": False}
-    
+
     net_type = data.get('net', data.get('type', 'tcp')).lower()
     security = data.get('security', data.get('tls', 'none')).lower()
     address = data.get('address', data.get('add', ''))
     port = data.get('port', 443)
-    
+
     try:
         net_type = map_transport_for_singbox(net_type)
-        
+
         if net_type == 'ws':
             transport = {
                 "type": "ws",
@@ -55,13 +55,19 @@ def build_singbox_settings(data: Dict, alpn_override: Optional[list] = None) -> 
                 "host": [data.get('host', address)],
                 "path": data.get('path', '/')
             }
+        elif net_type == 'httpupgrade':
+            transport = {
+                "type": "httpupgrade",
+                "host": data.get('host', address),
+                "path": data.get('path', '/')
+            }
         elif net_type == 'quic':
             transport = {"type": "quic"}
         elif net_type == 'kcp':
-            transport = {"type": "kcp"}
-        
+            transport = {}
+
         tls_enabled = security in ('tls', 'xtls', 'reality') or port in [443, 2053, 2083, 2087, 2096, 8443]
-        
+
         if security == 'reality':
             tls = {
                 "enabled": True,
@@ -82,24 +88,22 @@ def build_singbox_settings(data: Dict, alpn_override: Optional[list] = None) -> 
                 "alpn": alpn_override if alpn_override else (data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"]),
                 "utls": {"enabled": True, "fingerprint": sanitize_fingerprint(data.get('fp'))}
             }
-            if security == 'xtls':
-                tls["xtls"] = {"enabled": True}
 
     except Exception as e:
         logger.warning(f"Error building Sing-box settings: {e}")
-    
+
     return transport, tls
 
 def build_xray_settings(data: Dict) -> Dict:
     stream_settings = {"network": "tcp", "security": "none"}
-    
+
     net_type = data.get('net', data.get('type', 'tcp')).lower()
     security = data.get('security', data.get('tls', 'none')).lower()
     address = data.get('address', data.get('add', ''))
-    
+
     try:
         stream_settings["network"] = net_type
-        
+
         if net_type == 'ws':
             stream_settings["wsSettings"] = {
                 "path": data.get('path', '/'),
@@ -126,29 +130,21 @@ def build_xray_settings(data: Dict) -> Dict:
                 "path": data.get('path', '/'),
                 "host": data.get('host', address)
             }
-        elif net_type == 'splithttp':
-            splithttp_settings = {
-                "path": data.get('path', '/'),
-                "host": data.get('host', address)
-            }
-            if data.get('mode'):
-                splithttp_settings["mode"] = data.get('mode')
-            stream_settings["splithttpSettings"] = splithttp_settings
-        elif net_type == 'xhttp':
+        elif net_type in ('splithttp', 'xhttp'):
             xhttp_settings = {
                 "path": data.get('path', '/'),
                 "host": data.get('host', address)
             }
             if data.get('mode'):
                 xhttp_settings["mode"] = data.get('mode')
+            stream_settings["network"] = "xhttp"
             stream_settings["xhttpSettings"] = xhttp_settings
-        
+
         if security == 'reality':
             stream_settings["security"] = "reality"
             stream_settings["realitySettings"] = {
                 "serverName": data.get('sni', address),
                 "publicKey": data.get('pbk', ''),
-                "password": data.get('pbk', ''),
                 "shortId": data.get('sid', ''),
                 "fingerprint": sanitize_fingerprint(data.get('fp'))
             }
@@ -159,8 +155,8 @@ def build_xray_settings(data: Dict) -> Dict:
                 "fingerprint": sanitize_fingerprint(data.get('fp')),
                 "alpn": data.get('alpn', '').split(',') if data.get('alpn') else ["h2", "http/1.1"]
             }
-            
+
     except Exception as e:
         logger.warning(f"Error building Xray settings: {e}")
-        
+
     return stream_settings
