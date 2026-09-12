@@ -20,7 +20,7 @@ class ConfigToSingbox:
             if config_lower.startswith('vmess://'):
                 data = parser.decode_vmess(config)
                 if not data: return None
-                tag = data.get('name') or f"{protocol_type} {index} - {data['add']}:{data['port']}"
+                tag = f"{data['name']} #{index}" if data.get('name') else f"{protocol_type} {index} - {data['add']}:{data['port']}"
                 transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
                     "type": "vmess", "tag": tag, "server": data['add'], "server_port": int(data['port']),
@@ -31,7 +31,7 @@ class ConfigToSingbox:
             elif config_lower.startswith('vless://'):
                 data = parser.parse_vless(config)
                 if not data: return None
-                tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
+                tag = f"{data['name']} #{index}" if data.get('name') else f"{protocol_type} {index} - {data['address']}:{data['port']}"
                 transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
                     "type": "vless", "tag": tag, "server": data['address'], "server_port": data['port'],
@@ -41,7 +41,7 @@ class ConfigToSingbox:
             elif config_lower.startswith('trojan://'):
                 data = parser.parse_trojan(config)
                 if not data: return None
-                tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
+                tag = f"{data['name']} #{index}" if data.get('name') else f"{protocol_type} {index} - {data['address']}:{data['port']}"
                 transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
                     "type": "trojan", "tag": tag, "server": data['address'], "server_port": data['port'],
@@ -53,7 +53,7 @@ class ConfigToSingbox:
                 if not data:
                     logger.warning(f"Failed to parse hysteria2 config: {config[:80]}")
                     return None
-                tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
+                tag = f"{data['name']} #{index}" if data.get('name') else f"{protocol_type} {index} - {data['address']}:{data['port']}"
                 transport, tls = transport_builder.build_singbox_settings(data, alpn_override=["h3"])
                 outbound = {
                     "type": "hysteria2", "tag": tag, "server": data['address'], "server_port": data['port'],
@@ -65,7 +65,7 @@ class ConfigToSingbox:
             elif config_lower.startswith('ss://'):
                 data = parser.parse_shadowsocks(config)
                 if not data: return None
-                tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
+                tag = f"{data['name']} #{index}" if data.get('name') else f"{protocol_type} {index} - {data['address']}:{data['port']}"
                 outbound = {
                     "type": "shadowsocks", "tag": tag, "server": data['address'], "server_port": data['port'],
                     "method": data['method'], "password": data['password']
