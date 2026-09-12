@@ -54,7 +54,7 @@ class ConfigToSingbox:
                     logger.warning(f"Failed to parse hysteria2 config: {config[:80]}")
                     return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
-                transport, tls = transport_builder.build_singbox_settings(data)
+                transport, tls = transport_builder.build_singbox_settings(data, alpn_override=["h3"])
                 outbound = {
                     "type": "hysteria2", "tag": tag, "server": data['address'], "server_port": data['port'],
                     "password": data['password'], "tls": tls
