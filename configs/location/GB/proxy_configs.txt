@@ -8,3 +8,5 @@ vless://391a01e9-b664-407b-9158-610fab3f5920@3.9.135.156:51847?security=reality&
 
 hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@vpn-uk-002.fastervpn.world:443?sni=vpn-uk-002.fastervpn.world&path=%2f&allow_insecure=1#🇬🇧 28 - GB - Hysteria2/QUIC - 443
 
+vmess://eyJhZGQiOiAiNTcuMTI5LjEzMi4yMjMiLCAiYWlkIjogIjAiLCAiYWxwbiI6ICIiLCAiZnAiOiAiIiwgImhvc3QiOiAiZ29vZ2xlLmNvbSIsICJpZCI6ICJhMjVjYmYxMS0yOTA4LTRhMWItYTNhOC05YTU3MTc3N2RjYTMiLCAiaW5zZWN1cmUiOiAiMCIsICJuZXQiOiAid3MiLCAicGF0aCI6ICIvdm1lc3MvIiwgInBvcnQiOiA4MCwgInBzIjogIvCfh6zwn4enIDMzIC0gR0IgLSBWTWVzcy9XUyAtIDgwIiwgInNjeSI6ICJhdXRvIiwgInNuaSI6ICIiLCAidGxzIjogIiIsICJ0eXBlIjogIm5vbmUiLCAidiI6ICIyIiwgIm5hbWUiOiAi8J+HuvCfh7ggVVMgfCBWTUVTUyB8IEBOYW1pcmFDb25maWdzICMxIFtmYXN0XSJ9
+

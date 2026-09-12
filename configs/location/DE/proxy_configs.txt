@@ -4,7 +4,7 @@
 //support-url: https://t.me/An0nymou3Bot
 //profile-web-page-url: https://github.com/4n0nymou3
 
-vless://96b44347-cac5-cfae-383b-1724ae9b5aec@170.168.99.8:443?mode=auto&security=reality&encryption=none&pbk=skXBkyphBIt0TWVM0R5U3U-8UG0cuW00ONkaQpJ-OxU&fp=chrome&type=xhttp&sni=download.nvidia.com#🇩🇪 235 - DE - VLESS/XHTTP/REALITY/PBK/UTLS - 443
+vless://33ece698-85ea-49c4-bbd2-f54bceb9d701@188.137.232.57:46519?security=reality&encryption=none&pbk=AdgOmPJcyKw1bSrYXMmA-Clfvk4JrrdmrDEEuF42Z2w&headerType=none&fp=firefox&spx=/cfe9fb5d492cd24&type=tcp&sni=play-apps-features.googleusercontent.com&sid=bb#🇩🇪 62 - DE - VLESS/REALITY/PBK/SID/UTLS - 46519
 
 hysteria2://2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f@144.31.148.87:443?insecure=1&sni=replay.wwwinternetvideo.click#🇩🇪 3 - DE - Hysteria2/QUIC - 443
 
@@ -13,6 +13,8 @@ hysteria2://2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f@replay.wwwinternetv
 hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@89.125.156.80:443?insecure=1&sni=pixelcast.wwwinternetvideo.click#🇩🇪 5 - DE - Hysteria2/QUIC - 443
 
 hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@pixelcast.wwwinternetvideo.click:443?insecure=1&sni=pixelcast.wwwinternetvideo.click#🇩🇪 6 - DE - Hysteria2/QUIC - 443
+
+hysteria2://BPvdjudCGodsF67hRP3xgBYvcKp48coTsh6ANydLhQs=@fin14qr.wwwinternetvideo.click:443?insecure=1&sni=fin14qr.wwwinternetvideo.click#🇩🇪 9 - DE - Hysteria2/QUIC - 443
 
 hysteria2://V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8@144.31.221.57:443?insecure=1&sni=player.wwwinternetvideo.click#🇩🇪 36 - DE - Hysteria2/QUIC - 443
 
@@ -32,7 +34,9 @@ hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@de.1.22.washing.hel
 
 hysteria2://zhangyang@130.61.50.75:6443?insecure=1&sni=130.61.50.75#🇩🇪 82 - DE - Hysteria2/QUIC - 6443
 
-ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206Y09pQyszSmhBWE13ZEdWNWV4bnJNU29ySlUwUmw1cWxMQ2JDQXVEbFdZND06SlRvdStKU21aT0F5ck1MZHZOQmNYRm0wWTlsdVovOHUxN2llNDhqUWZWYz0@141.95.29.163:2083#🇩🇪 2 - DE - SS/2022/BLAKE3 - 2083
+ss://MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206Y09pQyszSmhBWE13ZEdWNWV4bnJNU29ySlUwUmw1cWxMQ2JDQXVEbFdZND06SlRvdStKU21aT0F5ck1MZHZOQmNYRm0wWTlsdVovOHUxN2llNDhqUWZWYz0@141.95.29.163:2083#🇩🇪 1 - DE - SS/2022/BLAKE3 - 2083
 
-ss://YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ@185.226.172.8:8008#🇩🇪 62 - DE - SS/AEAD - 8008
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyWWRFNGxGT2lkNWE@51.195.126.38:8388#🇩🇪 7 - DE - SS/AEAD - 8388
+
+ss://YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ@185.226.172.8:8008#🇩🇪 61 - DE - SS/AEAD - 8008
 
