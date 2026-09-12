@@ -57,7 +57,7 @@ class ConfigToSingbox:
                 transport, tls = transport_builder.build_singbox_settings(data, alpn_override=["h3"])
                 outbound = {
                     "type": "hysteria2", "tag": tag, "server": data['address'], "server_port": data['port'],
-                    "password": data['password'], "tls": tls
+                    "password": data['password'], "tls": tls, "disable_chrome_parrot": True
                 }
                 if data.get('obfs') and data.get('obfs-password'):
                     outbound["obfs"] = {"type": data['obfs'], "password": data['obfs-password']}
