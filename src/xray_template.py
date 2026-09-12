@@ -5,7 +5,6 @@ def get_xray_template(remarks: str) -> Dict:
         "log": {
             "loglevel": "warning"
         },
-        "version": {"min": "26.2.6"},
         "remarks": remarks,
         "dns": {
             "servers": [
@@ -22,12 +21,6 @@ def get_xray_template(remarks: str) -> Dict:
                 }
             ]
         },
-        "fakedns": [
-            {
-                "ipPool": "198.18.0.0/15",
-                "poolSize": 10000
-            }
-        ],
         "inbounds": [
             {
                 "port": 10808,
@@ -41,7 +34,7 @@ def get_xray_template(remarks: str) -> Dict:
                     "destOverride": [
                         "http",
                         "tls",
-                        "fakedns"
+                        "quic"
                     ],
                     "enabled": True,
                     "routeOnly": False
@@ -143,5 +136,5 @@ def get_utility_outbounds() -> list:
     return [
         {"protocol": "freedom", "settings": {"domainStrategy": "UseIP"}, "tag": "direct"},
         {"protocol": "blackhole", "settings": {"response": {"type": "http"}}, "tag": "block"},
-        {"protocol": "dns", "settings": {"rules": [{"action": "hijack"}]}, "tag": "dns-out"}
+        {"protocol": "dns", "settings": {"network": "tcp,udp"}, "tag": "dns-out"}
     ]
