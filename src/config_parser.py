@@ -98,7 +98,11 @@ def decode_vmess(config: str) -> Optional[Dict]:
     data['name'] = data.get('ps', data.get('name', ''))
     data['net'] = data.get('net', 'tcp').lower()
     data['tls'] = data.get('tls', 'none').lower()
-    
+
+    valid_security = {'auto', 'aes-128-gcm', 'chacha20-poly1305', 'none', 'zero'}
+    scy = str(data.get('scy') or 'auto').strip().lower()
+    data['scy'] = scy if scy in valid_security else 'auto'
+
     if data['net'] not in VALID_TRANSPORT_TYPES:
         data['net'] = 'tcp'
     
@@ -216,7 +220,15 @@ def parse_hysteria2(config: str) -> Optional[Dict]:
     if not url.hostname:
         return None
     
-    port = url.port or 443
+    try:
+        port = url.port or 443
+    except ValueError:
+        netloc_host = url.netloc.rsplit('@', 1)[-1]
+        port_part = netloc_host.rsplit(':', 1)[-1] if ':' in netloc_host else ''
+        first_port = re.split(r'[-,]', port_part)[0].strip()
+        if not first_port.isdigit():
+            return None
+        port = int(first_port)
     
     params = parse_qs(_fix_query_string(url.query))
     password = unquote(url.username) if url.username else params.get('password', [''])[0]
