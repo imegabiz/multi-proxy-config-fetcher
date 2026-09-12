@@ -62,7 +62,7 @@ class SingBoxBatchTester:
             "route": {"rules": rules, "final": "block"}
         }
 
-    def _test_one(self, port: int, tag: str) -> Tuple[str, bool, Optional[int]]:
+    def _test_one(self, port: int, tag: str, timeout: Optional[float] = None) -> Tuple[str, bool, Optional[int]]:
         proxies = {
             'http': f'http://127.0.0.1:{port}',
             'https': f'http://127.0.0.1:{port}'
@@ -71,7 +71,7 @@ class SingBoxBatchTester:
         session.proxies.update(proxies)
         start_time = time.time()
         try:
-            response = session.get(self.test_url, timeout=self.timeout)
+            response = session.get(self.test_url, timeout=timeout if timeout is not None else self.timeout)
             delay = int((time.time() - start_time) * 1000)
             if response.status_code in (200, 204):
                 return tag, True, delay
@@ -142,7 +142,14 @@ class SingBoxBatchTester:
                     return results
 
                 with ThreadPoolExecutor(max_workers=min(len(prepared), self.concurrency)) as executor:
-                    futures = [executor.submit(self._test_one, port, tag) for _, port, _, tag in prepared]
+                    quic_protocols = {'hysteria2', 'tuic'}
+                    futures = [
+                        executor.submit(
+                            self._test_one, port, tag,
+                            max(self.timeout, 15) if outbound.get('type') in quic_protocols else self.timeout
+                        )
+                        for _, port, outbound, tag in prepared
+                    ]
                     for future in as_completed(futures):
                         tag, ok, delay = future.result()
                         results[tag] = (ok, delay)
