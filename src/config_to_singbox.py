@@ -1,7 +1,8 @@
 import json
+from typing import Dict, Optional
 import logging
-from typing import Dict, Optional, Tuple
 import config_parser as parser
+import transport_builder
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -10,156 +11,68 @@ class ConfigToSingbox:
     def __init__(self):
         self.output_file = 'configs/singbox_configs_all.json'
 
-    def build_transport(self, data: Dict) -> Optional[Dict]:
-        ttype = data.get('type', 'tcp').lower()
-        path = data.get('path', '') or ''
-        host = data.get('host', '') or ''
-        mode = data.get('mode', '') or ''
-        if ttype in ('tcp', 'raw', 'kcp', 'quic'):
-            return None
-        if ttype == 'ws':
-            transport = {"type": "ws", "path": path or "/"}
-            if host:
-                transport["headers"] = {"Host": host}
-            return transport
-        if ttype == 'grpc':
-            transport = {"type": "grpc"}
-            if path:
-                transport["service_name"] = path.lstrip('/')
-            return transport
-        if ttype in ('h2', 'http'):
-            transport = {"type": "http"}
-            if host:
-                transport["host"] = [host]
-            if path:
-                transport["path"] = path
-            return transport
-        if ttype == 'httpupgrade':
-            transport = {"type": "httpupgrade"}
-            if host:
-                transport["host"] = host
-            if path:
-                transport["path"] = path
-            return transport
-        if ttype in ('xhttp', 'splithttp'):
-            transport = {"type": "xhttp"}
-            if host:
-                transport["host"] = host
-            if path:
-                transport["path"] = path
-            if mode:
-                transport["mode"] = mode
-            return transport
-        return None
-
-    def build_tls(self, data: Dict, alpn_override: Optional[list] = None, allow_utls: bool = True) -> Optional[Dict]:
-        security = (data.get('security') or 'none').lower()
-        if security not in ('tls', 'reality', 'xtls'):
-            return None
-        tls = {"enabled": True}
-        sni = data.get('sni') or data.get('address') or ''
-        if sni:
-            tls["server_name"] = sni
-        if data.get('insecure') == '1' or str(data.get('allow_insecure', '')) == '1':
-            tls["insecure"] = True
-        if alpn_override:
-            tls["alpn"] = alpn_override
-        else:
-            alpn_raw = data.get('alpn') or ''
-            if alpn_raw:
-                tls["alpn"] = [a.strip() for a in alpn_raw.split(',') if a.strip()]
-        if allow_utls:
-            tls["utls"] = {"enabled": True, "fingerprint": data.get('fp') or 'chrome'}
-        if security == 'reality' and data.get('pbk'):
-            tls["reality"] = {"enabled": True, "public_key": data['pbk']}
-            if data.get('sid'):
-                tls["reality"]["short_id"] = data['sid']
-        return tls
-
     def convert_to_singbox(self, config: str, index: int, protocol_type: str) -> Optional[Dict]:
         try:
-            config_lower = config.lower().strip()
+            config_lower = config.lower()
             data = None
             outbound = {}
-
+            
             if config_lower.startswith('vmess://'):
-                data = parser.decode_vmess(config.strip())
-                if not data:
-                    return None
+                data = parser.decode_vmess(config)
+                if not data: return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['add']}:{data['port']}"
-                transport = self.build_transport(data)
-                tls = self.build_tls(data)
+                transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
                     "type": "vmess", "tag": tag, "server": data['add'], "server_port": int(data['port']),
-                    "uuid": data['id'], "security": data.get('scy', 'auto'), "alter_id": int(data.get('aid', 0))
+                    "uuid": data['id'], "security": data.get('scy', 'auto'), "alter_id": int(data.get('aid', 0)),
+                    "transport": transport, "tls": tls
                 }
-                if transport:
-                    outbound["transport"] = transport
-                if tls:
-                    outbound["tls"] = tls
-
+            
             elif config_lower.startswith('vless://'):
-                data = parser.parse_vless(config.strip())
-                if not data:
-                    return None
+                data = parser.parse_vless(config)
+                if not data: return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
-                transport = self.build_transport(data)
-                tls = self.build_tls(data)
+                transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
-                    "type": "vless", "tag": tag, "server": data['address'], "server_port": int(data['port']),
-                    "uuid": data['uuid']
+                    "type": "vless", "tag": tag, "server": data['address'], "server_port": data['port'],
+                    "uuid": data['uuid'], "flow": data.get('flow', ''), "tls": tls, "transport": transport
                 }
-                if data.get('flow'):
-                    outbound["flow"] = data['flow']
-                if transport:
-                    outbound["transport"] = transport
-                if tls:
-                    outbound["tls"] = tls
-
+            
             elif config_lower.startswith('trojan://'):
-                data = parser.parse_trojan(config.strip())
-                if not data:
-                    return None
+                data = parser.parse_trojan(config)
+                if not data: return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
-                transport = self.build_transport(data)
-                tls = self.build_tls(data)
+                transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
-                    "type": "trojan", "tag": tag, "server": data['address'], "server_port": int(data['port']),
-                    "password": data['password']
+                    "type": "trojan", "tag": tag, "server": data['address'], "server_port": data['port'],
+                    "password": data['password'], "tls": tls, "transport": transport
                 }
-                if transport:
-                    outbound["transport"] = transport
-                if tls:
-                    outbound["tls"] = tls
-
+            
             elif config_lower.startswith(('hysteria2://', 'hy2://')):
-                data = parser.parse_hysteria2(config.strip())
+                data = parser.parse_hysteria2(config)
                 if not data:
                     logger.warning(f"Failed to parse hysteria2 config: {config[:80]}")
                     return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
-                tls = self.build_tls(data, alpn_override=["h3"], allow_utls=False)
-                if not tls:
-                    tls = {"enabled": True, "alpn": ["h3"]}
+                transport, tls = transport_builder.build_singbox_settings(data, alpn_override=["h3"])
                 outbound = {
-                    "type": "hysteria2", "tag": tag, "server": data['address'], "server_port": int(data['port']),
+                    "type": "hysteria2", "tag": tag, "server": data['address'], "server_port": data['port'],
                     "password": data['password'], "tls": tls
                 }
                 if data.get('obfs') and data.get('obfs-password'):
                     outbound["obfs"] = {"type": data['obfs'], "password": data['obfs-password']}
-
+         
             elif config_lower.startswith('ss://'):
-                data = parser.parse_shadowsocks(config.strip())
-                if not data:
-                    return None
+                data = parser.parse_shadowsocks(config)
+                if not data: return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
                 outbound = {
-                    "type": "shadowsocks", "tag": tag, "server": data['address'], "server_port": int(data['port']),
+                    "type": "shadowsocks", "tag": tag, "server": data['address'], "server_port": data['port'],
                     "method": data['method'], "password": data['password']
                 }
-
+            
             return outbound if outbound else None
-
+            
         except Exception as e:
             logger.error(f"Failed during convert_to_singbox for config {config[:30]}...: {e}")
             return None
@@ -167,7 +80,7 @@ class ConfigToSingbox:
     def process_configs(self):
         try:
             with open('configs/proxy_configs_tested.txt', 'r', encoding='utf-8') as f:
-                configs = [line for line in f.read().strip().split('\n') if line.strip() and not line.strip().startswith('//')]
+                configs = [line.strip() for line in f.read().strip().split('\n') if line.strip() and not line.strip().startswith('//')]
         except FileNotFoundError:
             logger.error("proxy_configs_tested.txt not found! Exiting.")
             return
@@ -180,16 +93,16 @@ class ConfigToSingbox:
         protocol_map = {'vless': 'VLESS', 'trojan': 'Trojan', 'vmess': 'VMess', 'ss': 'SS', 'hysteria2': 'Hysteria2', 'hy2': 'Hysteria2'}
 
         for config in configs:
-            protocol_key = config.split('://')[0].lower().strip()
+            protocol_key = config.split('://')[0].lower()
             protocol_name = protocol_map.get(protocol_key)
-
+            
             if protocol_name:
                 converted = self.convert_to_singbox(config, counters[protocol_name], protocol_name)
                 if converted:
                     outbounds.append(converted)
                     valid_tags.append(converted['tag'])
                     counters[protocol_name] += 1
-
+        
         if not outbounds:
             logger.error("No valid configurations found after processing.")
             return
@@ -203,12 +116,13 @@ class ConfigToSingbox:
                     {"type": "fakeip", "tag": "dns-fake", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
                 ],
                 "rules": [
-                    {"action": "route", "clash_mode": "Direct", "server": "dns-direct"},
-                    {"action": "route", "clash_mode": "Global", "server": "dns-remote"},
-                    {"action": "route", "rule_set": ["geosite-ir"], "server": "dns-direct"},
-                    {"action": "reject", "rule_set": ["geosite-malware", "geosite-phishing", "geosite-cryptominers", "geosite-category-ads-all"]},
-                    {"action": "route", "inbound": "tun-in", "query_type": ["A", "AAAA"], "server": "dns-fake"}
-                ]
+                    {"clash_mode": "Direct", "server": "dns-direct"},
+                    {"clash_mode": "Global", "server": "dns-remote"},
+                    {"rule_set": ["geosite-ir"], "server": "dns-direct"},
+                    {"rule_set": ["geosite-malware", "geosite-phishing", "geosite-cryptominers", "geosite-category-ads-all"], "action": "reject"},
+                    {"inbound": "tun-in", "query_type": ["A", "AAAA"], "server": "dns-fake"}
+                ],
+                "strategy": "ipv4_only"
             },
             "inbounds": [
                 {"type": "tun", "tag": "tun-in", "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"], "mtu": 9000, "auto_route": True, "strict_route": True, "stack": "mixed"},
@@ -227,8 +141,8 @@ class ConfigToSingbox:
                     {"clash_mode": "Global", "outbound": "🌐 Anonymous Multi"},
                     {"ip_is_private": True, "outbound": "direct"},
                     {"network": "udp", "action": "reject"},
-                    {"action": "reject", "rule_set": ["geosite-malware", "geosite-phishing", "geosite-cryptominers", "geosite-category-ads-all"]},
-                    {"action": "reject", "rule_set": ["geoip-malware", "geoip-phishing"]},
+                    {"rule_set": ["geosite-malware", "geosite-phishing", "geosite-cryptominers", "geosite-category-ads-all"], "action": "reject"},
+                    {"rule_set": ["geoip-malware", "geoip-phishing"], "action": "reject"},
                     {"rule_set": ["geosite-ir"], "outbound": "direct"},
                     {"rule_set": ["geoip-ir"], "outbound": "direct"}
                 ],
