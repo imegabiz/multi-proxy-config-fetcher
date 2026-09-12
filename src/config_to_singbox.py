@@ -50,7 +50,9 @@ class ConfigToSingbox:
             
             elif config_lower.startswith(('hysteria2://', 'hy2://')):
                 data = parser.parse_hysteria2(config)
-                if not data: return None
+                if not data:
+                    logger.warning(f"Failed to parse hysteria2 config: {config[:80]}")
+                    return None
                 tag = data.get('name') or f"{protocol_type} {index} - {data['address']}:{data['port']}"
                 transport, tls = transport_builder.build_singbox_settings(data)
                 outbound = {
